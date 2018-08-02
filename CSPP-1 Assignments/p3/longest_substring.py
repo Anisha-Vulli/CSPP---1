@@ -25,7 +25,7 @@ def main():
             f_count = 0
             f_s = str_1[i+1]
     if f_count > f_max:
-        str_2 = fs
+        str_2 = f_s
     print(str_2)
 
 if __name__ == "__main__":
