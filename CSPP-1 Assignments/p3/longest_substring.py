@@ -13,7 +13,7 @@ def main():
     leng = len(str_1)
     f_max = 0
     f_count = 0
-    fs = str_1[0]
+    f_s = str_1[0]
     for i in range(0, leng-1):
         if ord(str_1[i]) <= ord(str_1[i+1]):
             f_count += 1
