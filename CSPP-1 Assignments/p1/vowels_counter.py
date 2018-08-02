@@ -17,7 +17,7 @@ def main():
     for ch_ar in st_r:
         if ch_ar in ('a', 'e', 'i', 'o', 'u'):
             cou_nt += 1
-    print("Vowel count is:" + str(cou_nt))
+    print(cou_nt)
 
 if __name__ == "__main__":
     main()
