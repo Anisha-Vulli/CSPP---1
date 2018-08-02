@@ -9,7 +9,6 @@ def main():
    '''This function is used to count number of times bob occured '''
    s_tr = input()
    cou_nt = 0
-   s_2 = "bob"
    for i in range(0,len(s_tr)-2):
        if(s_tr[i] == 'b' and s_tr[i+1] == 'o' and s_tr[i+2] == 'b'):
            cou_nt += 1
