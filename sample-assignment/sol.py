@@ -1,10 +1,13 @@
-# Exercise: Assignment-1
-# Write a Python function, factorial(n), that takes in one number and
-# returns the factorial of given number.
+'''
 
-# This function takes in one number and returns one number.
+Author : Anisha
+Date : 02 Aug 2018
 
+'''
 def main():
+	'''
+	Addition of two numbers function
+	'''
     data = input()
     print(int(data[0])+int(data[3]))
 
