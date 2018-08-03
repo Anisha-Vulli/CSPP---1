@@ -15,6 +15,6 @@ def main():
     if res**3 == int(x_i):
         print(str(x_i) + " is a perfect cube")
     else:
-        print(str(x_i) + "is not a perfect cube")
+        print(str(x_i) + " is not a perfect cube")
 if __name__ == "__main__":
     main()
