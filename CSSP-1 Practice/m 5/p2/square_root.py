@@ -1,21 +1,22 @@
-# Write a python program to find the square root of the given number
-# using approximation method
+'''
 
-# testcase 1
-# input: 25
-# output: 4.999999999999998
+Author: Anisha Vulli
+Date: 03 Aug 2018
 
-# testcase 2
-# input: 49
-# output: 6.999999999999991
+'''
 
 def main():
-	s = raw_input()
-	# epsilon and step are initialized
-	# don't change these values
-	epsilon = 0.01
-	step = 0.1
-	# your code starts here
+    ''' This function is used to calcualte square root '''
+    s_q = input()
+    ep_i = 0.01
+    gu_ess = 0.0
+    inc_e = 0.001
+    while abs(gu_ess ** 2 - int(s_q)) >= ep_i and gu_ess <= int(s_q):
+        gu_ess += inc_e
+    if abs(gu_ess ** 2 - int(s_q)) >= ep_i:
+        print('Failed on cube root of' + str(s_q))
+    else:
+        print(gu_ess, 'is close to the cube root of', str(s_q))
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
