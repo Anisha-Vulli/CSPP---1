@@ -13,8 +13,8 @@ def main():
     while res**3 < int(x):
         res = res + 1
     if res**3 == int(x):
-        print (str(x) + " is a perfect cube")
+        print(str(x) + " is a perfect cube")
     else:
-        print (str(res) + "is not a perfect cube")
-if __name__== "__main__":
+        print(str(res) + "is not a perfect cube")
+if __name__ == "__main__":
     main()
