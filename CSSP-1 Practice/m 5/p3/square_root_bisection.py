@@ -21,7 +21,7 @@ def main():
             h_i = gu_ess
         gu_ess = (l_o + h_i)/2.0
     print(gu_ess)
-    print(num_gu)
+    #print(num_gu)
 
 if __name__ == "__main__":
     main()
