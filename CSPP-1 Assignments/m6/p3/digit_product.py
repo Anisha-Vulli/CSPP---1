@@ -10,15 +10,23 @@ def main():
     '''
     int_input = int(input())
     count_i = 0
-    n = int_input
+    n = 0
     d = 0
     pro_o = 1
-    while n>0:
-    	d = n % 10
-    	n = n //10
-    	pro_o = pro_o * d
-    #print(count_i)
-    print(pro_o)
+    if n>0:
+        n = int_input
+        while n>0:
+            d = n % 10
+            n = n //10
+            pro_o = pro_o * d
+        print(pro_o)
+    else:
+        n = -(int_input)
+        while n>0:
+            d = n % 10
+            n = n //10
+            pro_o = pro_o * d
+        print(-(pro_o))
 
 
 if __name__ == "__main__":
