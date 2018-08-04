@@ -24,9 +24,9 @@ def main():
         else:
             n_i = -(int_input)
             while n_i > 0:
-               d_i = n_i % 10
-               n_i = n_i //10
-               pro_o = pro_o * d_i
+                d_i = n_i % 10
+                n_i = n_i //10
+                pro_o = pro_o * d_i
             print(-(pro_o))
 
     else:
