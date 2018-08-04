@@ -15,7 +15,7 @@ def main():
     str_output = ""
     #a = {'!','@','#','$','%','^','&','*'}
     for char in str_input:
-        if char == '!' or char == '@' or char == '#' or char == '$' or char == '%' or char == '*':
+        if char == '!' or char == '@' or char == '#' or char == '$' or char == '%' or char == '*' or char == '&' or char == '^':
             str_output = str_output + " "
         else:
            str_output = str_output + char
