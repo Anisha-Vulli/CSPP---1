@@ -11,7 +11,7 @@ Date : 04 Aug 2018
 def main():
     ''' Function is to print Fizz buzz and fizzbuzz'''
     num_i = int(input())
-    for i in range(1, num_i):
+    for i in range(1, (num_i+1)):
         if i%3 == 0 and i%5 == 0:
             print("FizzBuzz")
         elif i%3 == 0:
