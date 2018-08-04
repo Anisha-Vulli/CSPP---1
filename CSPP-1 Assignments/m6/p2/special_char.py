@@ -15,10 +15,10 @@ def main():
     str_output = ""
     #a = {'!','@','#','$','%','^','&','*'}
     for char in str_input:
-        if char == '!' or char == '@' or char == '#' or char == '$' or char == '%' or char == '*' or char == '&' or char == '^':
+        if char in ('!','@','#','$','%','^','&','*','&','^'):
             str_output = str_output + " "
         else:
-           str_output = str_output + char
+            str_output = str_output + char
     print(str_output)
 
 if __name__ == "__main__":
