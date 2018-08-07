@@ -8,9 +8,9 @@ Date: 07 Aug 2018
 def sum_of_digits(n):
     ''' Function is used to caluculate sum of digits'''
     if n == 0:
-       return n
+        return n
     else:
-       return n%10 + sum_of_digits(n//10)
+        return n%10 + sum_of_digits(n//10)
 
 
 def main():
