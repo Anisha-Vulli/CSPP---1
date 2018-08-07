@@ -6,7 +6,7 @@ Date: 07 Aug 2018.
 '''
 def factorial_fun(n_in):
     ''' Calculating the factorial of the number '''
-    if n_in in (0,1):
+    if n_in in (0, 1):
         return 1
     return n_in * factorial_fun(n_in - 1)
 def main():
