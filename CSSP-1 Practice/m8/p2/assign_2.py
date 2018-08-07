@@ -5,12 +5,12 @@ Date: 07 Aug 2018
 
 '''
 
-def sum_of_digits(n):
+def sum_of_digits(n_in):
     ''' Function is used to caluculate sum of digits'''
-    if n == 0:
-        return n
+    if n_in == 0:
+        return n_in
     else:
-        return n%10 + sum_of_digits(n//10)
+        return n_in%10 + sum_of_digits(n_in//10)
 
 
 def main():
