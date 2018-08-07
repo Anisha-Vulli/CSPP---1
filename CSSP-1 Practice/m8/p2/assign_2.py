@@ -18,6 +18,5 @@ def main():
     num_in = input()
     print(sum_of_digits(int(num_in)))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
-
