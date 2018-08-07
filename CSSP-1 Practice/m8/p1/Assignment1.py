@@ -7,9 +7,9 @@ Date: 07 Aug 2018.
 def factorial_fun(n):
     ''' Calculating the factorial of the number '''
     if (n == 0) or (n == 1):
-       return 1
+        return 1
     else:
-       return n * factorial_fun(n - 1)
+        return n * factorial_fun(n - 1)
        
 
 def main():
