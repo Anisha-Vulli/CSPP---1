@@ -1,24 +1,24 @@
-# Exercise: GCDIter
-# Write a Python function, gcdIter(a, b), that takes in two numbers and returns the GCD(a,b) of given a and b.
+'''
 
-# This function takes in two numbers and returns one number.
+Author: Anisha Vulli
+Date : 07 Aug 2018
 
+'''
 
-def gcdIter(a, b):
-    '''
-    a, b: positive integers
-    
-    returns: a positive integer, the greatest common divisor of a & b.
-    '''
-    # Your code here
-    
-
+def gcd_iter(a_num1, b_num2):
+    ''' Calculate the GCD of two numbers '''
+    lim = min(a_num1, b_num2)
+    for i in range((lim + 1), 1, -1):
+        if (a_num1%i == 0) and (b_num2%i == 0):
+            return i
+    return 0
 
 
 def main():
+    ''' Main function used to take input and output '''
     data = input()
     data = data.split()
-    print(gcdIter(int(data[0]),int(data[1]))) 
+    print(gcd_iter(int(data[0]), int(data[1])))
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
