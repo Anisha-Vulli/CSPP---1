@@ -11,9 +11,9 @@ def factorial_fun(n):
     else:
         return n * factorial_fun(n - 1)
 def main():
-	''' Main function is used to take input and output '''
+    ''' Main function is used to take input and output '''
     num_in = input()
-    print(factorial_fun(int(num_in)))    
+    print(factorial_fun(int(num_in)))
 
 if __name__ == "__main__":
     main()
