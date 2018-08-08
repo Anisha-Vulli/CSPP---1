@@ -21,6 +21,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
     return "Lowest Payment: " + str(monthly_payment)
 
 def main():
+	''' Main function '''
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
