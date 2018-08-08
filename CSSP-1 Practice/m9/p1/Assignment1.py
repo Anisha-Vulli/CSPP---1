@@ -8,6 +8,7 @@ secret_word are in letters_guessed) and False otherwise.
 
 
 def is_word_guessed(secret_word, letters_guessed):
+    ''' Checking the characterws if present or not '''
     for each_char in letters_guessed:
         secret_word = secret_word.replace(each_char, "")
 
