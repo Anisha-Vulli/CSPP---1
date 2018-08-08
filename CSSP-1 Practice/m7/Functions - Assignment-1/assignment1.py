@@ -10,7 +10,7 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate, monthly_payment_rat
     '''function to find the remaining credit card balance'''
     i = 1
     balance_copy = balance
-    while i < 12:
+    while i <= 12:
         monthly_intr_rate = annual_interest_rate / 12.0
         min_monthly_pay = monthly_payment_rate * balance_copy
         monthly_unpaid_bal = balance_copy - min_monthly_pay
