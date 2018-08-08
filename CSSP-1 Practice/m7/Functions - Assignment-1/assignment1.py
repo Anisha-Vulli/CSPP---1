@@ -19,12 +19,12 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate, monthly_payment_rat
     return "Remaining balance: " + str(round(balance_copy, 2))
 
 def main():
-	''' Main function '''
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print(paying_debt_off_in_a_year(data[0],data[1],data[2]))
+    ''' Main function '''
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print(paying_debt_off_in_a_year(data[0],data[1],data[2]))
 
-if __name__== "__main__":
-	main()
+if __name__ == "__main__":
+    main()
 
