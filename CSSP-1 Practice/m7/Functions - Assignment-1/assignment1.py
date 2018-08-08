@@ -7,7 +7,7 @@ Date: 08 Aug 2018
 '''
 
 def payingDebtOffInAYear(balance, annualInterestRate, monthlyPaymentRate):
-	''' Function used to calucuate credit card balance ''' 
+    ''' Function used to calucuate credit card balance ''' 
     i = 1
     balance_copy = balance
     while i <= 12:
