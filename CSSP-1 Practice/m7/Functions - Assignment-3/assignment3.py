@@ -33,10 +33,6 @@ def paying_debt_off_in_a_year(balance_up, annual_interest_rate):
     min_pay = middle_val
     return "Lowest Payment: "+str(round(min_pay, 2))
 
-
-def paying_debt_off_in_a_year(balance, annualInterestRate):
-
-
 def main():
     data = input()
     # data = "4773 0.2"
