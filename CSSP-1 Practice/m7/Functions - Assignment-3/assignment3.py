@@ -1,7 +1,7 @@
 '''
 
 Author: Anisha Vulli
-Date: 08 Aug 2018 
+Date: 08 Aug 2018
 '''
 def paying_debt(balance_up, annual_interest_rate, guess_num):
     '''function for paying debt'''
