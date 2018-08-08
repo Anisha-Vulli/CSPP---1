@@ -13,7 +13,7 @@ def get_guessed_word(secret_word, letters_guessed):
       what letters in secret_word have been guessed so far.
     '''
     temp_stng = secret_word
-     for each_char in letters_guessed:
+    for each_char in letters_guessed:
         temp_stng = temp_stng.replace(each_char, "")
 
     for each_char in temp_stng:
