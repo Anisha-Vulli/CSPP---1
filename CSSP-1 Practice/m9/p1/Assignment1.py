@@ -11,7 +11,7 @@ def is_word_guessed(secret_word, letters_guessed):
     for each_char in letters_guessed:
         secret_word = secret_word.replace(each_char, " ")
 
-    return secret_word == " ":
+    return secret_word == " "
       
 
 def main():
