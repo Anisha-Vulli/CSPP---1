@@ -21,10 +21,10 @@ def paying_debt_off_in_a_year(balance, annual_interest_rate):
     return "Lowest Payment: " + str(monthly_payment)
 
 def main():
-	data = input()
-	data = data.split(' ')
-	data = list(map(float, data))
-	print(paying_debt_off_in_a_year(data[0], data[1]))
+    data = input()
+    data = data.split(' ')
+    data = list(map(float, data))
+    print(paying_debt_off_in_a_year(data[0], data[1]))
 	
 if __name__ == "__main__":
 	main()
