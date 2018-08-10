@@ -26,8 +26,6 @@ def update_hand(hand, word):
     returns: dictionary (string -> int)
     """
     # TO DO ... <-- Remove this comment when you code this function
-
-    #full_letters = "abcdefghijklmnopqrstuvwxyz"
     ''' Update hand function '''
     given_word = word
     given_dict = hand
