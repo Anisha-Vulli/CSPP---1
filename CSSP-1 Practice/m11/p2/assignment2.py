@@ -30,8 +30,7 @@ def main():
         data = input()
         l_i = data.split()
         adict[l_i[0]] = int(l_i[1])
-
-    i += 1
+        i += 1
     data1 = input()
 
     print(update_hand(adict, data1))
