@@ -11,7 +11,7 @@ def is_valid_word(word, hand, word_list):
     ''' Valid word function '''
     word_list = list(word)
     j = 0
-
+    k = 0
     for i in word_list:
         if i in hand:
             j += 1
