@@ -18,7 +18,7 @@ def is_valid_word(word, hand, word_list):
     if word in word_list:
         k = 1
 
-    return bool((j == len(word)) and (k == 1))
+    return bool((j == len(word)+1) and (k == 1))
 
 def main():
     ''' Main program '''
