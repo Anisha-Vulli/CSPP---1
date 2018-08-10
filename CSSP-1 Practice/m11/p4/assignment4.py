@@ -7,7 +7,6 @@ Date: 10 Aug 2018
 
 def calculate_hand_len(hand):
     ''' Hand length function '''
-    
     hand_list = list(hand.values())
     #print(hand_list)
     sum_val = 0
@@ -24,6 +23,7 @@ def main():
         data = input()
         l_i = data.split()
         a_dict[l_i[0]] = int(l_i[1])
+        i += 1
     print(calculate_hand_len(a_dict))
 
 
