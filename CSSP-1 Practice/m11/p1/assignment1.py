@@ -33,8 +33,10 @@ def get_word_score(word, n):
     #print(values_list)
     score = 0
     for i in enter_word:
-    	score = score + SCRABBLE_LETTER_VALUES[i]
+    	b = b + SCRABBLE_LETTER_VALUES[i]
     	#score = score + values_list[b]
+
+    score = b * len(enter_word)
 
     if n == len(enter_word):
     	score = score + 50
