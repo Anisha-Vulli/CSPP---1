@@ -9,16 +9,18 @@ Date : 10 Aug 2018
 
 def is_valid_word(word, hand, word_list):
     ''' Valid word function '''
-    word_list = list(word)
+    #word_list = list(word)
     j = 0
     k = 0
-    for i in word_list:
+    for i in word:
         if i in hand:
             j += 1
+    print(j)
+
     if word in word_list:
         k = 1
 
-    return bool((j == len(word)+1) and (k == 1))
+    return bool((j == len(word)) and (k == 1))
 
 def main():
     ''' Main program '''
