@@ -7,6 +7,7 @@ that are not in letters_guessed
 '''
 
 def get_available_letters(letters_guessed):
+    ''' letters that are not present are '''
     temp_stng = "abcdefghijklmnopqrstuvwxyz"
     for each_char in letters_guessed:
         temp_stng = temp_stng.replace(each_char, "")
