@@ -9,11 +9,13 @@ def calculate_hand_len(hand):
     ''' Hand length function ''' 
     count = 0
     hand_list = list(hand.values())
+    print(hand_list)
+    sum =0
     #print(hand.values())
     for i in hand_list:
-        if hand_list[i] > 0:
-            count += 1
-    return count
+        sum = sum +i
+    
+    return sum
 
 def main():
     ''' Main function '''
