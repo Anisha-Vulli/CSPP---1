@@ -25,7 +25,8 @@ def update_hand(hand, word):
     hand: dictionary (string -> int)
     returns: dictionary (string -> int)
     """
-    # TO DO ... <-- Remove this comment when you code this function
+    
+    
     ''' Update hand function '''
     given_word = word
     given_dict = hand
