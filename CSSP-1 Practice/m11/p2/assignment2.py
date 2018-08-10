@@ -49,7 +49,7 @@ def main():
         l = data.split()
         adict[l[0]] = int(l[1])
     data1 = input()
-    print(updateHand(adict, data1))
+    print(update_hand(adict, data1))
 
 
 if __name__ == "__main__":
