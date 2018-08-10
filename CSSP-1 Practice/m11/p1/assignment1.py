@@ -40,7 +40,7 @@ def get_word_score(word, num_letters):
 
     score_of_word = sum_of_letters * len(enter_word)
 
-    if n == len(enter_word):
+    if hand_size == len(enter_word):
         score_of_word = score_of_word + 50
 
     return score_of_word
