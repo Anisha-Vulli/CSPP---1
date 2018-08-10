@@ -30,7 +30,7 @@ def get_word_score(word, num_letters):
 
     enter_word = word
     hand_size = num_letters
-    values_list = list(scrabble_letter_values.values())
+    #values_list = list(scrabble_letter_values.values())
     #print(values_list)
     score_of_word = 0
     sum_of_letters = 0
