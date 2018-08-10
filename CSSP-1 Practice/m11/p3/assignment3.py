@@ -15,7 +15,7 @@ def is_valid_word(word, hand, word_list):
     for i in word:
         if i in hand:
             j += 1
-    print(j)
+    #print(j)
 
     if word in word_list:
         k = 1
