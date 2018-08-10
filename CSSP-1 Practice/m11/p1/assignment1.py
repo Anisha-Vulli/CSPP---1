@@ -32,6 +32,7 @@ def get_word_score(word, n):
     values_list = list(SCRABBLE_LETTER_VALUES.values())
     #print(values_list)
     score = 0
+    b = 0
     for i in enter_word:
     	b = b + SCRABBLE_LETTER_VALUES[i]
     	#score = score + values_list[b]
