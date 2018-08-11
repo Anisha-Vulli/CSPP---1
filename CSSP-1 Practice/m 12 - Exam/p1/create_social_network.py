@@ -62,9 +62,6 @@ def main():
         i += 1
 
     string_1 = string_in.split('\n')
-    
-    #print(string_1)
-    
     print(create_social_network(string_1))
 
 if __name__ == "__main__":
