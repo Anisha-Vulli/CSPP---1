@@ -47,7 +47,7 @@ def create_social_network(data_in):
             
             
         
-    #return a_dict
+    return a_dict
 
     
 
