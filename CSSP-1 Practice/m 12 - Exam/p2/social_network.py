@@ -58,7 +58,7 @@ def delete_person(network, arg1):
     a_dict = network
     if arg1 in a_dict.keys():
         a_dict.pop(arg1)
-        print(a_dict)
+        #print(a_dict)
         return a_dict
         
 
