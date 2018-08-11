@@ -39,18 +39,15 @@ def create_social_network(data_in):
         #print(list_1)
         if list_1[0] in a_dict:
             list_1[1] = list_1[1].split(',')
-            a_dict[list_1[0]] = ','.join(list_1[1])
-            '''for j in list_1[1]:
-                a_dict[list_1[0]] = ','.join(list_1[1])'''
-            
+            a_dict[list_1[0]] = list_1[1]
             
         else:
             list_1[1] = list_1[1].split(',')
-            a_dict[list_1[0]] = ','.join(list_1[1])
+            a_dict[list_1[0]] = list_1[1]
             
             
         
-    return a_dict
+    #return a_dict
 
     
 
