@@ -34,7 +34,7 @@ def create_social_network(data_in):
     a_dict = {}
     list_1 = []
     for i in data_in:
-        list_1 = i.split("follows")
+        list_1 = i.split(" follows ")
         #print(list_1[1])
         #print(list_1)
         if list_1[0] in a_dict:
@@ -62,6 +62,7 @@ def main():
         if i != (lines_num - 1):
             string_in += '\n'
         i += 1
+
     string_1 = string_in.split('\n')
     
     #print(string_1)
