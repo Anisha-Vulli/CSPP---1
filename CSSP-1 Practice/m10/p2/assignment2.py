@@ -115,9 +115,9 @@ def hangman(secretWord):
 
             break
     print("You lost!!! I am sorry")
-    print("The word was" + " " + word)
+    
               
-    return temp_stng
+    return temp_stng,word
 
 
 
@@ -130,7 +130,8 @@ def main():
     secretWord while you're testing)
     '''
     secretWord = chooseWord(wordlist).lower()
-    hangman(secretWord)
+    x , y = hangman(secretWord)
+    print("The word was" + " " + y)
     #print("This is the word" + random.choice(wordlist))
 
     #hangman(secretWord)
