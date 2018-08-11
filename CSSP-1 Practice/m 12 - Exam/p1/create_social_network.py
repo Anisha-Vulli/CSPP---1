@@ -33,7 +33,7 @@ def create_social_network(data_in):
     '''
     a_dict = {}
     list_1 = []
-    if " follows" not in data_in:
+    if "follows" not in data_in:
         return a_dict
     for i in data_in:
         list_1 = i.split(" follows ")
