@@ -42,18 +42,12 @@ def create_social_network(data_in):
             if list_1[0] in a_dict:
                 list_1[1] = list_1[1].split(',')
                 a_dict[list_1[0]] = list_1[1]
-            
             else:
                 list_1[1] = list_1[1].split(',')
                 a_dict[list_1[0]] = list_1[1]
         else:
             return a_dict
-            
-            
-    #print(a_dict)   
     return a_dict
-
-    
 
 def main():
     '''
