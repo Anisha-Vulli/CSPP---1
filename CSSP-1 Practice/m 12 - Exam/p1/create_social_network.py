@@ -46,7 +46,7 @@ def create_social_network(data_in):
             a_dict[list_1[0]] = list_1[1]
             
             
-    print(a_dict)   
+    #print(a_dict)   
     return a_dict
 
     
