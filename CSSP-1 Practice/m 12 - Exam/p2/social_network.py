@@ -16,8 +16,8 @@ def follow(network, arg1, arg2):
     '''a_dict = network
     list_1 = []
 
-    '''
-    '''for i in network:
+    
+    for i in network:
         if arg1 in a_dict.keys():
             for j in a_dict[arg1]:
                 list_1[1] = list_1[1].split(',')
@@ -25,7 +25,6 @@ def follow(network, arg1, arg2):
         else:
             list_1[1] = list_1[1].split(',')
             network[list_1[0]] = list_1[j]
-        
 
     return network
     if arg1 in a_dict.keys():
@@ -55,7 +54,7 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    dicto = {}
+    #dicto = {}
     a_dict = network
     if arg1 not in a_dict.keys():
         return a_dict
@@ -63,8 +62,6 @@ def delete_person(network, arg1):
         a_dict.pop(arg1)
         #print(a_dict)
         return a_dict
-        
-
 
 def main():
     '''
@@ -72,8 +69,7 @@ def main():
     '''
     network = eval(input())
     lines = int(input())
-    for i in range(lines):
-        
+    for i in range(lines): 
         line = input()
         output = line.split(" ")
         if output[0] == "follow":
