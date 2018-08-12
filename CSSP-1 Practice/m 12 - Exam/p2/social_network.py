@@ -42,7 +42,7 @@ def delete_person(network, arg1):
         update the network dictionary and return it
     '''
     
-    for person in netwok:
+    for person in network:
         if person in netwok[arg1]:
             network[arg1].remove(arg1)
 
