@@ -13,23 +13,9 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    '''a_dict = network
-    list_1 = []
-
-    
-    for i in network:
-        if arg1 in a_dict.keys():
-            for j in a_dict[arg1]:
-                list_1[1] = list_1[1].split(',')
-                network[list_1[0]] = list_1[j]
-        else:
-            list_1[1] = list_1[1].split(',')
-            network[list_1[0]] = list_1[j]
-
+    if arg1 in netwok:
+        network[arg1].append(arg2)
     return network
-    if arg1 in a_dict.keys():
-        a_dict[arg1] = a_dict[arg1].values().extend(arg2)
-        print (a_dict[arg1])'''
 
 
 def unfollow(network, arg1, arg2):
@@ -41,8 +27,9 @@ def unfollow(network, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    # remove the pass below and start writing your code
-    pass
+    if arg1 in netwok:
+        network[arg1].remove(arg2)
+    return network
 
 def delete_person(network, arg1):
     '''
@@ -54,14 +41,15 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    #dicto = {}
-    a_dict = network
-    if arg1 not in a_dict.keys():
-        return a_dict
-    else:
-        a_dict.pop(arg1)
-        #print(a_dict)
-        return a_dict
+    
+    for person in netwok:
+        if person in netwok[arg1]:
+            network[arg1].remove(arg1)
+
+    if arg1 in network:
+        del network[arg1]
+    return network
+
 
 def main():
     '''
@@ -78,8 +66,8 @@ def main():
         elif output[0] == "unfollow":
             network = unfollow(network, output[1], output[2])
         elif output[0] == "delete":
-            string_1 = line.split(' ')
-            network = delete_person(network, string_1[1])
+            #string_1 = line.split(' ')
+            network = delete_person(network, output[1])
         i += 1
 
     print(network)
