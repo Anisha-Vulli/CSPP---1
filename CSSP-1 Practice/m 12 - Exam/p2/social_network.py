@@ -46,15 +46,13 @@ def delete_person(network, arg1):
         also, before deleting arg1, remove arg1 from the everyone's followers list
         update the network dictionary and return it
     '''
-    
     for person in network:
         if arg1 in network[person]:
             #print(person)
             network[person].remove(arg1)
- 
+
     if arg1 in network:
         network.pop(arg1)
-    
     return network
 
 
@@ -64,7 +62,7 @@ def main():
     '''
     network = eval(input())
     lines = int(input())
-    for i in range(lines): 
+    for i in range(lines):
         line = input()
         output = line.split(" ")
         if output[0] == "follow":
