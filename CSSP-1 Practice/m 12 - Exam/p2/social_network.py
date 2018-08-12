@@ -15,6 +15,8 @@ def follow(network, arg1, arg2):
     '''
     if arg1 in network:
         network[arg1].append(arg2)
+    else:
+        network[arg1] = [arg2]
 
     #print(network)
     return network
