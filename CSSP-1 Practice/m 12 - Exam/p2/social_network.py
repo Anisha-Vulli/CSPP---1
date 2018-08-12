@@ -13,8 +13,10 @@ def follow(network, arg1, arg2):
         so, this should result in adding arg2 to the followers list of arg1
         update the network dictionary and return it
     '''
-    if arg1 in netwok:
+    if arg1 in network:
         network[arg1].append(arg2)
+
+    #print(network)
     return network
 
 
@@ -27,13 +29,14 @@ def unfollow(network, arg1, arg2):
         so, this should result in removing arg2 from the followers list of arg1
         update the network dictionary and return it
     '''
-    if arg1 in netwok:
+    if arg1 in network:
         network[arg1].remove(arg2)
     return network
 
 def delete_person(network, arg1):
     '''
         2 arguments are passed to this function
+
         network is a dictionary representing the social network
         arg1 is a person in the network
         delete_person function is called when arg1 wants to exit from the network
@@ -43,11 +46,13 @@ def delete_person(network, arg1):
     '''
     
     for person in network:
-        if person in network[arg1]:
+        if arg1 in network[person]:
+            #print(person)
             network[person].remove(arg1)
-
+ 
     if arg1 in network:
-        del network[arg1]
+        network.pop(arg1)
+    
     return network
 
 
@@ -61,8 +66,8 @@ def main():
         line = input()
         output = line.split(" ")
         if output[0] == "follow":
-            string_1 = line.split(' ')
-            network = follow(network, string_1[1], string_1[2])
+            #string_1 = line.split(' ')
+            network = follow(network, output[1], output[2])
         elif output[0] == "unfollow":
             network = unfollow(network, output[1], output[2])
         elif output[0] == "delete":
