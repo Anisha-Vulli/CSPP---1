@@ -25,7 +25,7 @@ def is_straight(hand):
     #print(hand_values)
 
     for i in range(len(hand_values) - 1):
-        if (hand_values[i] - hand_values[i+1] != -1):
+        if hand_values[i] - hand_values[i+1] != -1:
             return False
 
     return True
@@ -52,10 +52,8 @@ def is_flush(hand):
     #         count_spade += 1
     #     else:
     #         count_club += 1
-            
     # if count_heart == 5 or count_diman == 5 or count_club == 5 or count_spade == 5:
     #     return True
-    
 
     values_set = set({})
 
