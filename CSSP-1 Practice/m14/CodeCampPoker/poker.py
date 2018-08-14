@@ -14,19 +14,7 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    card_numbers = '2,3,4,5,6,7,8,9,T,J,Q,K,A'
-    card_suits = 'S,H,C,D'
-
-    count = 0
-
-    for j in hand:
-        if hand[j][0] > sub_list[j+1][0]:
-            count += 1
-
-    if count == 5:
-        return True
-    else:
-        return False
+    
 
 
 
@@ -84,8 +72,8 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     pok_hand = dict(hand)
     pok_rank = True
-    if pok_rank == is_straight(hand):
-        return 3
+    '''if pok_rank == is_straight(hand):
+                    return 3'''
     elif pok_rank == is_flush(hand):
         return 2
     '''elif  pok_rank == is_straight_flush(hand):
