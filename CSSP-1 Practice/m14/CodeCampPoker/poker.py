@@ -18,7 +18,7 @@ def is_straight(hand):
     hand_values = []
 
     for i in hand:
-        hand_values.append(stng_values.index(i))
+        hand_values.append(stng_values.index[i[0]])
 
     hand_values.sort()
 
