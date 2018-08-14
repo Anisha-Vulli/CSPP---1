@@ -42,7 +42,7 @@ def is_flush(hand):
     count_heart = 0
     count_diman = 0
     count_spade = 0
-    count_club  = 0
+    count_club = 0
     for i in hand:
         if i[1] == 'H':
             count_heart += 1
@@ -55,8 +55,7 @@ def is_flush(hand):
             
     if count_heart == 5 or count_diman == 5 or count_club == 5 or count_spade == 5:
         return True
-    else:
-        return False
+    
 
     '''values_set = set({})
 
