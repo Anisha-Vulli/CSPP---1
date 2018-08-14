@@ -25,7 +25,7 @@ def is_straight(hand):
     #print(hand_values)
 
     for i in range(len(hand_values) - 1):
-        if hand_values[i] - hand_values[i+1] != -1:
+        if (hand_values[i] - hand_values[i+1] != -1):
             return False
 
     return True
@@ -92,10 +92,13 @@ def hand_rank(hand):
     # max in poker function uses these return values to select the best hand
     #pok_rank = True
     if is_straight(hand):
+        print("called")
         return 1
     if is_flush(hand):
+        print("called 2")
         return 2
     if is_straight(hand) and is_flush(hand):
+        print("called 3")
         return 3
     
     return 0
