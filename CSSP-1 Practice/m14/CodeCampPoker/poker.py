@@ -22,7 +22,7 @@ def is_straight(hand):
 
     hand_values.sort()
 
-    for i in hand_values:
+    for i in range(len(hand_values) - 1):
         if hand_values[i] - hand_values[i+1] == -1:
             return True
 
