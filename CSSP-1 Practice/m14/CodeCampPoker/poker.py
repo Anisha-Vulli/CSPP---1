@@ -74,7 +74,7 @@ def hand_rank(hand):
     pok_rank = True
     '''if pok_rank == is_straight(hand):
                     return 3'''
-    elif pok_rank == is_flush(hand):
+    if pok_rank == is_flush(hand):
         return 2
     '''elif  pok_rank == is_straight_flush(hand):
                     return 1'''
