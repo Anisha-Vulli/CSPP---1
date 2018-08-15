@@ -151,16 +151,12 @@ def is_three_pair(hand):
         return True
 
 def is_two_pair(hand):
-    set_values = set({})
-
-    for i in hand:
-        set_values.add(i[0])
-
-    for f in set_values:
-        if set_values.count(f) == 2
-            two_pairs.add(f)
-
-    return len(two_pairs) == 2
+    hand_values = [f for f,s in hand]
+    x = set(hand_values)
+    twopairs = [f for f in x if hand_values.count(f) == 2]
+    if len(twopairs) != 2:
+        return False
+    return True
 
 
 def is_one_pair(hand):
