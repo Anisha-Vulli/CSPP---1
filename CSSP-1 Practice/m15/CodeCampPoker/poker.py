@@ -195,7 +195,7 @@ def hand_rank(hand):
         hand_rank_value = 1
     else:
         hand_rank_value = 0
-    return rank
+    return hand_rank_value
 
 def poker(hands):
     '''
