@@ -22,7 +22,7 @@ def is_four_of_a_kind(hand):
     print(values)
     four_of_a_kind = [f for f in values if hand_values.count(f) == 2 ]
     
-    return len(four_of_a_kind == 4)
+    return len(four_of_a_kind) == 4
 
 
 def is_full_house(hand):
