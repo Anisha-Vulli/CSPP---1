@@ -40,7 +40,7 @@ def is_full_house(hand):
     are either 3 or 6.
 
     '''
-    stng_values = "--23456789TJQKA"
+    #stng_values = "--23456789TJQKA"
     hand_values = []
 
     for i in hand:
@@ -52,11 +52,10 @@ def is_full_house(hand):
     count = 1
 
     for i in hand_values:
-        if (i == 3) or (i == 6):
+        if i in (3,6):
             count += 1
 
     return count == 3
-    
 
 def is_straight(hand):
     '''
@@ -106,12 +105,12 @@ def is_flush(hand):
 
 def is_three_pair(hand):
     '''
-    This code is  to check if the given hand is 
-    four of a kind or not. 
+    This code is  to check if the given hand is
+    four of a kind or not.
 
-    Converted the hand into a list of indexes and calculated 
-    the difference between the consicutive numbers. 
-    If the difference is equal to three then we can say that it is 
+    Converted the hand into a list of indexes and calculated
+    the difference between the consicutive numbers.
+    If the difference is equal to three then we can say that it is
 
     '''
 
