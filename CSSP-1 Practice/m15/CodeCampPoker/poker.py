@@ -29,8 +29,8 @@ def is_four_of_a_kind(hand):
         if hand_values[i] - hand_values[i+1] == 0:
             count_diff += 1
 
-    if count_diff == 4:
-        return True
+    return count_diff == 4:
+        
 
 
 def is_full_house(hand):
@@ -81,8 +81,6 @@ def is_straight(hand):
         if hand_values[i] - hand_values[i+1] != -1:
             return False
 
-    return True
-
 def is_flush(hand):
     '''
         How do we find out if the given hand is a flush?
@@ -130,8 +128,8 @@ def is_three_pair(hand):
         if hand_values[i] - hand_values[i+1] == 0:
             count_diff += 1
 
-    if count_diff == 3:
-        return True
+    return count_diff == 3:
+        
 
 def is_two_pair(hand):
     ''' Sees if the hand is a two pair or not '''
@@ -164,8 +162,8 @@ def is_one_pair(hand):
         if hand_values[i] - hand_values[i+1] == 0:
             count_diff += 1
 
-    if count_diff == 2:
-        return True
+    return count_diff == 2:
+        
 
 def hand_rank(hand):
     '''
