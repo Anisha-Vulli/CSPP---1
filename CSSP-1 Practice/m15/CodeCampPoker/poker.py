@@ -14,15 +14,23 @@ def is_four_of_a_kind(hand):
     If the difference is equal to four then we can say that it is
 
     '''
-    hand_values = [f for f, s in hand]
+
+    stng_values = "--23456789TJQKA"
+    hand_values = []
+
+    for i in hand:
+        hand_values.append(stng_values.index(i[0]))
 
     hand_values.sort() #For the sorting the indexes in hand.
     #print(hand_values)
-    values = set(hand_values)
-    #print(values)
-    four_of_a_kind = [f for f in values if hand_values.count(f) == 2 ]
-    
-    return len(four_of_a_kind) == 4
+    count_diff = 1
+
+    for i in range(len(hand_values) - 1):
+        if hand_values[i] - hand_values[i+1] == 0:
+            count_diff += 1
+
+    if count_diff == 4:
+        return True
 
 
 def is_full_house(hand):
@@ -85,7 +93,6 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    
     values_set = set({})
 
     for i in hand:
