@@ -52,7 +52,7 @@ def is_full_house(hand):
     count = 1
 
     for i in hand_values:
-        if i in (3,6):
+        if i in (3, 6):
             count += 1
 
     return count == 3
@@ -134,21 +134,20 @@ def is_three_pair(hand):
         return True
 
 def is_two_pair(hand):
-    
+    ''' Sees if the hand is a two pair or not '''
     hand_values = [f for f, s in hand]
     values = set(hand_values)
     twopairs = [f for f in values if hand_values.count(f) == 2]
     return len(twopairs) == 2
-        
 
 def is_one_pair(hand):
     '''
-    This code is  to check if the given hand is 
-    four of a kind or not. 
+    This code is  to check if the given hand is
+    four of a kind or not.
 
-    Converted the hand into a list of indexes and calculated 
-    the difference between the consicutive numbers. 
-    If the difference is equal to three then we can say that it is 
+    Converted the hand into a list of indexes and calculated
+    the difference between the consicutive numbers.
+    If the difference is equal to three then we can say that it is
 
     '''
 
@@ -159,7 +158,6 @@ def is_one_pair(hand):
         hand_values.append(stng_values.index(i[0]))
 
     hand_values.sort() #For the sorting the indexes in hand.
-    #print(hand_values)
     count_diff = 1
 
     for i in range(len(hand_values) - 1):
@@ -169,8 +167,6 @@ def is_one_pair(hand):
     if count_diff == 2:
         return True
 
-
-
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -179,46 +175,27 @@ def hand_rank(hand):
         The first version should identify if the given hand is a straight
         or a flush or a straight flush.
     '''
+    hand_rank_value = 0
 
-    # By now you should have seen the way a card is represented.
-    # If you haven't then go the main or poker function and print the hands
-    # Each card is coded as a 2 character string. Example Kind of Hearts is KH
-    # First character for face value 2,3,4,5,6,7,8,9,T,J,Q,K,A
-    # Second character for the suit S (Spade), H (Heart), D (Diamond), C (Clubs)
-    # What would be the logic to determine if a hand is a straight or flush?
-    # Let's not think about the logic in the hand_rank function
-    # Instead break it down into two sub functions is_straight and is_flush
-
-    # check for straight, flush and straight flush
-    # best hand of these 3 would be a straight flush with the return value 3
-    # the second best would be a flush with the return value 2
-    # third would be a straight with the return value 1
-    # any other hand would be the fourth best with the return value 0
-    # max in poker function uses these return values to select the best hand
-    #pok_rank = True
     if is_straight(hand) and is_flush(hand):
-        #print("called 3")
-        return 8
-    if is_four_of_a_kind(hand):
-        #print("called 4")
-        return 7
-    if is_full_house(hand):
-        return 6
-    if is_flush(hand):
-        #print("called 2")
-        return 5
-    if is_straight(hand):
-        #print("called")
-        return 4
-    if is_three_pair(hand):
-        #print("called 5")
-        return 3
-    if is_two_pair(hand):
-        return 2
-    if is_one_pair(hand):
-        return 1
-    
-    return 0
+        hand_rank_value = 8
+    elif is_four_of_a_kind(hand):
+        hand_rank_value = 7
+    elif is_full_house(hand):
+        hand_rank_value = 6
+    elif is_flush(hand):
+        hand_rank_value = 5
+    elif is_straight(hand):
+        hand_rank_value = 4
+    elif is_three_pair(hand):
+        hand_rank_value = 3
+    elif is_two_pair(hand):
+        hand_rank_value = 2
+    elif is_one_pair(hand):
+        hand_rank_value = 1
+    else:
+        hand_rank_value = 0
+    return rank
 
 def poker(hands):
     '''
