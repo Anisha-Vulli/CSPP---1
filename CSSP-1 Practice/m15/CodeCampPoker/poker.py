@@ -55,7 +55,8 @@ def is_full_house(hand):
         if i in (3, 6):
             count += 1
 
-    return count == 3
+    if count == 3:
+        return True
 
 def is_straight(hand):
     '''
@@ -99,7 +100,8 @@ def is_flush(hand):
 
     #print(values_set)
 
-    return len(values_set) == 1
+    if len(values_set) == 1:
+        return True
 
 
 
@@ -138,7 +140,8 @@ def is_two_pair(hand):
     hand_values = [f for f, s in hand]
     values = set(hand_values)
     twopairs = [f for f in values if hand_values.count(f) == 2]
-    return len(twopairs) == 2
+    if len(twopairs) == 2:
+        return True
 
 def is_one_pair(hand):
     '''
