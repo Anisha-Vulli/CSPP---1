@@ -19,7 +19,7 @@ def is_four_of_a_kind(hand):
     hand_values.sort() #For the sorting the indexes in hand.
     #print(hand_values)
     values = set(hand_values)
-    print(values)
+    #print(values)
     four_of_a_kind = [f for f in values if hand_values.count(f) == 2 ]
     
     return len(four_of_a_kind) == 4
