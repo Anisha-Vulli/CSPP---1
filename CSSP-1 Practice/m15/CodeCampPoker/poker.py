@@ -4,6 +4,35 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 
+def is_four_of_a_kind(hand):
+    '''
+    This code is  to check if the given hand is
+    four of a kind or not.
+
+    Converted the hand into a list of indexes and calculated
+    the difference between the consicutive numbers.
+    If the difference is equal to four then we can say that it is
+
+    '''
+
+    stng_values = "--23456789TJQKA"
+    hand_values = []
+
+    for i in hand:
+        hand_values.append(stng_values.index(i[0]))
+
+    hand_values.sort() #For the sorting the indexes in hand.
+    #print(hand_values)
+    count_diff = 1
+
+    for i in range(len(hand_values) - 1):
+        if hand_values[i] - hand_values[i+1] == 0:
+            count_diff += 1
+
+    if count_diff == 4:
+        return True
+
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -64,33 +93,6 @@ def is_flush(hand):
 
     return len(values_set) == 1
 
-def is_four_of_a_kind(hand):
-    '''
-    This code is  to check if the given hand is
-    four of a kind or not.
-
-    Converted the hand into a list of indexes and calculated
-    the difference between the consicutive numbers.
-    If the difference is equal to four then we can say that it is
-
-    '''
-
-    stng_values = "--23456789TJQKA"
-    hand_values = []
-
-    for i in hand:
-        hand_values.append(stng_values.index(i[0]))
-
-    hand_values.sort() #For the sorting the indexes in hand.
-    #print(hand_values)
-    count_diff = 1
-
-    for i in range(len(hand_values) - 1):
-        if hand_values[i] - hand_values[i+1] == 0:
-            count_diff += 1
-
-    if count_diff == 4:
-        return True
 
 
 def is_three_pair(hand):
@@ -113,6 +115,8 @@ def is_three_pair(hand):
     hand_values.sort() #For the sorting the indexes in hand.
     #print(hand_values)
     count_diff = 1
+
+    #print(hand_values)
 
     for i in range(len(hand_values) - 1):
         if hand_values[i] - hand_values[i+1] == 0:
@@ -176,23 +180,25 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     #pok_rank = True
-    if is_one_pair(hand):
-         return 6
-    if is_three_pair(hand):
-        #print("called 5")
-        return 5
-    if is_four_of_a_kind(hand):
-        #print("called 4")
-        return 4
     if is_straight(hand) and is_flush(hand):
         #print("called 3")
-        return 3
+        return 6
+    if is_four_of_a_kind(hand):
+        #print("called 4")
+        return 5
     if is_flush(hand):
         #print("called 2")
-        return 2
+        return 4
     if is_straight(hand):
         #print("called")
-        return 1
+        return 3
+
+    if is_three_pair(hand):
+        #print("called 5")
+        return 2
+    if is_one_pair(hand):
+         return 1
+    
     return 0
 
 def poker(hands):
