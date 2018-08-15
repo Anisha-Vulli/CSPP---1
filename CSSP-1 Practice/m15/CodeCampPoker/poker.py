@@ -121,7 +121,7 @@ def is_three_pair(hand):
     if count_diff == 3:
         return True
 
-def is_two_pair(hand):
+def is_one_pair(hand):
     '''
     This code is  to check if the given hand is 
     four of a kind or not. 
@@ -176,8 +176,8 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     #pok_rank = True
-    if is_two_pair(hand):
-        return 6
+    if is_one_pair(hand):
+         return 6
     if is_three_pair(hand):
         #print("called 5")
         return 5
