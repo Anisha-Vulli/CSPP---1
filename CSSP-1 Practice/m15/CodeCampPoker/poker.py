@@ -150,6 +150,17 @@ def is_three_pair(hand):
     if count_diff == 3:
         return True
 
+def is_two_pair(hand):
+    set_values = set({})
+
+    for i in hand:
+        set_values.add(i[0])
+
+    two_pairs = [f for f in x if hand_values.count(f) == 2]
+
+    return len(two_pairs) == 2
+
+
 def is_one_pair(hand):
     '''
     This code is  to check if the given hand is 
@@ -207,23 +218,25 @@ def hand_rank(hand):
     #pok_rank = True
     if is_straight(hand) and is_flush(hand):
         #print("called 3")
-        return 7
+        return 8
     if is_four_of_a_kind(hand):
         #print("called 4")
-        return 6
+        return 7
     if is_full_house(hand):
-        return 5
+        return 6
     if is_flush(hand):
         #print("called 2")
-        return 4
+        return 5
     if is_straight(hand):
         #print("called")
-        return 3
+        return 4
     if is_three_pair(hand):
         #print("called 5")
+        return 3
+    if is_two_pair(hand):
         return 2
     if is_one_pair(hand):
-         return 1
+        return 1
     
     return 0
 
