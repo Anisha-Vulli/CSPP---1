@@ -29,7 +29,7 @@ def is_four_of_a_kind(hand):
         if hand_values[i] - hand_values[i+1] == 0:
             count_diff += 1
 
-    return count_diff == 4:
+    return count_diff == 4
         
 
 
@@ -128,7 +128,7 @@ def is_three_pair(hand):
         if hand_values[i] - hand_values[i+1] == 0:
             count_diff += 1
 
-    return count_diff == 3:
+    return count_diff == 3
         
 
 def is_two_pair(hand):
@@ -162,7 +162,7 @@ def is_one_pair(hand):
         if hand_values[i] - hand_values[i+1] == 0:
             count_diff += 1
 
-    return count_diff == 2:
+    return count_diff == 2
         
 
 def hand_rank(hand):
