@@ -156,7 +156,7 @@ def is_two_pair(hand):
     for i in hand:
         set_values.add(i[0])
 
-    for f in x:
+    for f in set_values:
         if set_values.count(f) == 2
             two_pairs.add(f)
 
