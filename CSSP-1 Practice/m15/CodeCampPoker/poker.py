@@ -66,12 +66,12 @@ def is_flush(hand):
 
 def is_four_of_a_kind(hand):
     '''
-    This code is  to check if the given hand is 
-    four of a kind or not. 
+    This code is  to check if the given hand is
+    four of a kind or not.
 
-    Converted the hand into a list of indexes and calculated 
-    the difference between the consicutive numbers. 
-    If the difference is equal to four then we can say that it is 
+    Converted the hand into a list of indexes and calculated
+    the difference between the consicutive numbers.
+    If the difference is equal to four then we can say that it is
 
     '''
 
@@ -121,6 +121,35 @@ def is_three_pair(hand):
     if count_diff == 3:
         return True
 
+def is_two_pair(hand):
+    '''
+    This code is  to check if the given hand is 
+    four of a kind or not. 
+
+    Converted the hand into a list of indexes and calculated 
+    the difference between the consicutive numbers. 
+    If the difference is equal to three then we can say that it is 
+
+    '''
+
+    stng_values = "--23456789TJQKA"
+    hand_values = []
+
+    for i in hand:
+        hand_values.append(stng_values.index(i[0]))
+
+    hand_values.sort() #For the sorting the indexes in hand.
+    #print(hand_values)
+    count_diff = 1
+
+    for i in range(len(hand_values) - 1):
+        if hand_values[i] - hand_values[i+1] == 0:
+            count_diff += 1
+
+    if count_diff == 2:
+        return True
+
+
 
 def hand_rank(hand):
     '''
@@ -147,9 +176,13 @@ def hand_rank(hand):
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
     #pok_rank = True
+    if is_two_pair(hand):
+        return 6
     if is_three_pair(hand):
+        #print("called 5")
         return 5
     if is_four_of_a_kind(hand):
+        #print("called 4")
         return 4
     if is_straight(hand) and is_flush(hand):
         #print("called 3")
