@@ -33,6 +33,31 @@ def is_four_of_a_kind(hand):
         return True
 
 
+def is_full_house(hand):
+    ''' 
+
+    The hand is said to be inn full house if the three cards
+    are either 3 or 6.
+
+    '''
+    stng_values = "--23456789TJQKA"
+    hand_values = []
+
+    for i in hand:
+        hand_values.append(i[0])
+
+    hand_values.sort()
+    #print(hand_values)
+
+    count = 1
+
+    for i in hand_values:
+        if (i == 3) or (i == 6):
+            count += 1
+
+    return count == 3
+    
+
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -182,9 +207,11 @@ def hand_rank(hand):
     #pok_rank = True
     if is_straight(hand) and is_flush(hand):
         #print("called 3")
-        return 6
+        return 7
     if is_four_of_a_kind(hand):
         #print("called 4")
+        return 6
+    if is_full_house(hand):
         return 5
     if is_flush(hand):
         #print("called 2")
@@ -192,7 +219,6 @@ def hand_rank(hand):
     if is_straight(hand):
         #print("called")
         return 3
-
     if is_three_pair(hand):
         #print("called 5")
         return 2
