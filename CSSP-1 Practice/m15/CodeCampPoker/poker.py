@@ -14,27 +14,19 @@ def is_four_of_a_kind(hand):
     If the difference is equal to four then we can say that it is
 
     '''
-
-    stng_values = "--23456789TJQKA"
-    hand_values = []
-
-    for i in hand:
-        hand_values.append(stng_values.index(i[0]))
+    hand_values = [f for f, s in hand]
 
     hand_values.sort() #For the sorting the indexes in hand.
     #print(hand_values)
-    count_diff = 1
-
-    for i in range(len(hand_values) - 1):
-        if hand_values[i] - hand_values[i+1] == 0:
-            count_diff += 1
-
-    if count_diff == 4:
-        return True
+    values = set(hand_values)
+    print(values)
+    four_of_a_kind = [f for f in values if hand_values.count(f) == 2 ]
+    
+    return len(four_of_a_kind == 4)
 
 
 def is_full_house(hand):
-    ''' 
+    '''
 
     The hand is said to be inn full house if the three cards
     are either 3 or 6.
@@ -93,22 +85,7 @@ def is_flush(hand):
         Think of an algorithm: given the card suite how to check if it is a flush
         Write the code for it and return True if it is a flush else return False
     '''
-    # count_heart = 0
-    # count_diman = 0
-    # count_spade = 0
-    # count_club = 0
-    # for i in hand:
-    #     if i[1] == 'H':
-    #         count_heart += 1
-    #     elif i[1] == 'D':
-    #         count_diman += 1
-    #     elif i[1] == 'S':
-    #         count_spade += 1
-    #     else:
-    #         count_club += 1
-    # if count_heart == 5 or count_diman == 5 or count_club == 5 or count_spade == 5:
-    #     return True
-
+    
     values_set = set({})
 
     for i in hand:
@@ -151,6 +128,7 @@ def is_three_pair(hand):
         return True
 
 def is_two_pair(hand):
+    
     hand_values = [f for f, s in hand]
     values = set(hand_values)
     twopairs = [f for f in values if hand_values.count(f) == 2]
