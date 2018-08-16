@@ -44,7 +44,7 @@ def create_social_network(data_in):
                 a_dict[list_1[0]] = list_1[1]
             else:
                 list_1[1] = list_1[1].split(',')
-                print(list_1)
+                #print(list_1)
                 a_dict[list_1[0]] = list_1[1]
         else:
             return a_dict
