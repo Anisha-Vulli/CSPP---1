@@ -16,7 +16,7 @@ def is_flush(hand):
 def which_kind(ranks,n):
     ''' Returning the rank and checking of the repetition and sending the rank''' 
     for i in rank:
-        if rank.count(i) == n
+        if rank.count(i) == n:
         return i
 def is_two_pair(ranks):
     '''Checking if two pair or not '''
