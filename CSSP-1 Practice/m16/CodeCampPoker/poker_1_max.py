@@ -1,6 +1,6 @@
 def hand_values(hand):
     ''' Returns the hand values based on the index '''
-    return sorted((["--23456789JQKA".index(f) for f,s in hand]), reverse = True)
+    return sorted((["--23456789TJQKA".index(f) for f,s in hand]), reverse = True)
 
 def is_straight(ranks):
     ''' Check if straight or not ''' 
@@ -35,9 +35,9 @@ def hand_rank(hand):
         return 7, which_kind(rank, 4), rank
     if which_kind(rank, 3) and which_kind(rank, 2):#Full house
         return 6, which_kind(rank, 3), which_kind(rank, 2), rank
-    if is_flush(hand):#Flush
+    if is_flush(rank):#Flush
         return 5, rank
-    if is_straight(hand):#Straight
+    if is_straight(rank):#Straight
         return 4, rank
     if which_kind(rank, 3):# Three of a kind
         return 3, which_kind(rank, 3), rank
