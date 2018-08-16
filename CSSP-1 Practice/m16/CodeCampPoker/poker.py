@@ -36,9 +36,7 @@ def is_four_of_a_kind(hand):
     values = set(hand_values)
     four_of_a_kind = [f for f in values if hand_values.count(f) == 4]
     #print(four_of_a_kind)
-    if len(four_of_a_kind) == 1:
-        return True
-
+    return len(four_of_a_kind) == 1
 
 def is_full_house(hand):
     '''
@@ -62,8 +60,7 @@ def is_full_house(hand):
         if i in (3, 6):
             count += 1
 
-    if count == 3:
-        return True
+    return count == 3
 
 def is_straight(hand):
     '''
@@ -107,11 +104,8 @@ def is_flush(hand):
 
     #print(values_set)
 
-    if len(values_set) == 1:
-        return True
-
-
-
+    return len(values_set) == 1
+        
 def is_three_pair(hand):
     '''
     This code is  to check if the given hand is
@@ -145,8 +139,8 @@ def is_three_pair(hand):
     values = set(hand_values)
     three_pairs = [f for f in values if hand_values.count(f) == 3]
     #print(three_pairs)
-    if len(three_pairs) == 1:
-        return True
+    return len(three_pairs) == 1
+        
 
 
 def is_two_pair(hand):
@@ -155,8 +149,8 @@ def is_two_pair(hand):
     values = set(hand_values)
     twopairs = [f for f in values if hand_values.count(f) == 2]
     #print(twopairs)
-    if len(twopairs) == 2:
-        return True
+    return len(twopairs) == 2
+        
 
 def is_one_pair(hand):
     '''
@@ -189,8 +183,8 @@ def is_one_pair(hand):
     values = set(hand_values)
     one_pair = [f for f in values if hand_values.count(f) == 1]
     #print(twopairs)
-    if len(one_pair) == 1:
-        return True
+    return len(one_pair) == 1
+        
 
 def hand_rank(hand):
     '''
@@ -203,20 +197,22 @@ def hand_rank(hand):
     hand_rank_value = 0
 
     if is_straight(hand) and is_flush(hand):
-        hand_rank_value = 8
+        hand_rank_value = 9
     elif is_four_of_a_kind(hand):
-        hand_rank_value = 7
+        hand_rank_value = 8
     elif is_full_house(hand):
-        hand_rank_value = 6
+        hand_rank_value = 7
     elif is_flush(hand):
-        hand_rank_value = 5
+        hand_rank_value = 6
     elif is_straight(hand):
-        hand_rank_value = 4
+        hand_rank_value = 5
     elif is_three_pair(hand):
-        hand_rank_value = 3
+        hand_rank_value = 4
     elif is_two_pair(hand):
-        hand_rank_value = 2
+        hand_rank_value = 3
     elif is_one_pair(hand):
+        hand_rank_value = 2
+    elif is_high_card(hand):
         hand_rank_value = 1
     else:
         hand_rank_value = 0
