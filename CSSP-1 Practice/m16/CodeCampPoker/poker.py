@@ -187,7 +187,7 @@ def is_one_pair(hand):
 
     hand_values = [f for f, s in hand]
     values = set(hand_values)
-    one_pairs = [f for f in values if hand_values.count(f) == 1]
+    one_pair = [f for f in values if hand_values.count(f) == 1]
     #print(twopairs)
     if len(one_pair) == 1:
         return True
