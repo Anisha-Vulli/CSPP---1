@@ -15,21 +15,28 @@ def is_four_of_a_kind(hand):
 
     '''
 
-    stng_values = "--23456789TJQKA"
-    hand_values = []
+    # stng_values = "--23456789TJQKA"
+    # hand_values = []
 
-    for i in hand:
-        hand_values.append(stng_values.index(i[0]))
+    # for i in hand:
+    #     hand_values.append(stng_values.index(i[0]))
 
-    hand_values.sort() #For the sorting the indexes in hand.
-    #print(hand_values)
-    count_diff = 1
+    # hand_values.sort() #For the sorting the indexes in hand.
+    # #print(hand_values)
+    # count_diff = 1
 
-    for i in range(len(hand_values) - 1):
-        if hand_values[i] - hand_values[i+1] == 0:
-            count_diff += 1
+    # for i in range(len(hand_values) - 1):
+    #     if hand_values[i] - hand_values[i+1] == 0:
+    #         count_diff += 1
 
-    if count_diff == 4:
+    # if count_diff == 4:
+    #     return True
+
+    hand_values = [f for f, s in hand]
+    values = set(hand_values)
+    four_of_a_kind = [f for f in values if hand_values.count(f) == 4]
+    print(four_of_a_kind)
+    if len(four_of_a_kind) == 1:
         return True
 
 
@@ -116,30 +123,38 @@ def is_three_pair(hand):
 
     '''
 
-    stng_values = "--23456789TJQKA"
-    hand_values = []
+    # stng_values = "--23456789TJQKA"
+    # hand_values = []
 
-    for i in hand:
-        hand_values.append(stng_values.index(i[0]))
+    # for i in hand:
+    #     hand_values.append(stng_values.index(i[0]))
 
-    hand_values.sort() #For the sorting the indexes in hand.
-    #print(hand_values)
-    count_diff = 1
+    # hand_values.sort() #For the sorting the indexes in hand.
+    # #print(hand_values)
+    # count_diff = 1
 
-    #print(hand_values)
+    # #print(hand_values)
 
-    for i in range(len(hand_values) - 1):
-        if hand_values[i] - hand_values[i+1] == 0:
-            count_diff += 1
+    # for i in range(len(hand_values) - 1):
+    #     if hand_values[i] - hand_values[i+1] == 0:
+    #         count_diff += 1
 
-    if count_diff == 3:
+    # if count_diff == 3:
+    #     return True
+    hand_values = [f for f, s in hand]
+    values = set(hand_values)
+    three_pairs = [f for f in values if hand_values.count(f) == 3]
+    #print(three_pairs)
+    if len(three_pairs) == 1:
         return True
+
 
 def is_two_pair(hand):
     ''' Sees if the hand is a two pair or not '''
     hand_values = [f for f, s in hand]
     values = set(hand_values)
     twopairs = [f for f in values if hand_values.count(f) == 2]
+    #print(twopairs)
     if len(twopairs) == 2:
         return True
 
