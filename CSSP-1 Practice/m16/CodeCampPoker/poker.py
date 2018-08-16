@@ -181,9 +181,21 @@ def is_one_pair(hand):
     hand_values = [f for f, s in hand]
     values = set(hand_values)
     one_pair = [f for f in values if hand_values.count(f) == 1]
-    #print(twopairs)
+    #print(one_pair)
     return len(one_pair) == 1
 
+def is_high_card(hand):
+    stng_values = "--23456789TJQKA"
+    hand_values = []
+
+    for i in hand:
+        hand_values.append(stng_values.index(i[0]))
+    # hand_values = [f for f, s in hand]
+    # values = set(hand_values)
+    #print(values)
+    max_value = max(hand_values)
+    if max_value == 14:
+        return True
 
 def hand_rank(hand):
     '''
@@ -211,8 +223,8 @@ def hand_rank(hand):
         hand_rank_value = 3
     elif is_one_pair(hand):
         hand_rank_value = 2
-    # elif is_high_card(hand):
-    #     hand_rank_value = 1
+    elif is_high_card(hand):
+        hand_rank_value = 1
     else:
         hand_rank_value = 0
     return hand_rank_value
