@@ -43,7 +43,7 @@ def hand_rank(hand):
         return 3, which_kind(rank, 3), rank
     if is_two_pair(rank): #Two pair
         return 2, is_two_pair(rank)
-    if which_kind(rank, 1): #One pair
+    if which_kind(rank, 2): #One pair
         return 1, which_kind(rank, 2), rank
   
     return 0, rank
