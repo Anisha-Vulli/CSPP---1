@@ -30,7 +30,7 @@ def hand_rank(hand):
     ''' Function to call all the functions '''
     rank = hand_values(hand)
 
-    if is_straight(hand) and is_flush(hand):#Straightflush
+    if is_straight(rank) and is_flush(hand):#Straightflush
         return 8, rank
     if which_kind(rank,4):#Four of a kind
         return 7, which_kind(rank, 4), rank
