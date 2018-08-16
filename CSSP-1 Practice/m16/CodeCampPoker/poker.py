@@ -105,7 +105,7 @@ def is_flush(hand):
     #print(values_set)
 
     return len(values_set) == 1
-        
+
 def is_three_pair(hand):
     '''
     This code is  to check if the given hand is
@@ -140,7 +140,7 @@ def is_three_pair(hand):
     three_pairs = [f for f in values if hand_values.count(f) == 3]
     #print(three_pairs)
     return len(three_pairs) == 1
-        
+
 
 
 def is_two_pair(hand):
@@ -150,7 +150,6 @@ def is_two_pair(hand):
     twopairs = [f for f in values if hand_values.count(f) == 2]
     #print(twopairs)
     return len(twopairs) == 2
-        
 
 def is_one_pair(hand):
     '''
@@ -184,7 +183,7 @@ def is_one_pair(hand):
     one_pair = [f for f in values if hand_values.count(f) == 1]
     #print(twopairs)
     return len(one_pair) == 1
-        
+
 
 def hand_rank(hand):
     '''
