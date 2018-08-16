@@ -175,7 +175,7 @@ def is_high_card(hand):
 
     max_value = max(hand_values)
     list_1.append(max_value)
-    return max(max(list_1),hand)
+    #return max(max(list_1),hand)
 
 def hand_rank(hand):
     '''
