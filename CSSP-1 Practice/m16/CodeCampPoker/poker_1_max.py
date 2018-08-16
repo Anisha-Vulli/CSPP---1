@@ -10,6 +10,7 @@ def is_flush(hand):
     ''' Check if it is flush '''
     values_set = []
     for i in hand:
+        print(i)
         values_set.append(i[1])
     return len(set(values_set)) == 1
 
