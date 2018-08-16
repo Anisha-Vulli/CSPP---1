@@ -20,8 +20,8 @@ def which_kind(ranks,n):
            return i
 def is_two_pair(ranks):
     '''Checking if two pair or not '''
-    high_val = which_kind(ranks,2)
-    low_val = sorted(which_kind(ranks, 2))
+    high_val = which_kind(ranks, 2)
+    low_val = which_kind(sorted(ranks), 2))
     if high_val != low_val:
         return high_val, low_val, ranks
 
