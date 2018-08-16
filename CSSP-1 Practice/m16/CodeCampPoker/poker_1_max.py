@@ -32,7 +32,7 @@ def hand_rank(hand):
 
     if is_straight(rank) and is_flush(hand):#Straightflush
         return 8, rank
-    if which_kind(rank,4):#Four of a kind
+    if which_kind(rank, 4):#Four of a kind
         return 7, which_kind(rank, 4), rank
     if which_kind(rank, 3) and which_kind(rank, 2):#Full house
         return 6, which_kind(rank, 3), which_kind(rank, 2), rank
