@@ -5,7 +5,7 @@ def hand_values(hand):
 def is_straight(ranks):
     ''' Check if straight or not ''' 
     #print(ranks)
-    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14 ) 
+    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14) 
 
 def is_flush(hand):
     ''' Check if it is flush '''
@@ -14,7 +14,7 @@ def is_flush(hand):
         values_set.append(i[1])
     return len(set(values_set)) == 1
 
-def which_kind(ranks,n):
+def which_kind(ranks, val_num):
     ''' Returning the rank and checking of the repetition and sending the rank''' 
     for i in ranks:
         if ranks.count(i) == n:
@@ -59,7 +59,6 @@ if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
     # iterate through the test cases to set up hands list
-    list_1 = []
     HANDS = []
     for x in range(COUNT):
         line = input()
