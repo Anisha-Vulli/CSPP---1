@@ -10,7 +10,6 @@ def is_flush(hand):
     ''' Check if it is flush '''
     values_set = []
     for i in hand:
-        print(i)
         values_set.append(i[1])
     return len(set(values_set)) == 1
 
@@ -36,7 +35,7 @@ def hand_rank(hand):
         return 7, which_kind(rank, 4), rank
     if which_kind(rank, 3) and which_kind(rank, 2):#Full house
         return 6, which_kind(rank, 3), which_kind(rank, 2), rank
-    if is_flush(rank):#Flush
+    if is_flush(hand):#Flush
         return 5, rank
     if is_straight(rank):#Straight
         return 4, rank
