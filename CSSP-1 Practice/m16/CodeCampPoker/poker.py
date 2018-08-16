@@ -35,7 +35,7 @@ def is_four_of_a_kind(hand):
     hand_values = [f for f, s in hand]
     values = set(hand_values)
     four_of_a_kind = [f for f in values if hand_values.count(f) == 4]
-    print(four_of_a_kind)
+    #print(four_of_a_kind)
     if len(four_of_a_kind) == 1:
         return True
 
