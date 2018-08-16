@@ -212,8 +212,8 @@ def hand_rank(hand):
         hand_rank_value = 3
     elif is_one_pair(hand):
         hand_rank_value = 2
-    elif is_high_card(hand):
-        hand_rank_value = 1
+    # elif is_high_card(hand):
+    #     hand_rank_value = 1
     else:
         hand_rank_value = 0
     return hand_rank_value
