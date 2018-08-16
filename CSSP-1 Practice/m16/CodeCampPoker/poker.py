@@ -154,29 +154,7 @@ def is_two_pair(hand):
 def is_one_pair(hand):
     '''
     This code is  to check if the given hand is
-    four of a kind or not.
-
-    Converted the hand into a list of indexes and calculated
-    the difference between the consicutive numbers.
-    If the difference is equal to three then we can say that it is
-
-    '''
-
-    # stng_values = "--23456789TJQKA"
-    # hand_values = []
-
-    # for i in hand:
-    #     hand_values.append(stng_values.index(i[0]))
-
-    # hand_values.sort() #For the sorting the indexes in hand.
-    # count_diff = 1
-
-    # for i in range(len(hand_values) - 1):
-    #     if hand_values[i] - hand_values[i+1] == 0:
-    #         count_diff += 1
-
-    # if count_diff == 2:
-    #     return True
+    one pair or not.'''
 
     hand_values = [f for f, s in hand]
     values = set(hand_values)
@@ -194,8 +172,10 @@ def is_high_card(hand):
     # hand_values = [f for f, s in hand]
     # values = set(hand_values)
     #print(values)
+
     max_value = max(hand_values)
-    return max_value == 14
+    list_1.append(max_value)
+    return max(max(list_1),hand)
 
 def hand_rank(hand):
     '''
@@ -253,6 +233,7 @@ if __name__ == "__main__":
     # read the number of test cases
     COUNT = int(input())
     # iterate through the test cases to set up hands list
+    list_1 = []
     HANDS = []
     for x in range(COUNT):
         line = input()
