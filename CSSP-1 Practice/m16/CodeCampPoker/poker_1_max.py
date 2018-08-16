@@ -8,7 +8,7 @@ def is_straight(ranks):
 
 def is_flush(hand):
     ''' Check if it is flush '''
-    values_set = set({})
+    values_set = set()
     for i in hand:
         values_set.add(i[1])
     return len(values_set) == 1
@@ -20,8 +20,8 @@ def which_kind(ranks,n):
            return i
 def is_two_pair(ranks):
     '''Checking if two pair or not '''
-    high_val = kind(rank,2)
-    low_val = sorted(kind(rank, 2))
+    high_val = kind(ranks,2)
+    low_val = sorted(kind(ranks, 2))
     if high_val != low_val:
         return high_val, low_val, ranks
 
