@@ -8,10 +8,10 @@ def is_straight(ranks):
 
 def is_flush(hand):
     ''' Check if it is flush '''
-    values_set = set()
+    values_set = []
     for i in hand:
-        values_set.add(i[1])
-    return len(values_set) == 1
+        values_set.append(i[1])
+    return len(set(values_set)) == 1
 
 def which_kind(ranks,n):
     ''' Returning the rank and checking of the repetition and sending the rank''' 
