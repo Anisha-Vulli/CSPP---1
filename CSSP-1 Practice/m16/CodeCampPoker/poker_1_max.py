@@ -5,7 +5,8 @@ def hand_values(hand):
 def is_straight(ranks):
     ''' Check if straight or not '''
     #print(ranks)
-    return (max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14)
+    return ((max(ranks) - min(ranks) == 4 and len(set(ranks)) == 5) or 
+        (ranks[1:5] == [5, 4, 3, 2] and ranks[0] == 14))
 
 def is_flush(hand):
     ''' Check if it is flush '''
@@ -15,10 +16,10 @@ def is_flush(hand):
     return len(set(values_set)) == 1
 
 def which_kind(ranks, val_num):
-    ''' Returning the rank and checking of the repetition and sending the rank''' 
+    ''' Returning the rank and checking of the repetition and sending the rank'''
     for i in ranks:
         if ranks.count(i) == val_num:
-           return i
+            return i
 def is_two_pair(ranks):
     '''Checking if two pair or not '''
     high_val = which_kind(ranks, 2)
@@ -46,7 +47,6 @@ def hand_rank(hand):
         return 2, is_two_pair(rank)
     if which_kind(rank, 2): #One pair
         return 1, which_kind(rank, 2), rank
-  
     return 0, rank
 
 def poker(hands):
