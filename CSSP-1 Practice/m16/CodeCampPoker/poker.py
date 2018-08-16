@@ -169,20 +169,27 @@ def is_one_pair(hand):
 
     '''
 
-    stng_values = "--23456789TJQKA"
-    hand_values = []
+    # stng_values = "--23456789TJQKA"
+    # hand_values = []
 
-    for i in hand:
-        hand_values.append(stng_values.index(i[0]))
+    # for i in hand:
+    #     hand_values.append(stng_values.index(i[0]))
 
-    hand_values.sort() #For the sorting the indexes in hand.
-    count_diff = 1
+    # hand_values.sort() #For the sorting the indexes in hand.
+    # count_diff = 1
 
-    for i in range(len(hand_values) - 1):
-        if hand_values[i] - hand_values[i+1] == 0:
-            count_diff += 1
+    # for i in range(len(hand_values) - 1):
+    #     if hand_values[i] - hand_values[i+1] == 0:
+    #         count_diff += 1
 
-    if count_diff == 2:
+    # if count_diff == 2:
+    #     return True
+
+    hand_values = [f for f, s in hand]
+    values = set(hand_values)
+    twopairs = [f for f in values if hand_values.count(f) == 1]
+    #print(twopairs)
+    if len(twopairs) == 1:
         return True
 
 def hand_rank(hand):
