@@ -185,6 +185,7 @@ def is_one_pair(hand):
     return len(one_pair) == 1
 
 def is_high_card(hand):
+    ''' Function to return high card '''
     stng_values = "--23456789TJQKA"
     hand_values = []
 
@@ -194,8 +195,7 @@ def is_high_card(hand):
     # values = set(hand_values)
     #print(values)
     max_value = max(hand_values)
-    if max_value == 14:
-        return True
+    return max_value == 14
 
 def hand_rank(hand):
     '''
