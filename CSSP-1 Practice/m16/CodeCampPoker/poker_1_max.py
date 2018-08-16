@@ -1,6 +1,12 @@
+'''
+
+Author: Anisha Vulli
+Date : 16 Aug 2018
+
+'''
 def hand_values(hand):
     ''' Returns the hand values based on the index '''
-    return sorted((["--23456789TJQKA".index(f) for f, s in hand]), reverse = True)
+    return sorted((["--23456789TJQKA".index(f) for f, s in hand]), reverse=True)
 
 def is_straight(ranks):
     ''' Check if straight or not '''
