@@ -75,8 +75,6 @@ def freq_count(list_1, list_2):
             freq_count_dict_2[k] = 1
         else:
             freq_count_dict_2[k] += 1
-    print(freq_count_dict_1)
-    print(freq_count_dict_2)
     
     for i in freq_count_dict_1:
         if i in freq_count_dict_2:
