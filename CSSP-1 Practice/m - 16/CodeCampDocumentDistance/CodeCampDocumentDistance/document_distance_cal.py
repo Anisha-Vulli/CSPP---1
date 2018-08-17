@@ -11,7 +11,7 @@ def similarity(dict1, dict2, dict3):
     #a = len(dict1)
     num_val = 0
     for i in dict1:
-        num_val = dict1[i][0] * dict1[i][1]
+        num_val += dict1[i][0] * dict1[i][1]
     #print(num)
     for j in dict2:
         a_1 = dict2[j] ** 2
