@@ -87,7 +87,7 @@ def freq_count(list_1, list_2):
 
     #print(sum_val)
     #print(sum_val_1)
-    print(common_dict)
+    #print(common_dict)
     #print(freq_count_dict_1)
     # print(freq_count_dict_2)
 
