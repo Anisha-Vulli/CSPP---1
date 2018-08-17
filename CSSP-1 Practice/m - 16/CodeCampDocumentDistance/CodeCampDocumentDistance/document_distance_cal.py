@@ -51,16 +51,29 @@ def word_list(input1, input2):
 
     list_1 = stng_1.split(" ")
     list_2 = stng_2.split(" ")
+    word_list = list_1[:]
+    
+    for i in word_list:
+        if i in key_list:
+            list_1.remove(i)
 
-    for i in key_list:
-        for j in list_1:
-            if i == j:
-                list_1.remove(j)
+    word_list = list_2[:]
+    
+    for i in word_list:
+        if i in key_list:
+            list_2.remove(i)
 
-    for i in key_list:
-        for j in list_2:
-            if i == j:
-                list_2.remove(j)
+
+
+    # for i in key_list:
+    #     for j in list_1:
+    #         if i == j:
+    #             list_1.remove(j)
+
+    # for i in key_list:
+    #     for j in list_2:
+    #         if i == j:
+    #             list_2.remove(j)
     
     return freq_count(list_1, list_2)
 
