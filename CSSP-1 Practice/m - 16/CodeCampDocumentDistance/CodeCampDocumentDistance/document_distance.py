@@ -60,29 +60,37 @@ def word_list(input1, input2):
 def freq_count(list_1, list_2):
     freq_count_dict_1 = {}
     freq_count_dict_2 = {}
+    common_dict = {}
     sum_val = 0
     sum_val_1 = 0
 
     for k in list_1:
         if k not in freq_count_dict_1:
-            freq_count_dict_1[k] = 0
+            freq_count_dict_1[k] = 1
         else:
             freq_count_dict_1[k] += 1
 
     for k in list_2:
         if k not in freq_count_dict_2:
-            freq_count_dict_2[k] = 0
+            freq_count_dict_2[k] = 1
         else:
             freq_count_dict_2[k] += 1
+    print(freq_count_dict_1)
+    print(freq_count_dict_2)
     
-    for i in freq_count_dict_1.values():
-        sum_val = sum_val + i
+    for i in freq_count_dict_1:
+        if i in freq_count_dict_2:
+            common_dict[i] = [freq_count_dict_1[i], freq_count_dict_2[i]]
+        else:
+            common_dict[i] = [freq_count_dict_1[i],0]
+            
+    for p in common_dict:
+        if p not in common_dict:
+            common_dict[p] = [0,freq_count_dict_2[p]]
 
-    for j in freq_count_dict_2.values():
-        sum_val_1 = sum_val_1 + j
-
-    print(sum_val)
-    print(sum_val_1)
+    #print(sum_val)
+    #print(sum_val_1)
+    print(common_dict)
     #print(freq_count_dict_1)
     # print(freq_count_dict_2)
 
