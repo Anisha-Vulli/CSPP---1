@@ -2,6 +2,7 @@
     Document Distance - A detailed description is given in the PDF
 '''
 import re
+import math
 
 def similarity(dict1):
     '''
@@ -17,7 +18,7 @@ def similarity(dict1):
     for k in dict1:
         b = dict1[k][1] ** 2
 
-    distance = (num) / sqrt(a*b)
+    distance = (num) / math.sqrt(a*b)
     return distance
 def load_stopwords(filename):
     '''
