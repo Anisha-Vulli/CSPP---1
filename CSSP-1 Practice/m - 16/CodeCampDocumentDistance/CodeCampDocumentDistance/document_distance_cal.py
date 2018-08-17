@@ -16,11 +16,13 @@ def similarity(dict1, dict2, dict3):
     distance = 0
     for i in dict1:
         num_val += dict1[i][0] * dict1[i][1]
+        a_1 += dict1[i][0] ** 2
+        b_1 += dict1[i][1] ** 2
     #print(num)
-    for j in dict2:
-        a_1 += dict2[j] ** 2
-    for k in dict3:
-        b_1 += dict3[k] ** 2
+    # for j in dict2:
+    #     a_1 += dict1[] ** 2
+    # for k in dict3:
+    #     b_1 += dict3[k] ** 2
 
     distance = (num_val) / (math.sqrt(a_1) * math.sqrt(b_1))
     return distance
