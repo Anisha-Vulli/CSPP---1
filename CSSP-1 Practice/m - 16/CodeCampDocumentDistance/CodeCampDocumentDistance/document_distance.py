@@ -42,8 +42,8 @@ def word_list(input1, input2):
     key_list = []
     stng_1 = ""
     stng_2 = ""
-    stng_1 = re.sub('[^ a-zA-Z0-9]','',input1.lower())
-    stng_2 = re.sub('[^ a-zA-Z0-9]','',input2.lower())
+    stng_1 = re.sub('[^ a-zA-Z0-9]', '', input1.lower())
+    stng_2 = re.sub('[^ a-zA-Z0-9]', '', input2.lower())
     stopwords = load_stopwords("stopwords.txt")
     key_list = stopwords.keys()
     #print(key_list)
@@ -113,7 +113,7 @@ def main():
     input1 = input()
     input2 = input()
     (common_dict_1,dict_1,dict_2)= word_list(input1, input2)
-    print(similarity(common_dict_1,dict_1,dict_2))
+    print(similarity(common_dict_1, dict_1, dict_2))
 
 if __name__ == '__main__':
     main()
