@@ -47,13 +47,14 @@ def word_list(input1, input2):
     stng_2 = ""
     stng_1 = re.sub('[^ a-z]', '', input1.lower())
     stng_2 = re.sub('[^ a-z]', '', input2.lower())
+    print(stng_1,stng_2)
     stopwords = load_stopwords("stopwords.txt")
     key_list = list(stopwords.keys())
     #print(key_list)
 
     list_1 = stng_1.split(" ")
     list_2 = stng_2.split(" ")
-    print(list_1,list_2)
+    #print(list_1,list_2)
     word_list = list_1[:]
     
     for i in word_list:
