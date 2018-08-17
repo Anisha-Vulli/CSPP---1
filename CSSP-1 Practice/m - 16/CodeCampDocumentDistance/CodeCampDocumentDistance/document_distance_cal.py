@@ -101,9 +101,10 @@ def freq_count(list_1, list_2):
         else:
             common_dict[i] = [freq_count_dict_1[i], 0]
 
-    for p_1 in common_dict:
+    for p_1 in freq_count_dict_2:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_count_dict_2[p_1]]
+    
     d_1 = copy.deepcopy(common_dict)
     for h_1 in d_1:
         if len(h_1) == 0:
