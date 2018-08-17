@@ -46,7 +46,7 @@ def word_list(input1, input2):
     stng_1 = re.sub('[^ a-zA-Z0-9]', '', input1.lower())
     stng_2 = re.sub('[^ a-zA-Z0-9]', '', input2.lower())
     stopwords = load_stopwords("stopwords.txt")
-    key_list = stopwords.keys()
+    key_list = list(stopwords.keys())
     #print(key_list)
 
     list_1 = stng_1.split(" ")
@@ -61,6 +61,7 @@ def word_list(input1, input2):
         for j in list_2:
             if i == j:
                 list_2.remove(j)
+    
     return freq_count(list_1, list_2)
 
 def freq_count(list_1, list_2):
@@ -94,7 +95,7 @@ def freq_count(list_1, list_2):
     for h_1 in d_1:
         if len(h_1) == 0:
             del common_dict[h_1]
-    print(sorted(common_dict.keys()))
+    #print(sorted(common_dict.keys()))
     return(common_dict, freq_count_dict_1, freq_count_dict_2)
 
 
