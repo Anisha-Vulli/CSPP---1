@@ -5,7 +5,7 @@ import re
 import math
 import copy
 
-def similarity(dict1, dict2, dict3):
+def similarity(dict1):
     '''
         Compute the document distance as given in the PDF
     '''
@@ -123,8 +123,8 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    (common_dict_1, dict_1, dict_2) = word_list(input1, input2)
-    print(similarity(common_dict_1, dict_1, dict_2))
+    common_dict_1 = word_list(input1, input2)
+    print(similarity(common_dict_1))
 
 if __name__ == '__main__':
     main()
