@@ -78,8 +78,12 @@ def freq_count(list_1, list_2):
     for i in freq_count_dict_1.values():
         sum_val = sum_val + i
 
+    for j in freq_count_dict_2.values():
+        sum_val_1 = sum_val_1 + j
+
     print(sum_val)
-    print(freq_count_dict_1)
+    print(sum_val_1)
+    #print(freq_count_dict_1)
     # print(freq_count_dict_2)
 
 
