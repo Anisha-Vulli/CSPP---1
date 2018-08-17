@@ -113,7 +113,7 @@ def freq_count(list_1, list_2):
             del common_dict[h_1]
     # print(common_dict)
     # print(len(common_dict))
-    return(common_dict, freq_count_dict_1, freq_count_dict_2)
+    return common_dict
 
 
 
