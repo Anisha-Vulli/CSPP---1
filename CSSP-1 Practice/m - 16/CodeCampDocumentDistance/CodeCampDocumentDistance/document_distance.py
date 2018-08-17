@@ -18,7 +18,7 @@ def similarity(dict1, dict2, dict3):
     for k in dict3:
         b_1 = dict3[k] ** 2
 
-    distance = (num) / math.sqrt(a_1*b_1)
+    distance = (num_val) / math.sqrt(a_1*b_1)
     return distance
 
 def load_stopwords(filename):
