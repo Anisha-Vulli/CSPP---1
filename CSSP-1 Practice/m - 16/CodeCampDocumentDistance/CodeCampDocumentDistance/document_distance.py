@@ -4,7 +4,7 @@
 import re
 import math
 
-def similarity(dict1,dict2,dict3):
+def similarity(dict1, dict2, dict3):
     '''
         Compute the document distance as given in the PDF
     '''
@@ -20,6 +20,7 @@ def similarity(dict1,dict2,dict3):
 
     distance = (num) / math.sqrt(a*b)
     return distance
+    
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -31,12 +32,8 @@ def load_stopwords(filename):
     #print(stopwords)
     return stopwords
 
-# def remove_words(list_1, list_2):
-#   new_list = []
-#   new_list = load_stopwords(stopwords.txt)
-#   print(new_list.keys())
-
 def word_list(input1, input2):
+    '''Making word list '''
     list_1 = []
     list_2 = []
     key_list = []
@@ -60,15 +57,10 @@ def word_list(input1, input2):
         for j in list_2:
             if i == j:
                 list_2.remove(j)
-            
-    #print(stng_1)
     return(freq_count(list_1, list_2))
-    # dict_1 = dict(list_1)
-    # print(dict_1)
-
-    #return list_1, list_2
 
 def freq_count(list_1, list_2):
+    '''Creating common dictonary '''
     freq_count_dict_1 = {}
     freq_count_dict_2 = {}
     common_dict = {}
@@ -97,11 +89,6 @@ def freq_count(list_1, list_2):
         if p not in common_dict:
             common_dict[p] = [0,freq_count_dict_2[p]]
 
-    #print(sum_val)
-    #print(sum_val_1)
-    #print(common_dict)
-    #print(freq_count_dict_1)
-    # print(freq_count_dict_2)
     return(common_dict,freq_count_dict_1,freq_count_dict_2)
 
 
