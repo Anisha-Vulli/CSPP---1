@@ -21,13 +21,13 @@ def similarity(dict1, dict2, dict3):
     distance = (num_val) / math.sqrt(a_1*b_1)
     return distance
 
-def load_stopwords(filename):
+def load_stopwords(file_name):
     '''
         loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(file_name, 'r') as file_name:
+        for line in file_name:
             stopwords[line.strip()] = 0
     #print(stopwords)
     return stopwords
