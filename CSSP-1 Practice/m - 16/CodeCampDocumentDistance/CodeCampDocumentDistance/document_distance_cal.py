@@ -42,8 +42,8 @@ def word_list(input1, input2):
     key_list = []
     stng_1 = ""
     stng_2 = ""
-    stng_1 = re.sub('[^ a-zA-Z0-9] or " "', '', input1.lower())
-    stng_2 = re.sub('[^ a-zA-Z0-9] or " "', '', input2.lower())
+    stng_1 = re.sub('[^ a-zA-Z0-9]', '', input1.lower())
+    stng_2 = re.sub('[^ a-zA-Z0-9]', '', input2.lower())
     stopwords = load_stopwords("stopwords.txt")
     key_list = stopwords.keys()
     #print(key_list)
