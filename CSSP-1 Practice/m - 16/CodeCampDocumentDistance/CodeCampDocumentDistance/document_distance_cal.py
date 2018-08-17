@@ -27,10 +27,11 @@ def similarity(dict1):
     distance = (num_val) / (math.sqrt(a_1) * math.sqrt(b_1))
     return distance
 
-def load_stopwords(file_name):
+def load_stopwords():
     '''
         loads stop words from a file and returns a dictionary
     '''
+    file_name = stopwords.txt
     stopwords = {}
     with open(file_name, 'r') as file_name:
         for line in file_name:
@@ -96,11 +97,11 @@ def freq_count(list_1, list_2):
             common_dict[p_1] = [0, freq_count_dict_2[p_1]]
 
     d_1 = copy.deepcopy(common_dict)
+    
     for h_1 in d_1:
         if len(h_1) == 0:
             del common_dict[h_1]
-    # print(common_dict)
-    # print(len(common_dict))
+    
     return common_dict
 
 def main():
