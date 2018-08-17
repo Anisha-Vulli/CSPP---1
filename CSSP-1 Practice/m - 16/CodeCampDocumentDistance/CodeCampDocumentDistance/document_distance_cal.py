@@ -3,6 +3,7 @@
 '''
 import re
 import math
+import copy
 
 def similarity(dict1, dict2, dict3):
     '''
@@ -42,8 +43,8 @@ def word_list(input1, input2):
     key_list = []
     stng_1 = ""
     stng_2 = ""
-    stng_1 = re.sub('[^ a-zA-Z0-9, " "]', '', input1.lower())
-    stng_2 = re.sub('[^ a-zA-Z0-9, " "]', '', input2.lower())
+    stng_1 = re.sub('[^ a-zA-Z0-9]', '', input1.lower())
+    stng_2 = re.sub('[^ a-zA-Z0-9]', '', input2.lower())
     stopwords = load_stopwords("stopwords.txt")
     key_list = stopwords.keys()
     #print(key_list)
@@ -89,7 +90,10 @@ def freq_count(list_1, list_2):
     for p_1 in common_dict:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_count_dict_2[p_1]]
-
+    d_1 = copy.deepcopy(common_dict)
+    for h_1 in d_1:
+        if len(h_1) == 0:
+            del common_dict[h_1]
     return(common_dict, freq_count_dict_1, freq_count_dict_2)
 
 
