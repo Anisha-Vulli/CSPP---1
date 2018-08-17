@@ -3,16 +3,22 @@
 '''
 import re
 
-def similarity(dict1, dict2):
+def similarity(dict1):
     '''
         Compute the document distance as given in the PDF
     '''
-    a = len(dict1)
-    b = len(dict2)
+    #a = len(dict1)
     num = 0
-    for i in range(a+1):
-        num = dict1(i) * dict2(i)
-    print(num)
+    for i in dict1:
+        num = dict1[i][0] * dict1[i][1]
+    #print(num)
+    for j in dict1:
+        a = dict1[j][0] ** 2
+    for k in dict1:
+        b = dict1[k][1] ** 2
+
+    distance = (num) / sqrt(a*b)
+    return distance
 def load_stopwords(filename):
     '''
         loads stop words from a file and returns a dictionary
@@ -95,7 +101,7 @@ def freq_count(list_1, list_2):
     #print(common_dict)
     #print(freq_count_dict_1)
     # print(freq_count_dict_2)
-    return(freq_count_dict_1,freq_count_dict_2)
+    return(common_dict)
 
 
 
@@ -105,8 +111,8 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    (dict1, dict2) = word_list(input1, input2)
-    print(similarity(dict1,dict2))
+    common_dict_1 = word_list(input1, input2)
+    print(similarity(common_dict_1))
 
 if __name__ == '__main__':
     main()
