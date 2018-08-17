@@ -82,7 +82,7 @@ def freq_count(list_1, list_2):
             common_dict[i] = [freq_count_dict_1[i], freq_count_dict_2[i]]
         else:
             common_dict[i] = [freq_count_dict_1[i], 0]
-            
+  
     for p_1 in common_dict:
         if p_1 not in common_dict:
             common_dict[p_1] = [0, freq_count_dict_2[p_1]]
@@ -97,7 +97,7 @@ def main():
     '''
     input1 = input()
     input2 = input()
-    (common_dict_1, dict_1, dict_2)= word_list(input1, input2)
+    (common_dict_1, dict_1, dict_2) = word_list(input1, input2)
     print(similarity(common_dict_1, dict_1, dict_2))
 
 if __name__ == '__main__':
