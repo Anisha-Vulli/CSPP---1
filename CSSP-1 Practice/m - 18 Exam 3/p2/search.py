@@ -42,7 +42,7 @@ def search(search_index, query):
         for j in i:
             query_sent = j.split()
 
-    print(query)
+    print(query_sent)
 
 def process_queries(search_index, queries):
     '''
