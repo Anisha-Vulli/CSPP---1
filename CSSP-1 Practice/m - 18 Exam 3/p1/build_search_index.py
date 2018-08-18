@@ -42,7 +42,7 @@ def word_list(text):
     #print(text)
     strng_obtained = ""
     list_of_word = []
-    strng_obtained = re.sub('[^ a-z]','',text.lower())
+    strng_obtained = re.sub('[^ a-z]', '', text.lower())
     list_of_word = strng_obtained.split()
     stop_words = load_stopwords("stopwords.txt")
     key_words = list(stop_words.keys())
@@ -96,7 +96,7 @@ def build_search_index(docs):
             else:
                 search_index_dict[j].append([(k,1)])
 
-    return(search_index_dict)
+    return search_index_dict
 
     
 
