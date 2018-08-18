@@ -38,14 +38,10 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query_sent = []
-   
-    
     for i in query:
         list_1 = i.split(" ")
         #print(list_1)
         query_sent.append(list_1)
-
-    
 
     for i in query_sent:
         a = []
@@ -67,7 +63,7 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     queries_sent = queries
-    search(search_index,queries)
+    search(search_index, queries)
 
 def main():
     '''
