@@ -75,25 +75,10 @@ def build_search_index(docs):
     doc_list = docs
     words_list = []
 
-    counter = []
 
     for i, j in enumerate(doc_list):
         #print(type(i))
         words_list.append(word_list(j))
-        counter.append(i)
-    # print(words_list)
-    # print(counter)
-    # n = 1
-    # for h in words_list:
-    #     for m in h:
-    #         word = m
-    #         if word in h:
-    #             n += 1
-    #             print(n)
-    #     else:
-    #         p = 1
-
-    # #print(n)
 
     for k, l_1 in enumerate(words_list):
         for j in l_1:
@@ -102,25 +87,8 @@ def build_search_index(docs):
             else:
                 search_index_dict[j].append([(k, 1)])
 
+    print(search_index_dict)
     return search_index_dict
-
-
-    #print(search_index_dict)
-
-# def search_index_fun(words):
-#     #print(words)
-#     words_list = words
-#     search_index = {}
-
-#     for k in words_list:
-#         if k not in search_index:
-#             search_index[k] = 1
-#         else:
-#             search_index[k] += 1
-
-#     #print(search_index)
-
-#     return search_index
 
 # helper function to print the search index
 # use this to verify how the search index looks
