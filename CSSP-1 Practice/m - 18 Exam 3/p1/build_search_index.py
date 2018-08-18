@@ -74,6 +74,7 @@ def build_search_index(docs):
     # return search index
     
     search_index_dict = {}
+    final_search_index = {}
     doc_list = docs
     words_list = []
 
@@ -82,7 +83,14 @@ def build_search_index(docs):
         search_index_dict = search_index_fun(word_list(j))
         words_list.append(list(search_index_dict.keys()))
 
-    print(words_list)
+    #print(words_list)
+
+    for l in words_list:
+        final_search_index[l][0] = [i,search_index_dict[l][0]]
+
+    print(final_search_index)
+
+
 
     #print(search_index_dict)
 
@@ -97,7 +105,7 @@ def search_index_fun(words):
         else:
             search_index[k] += 1
 
-    print(search_index)
+    #print(search_index)
 
     return search_index
 
