@@ -63,7 +63,7 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    search_index = {}
+    
 
     doc_list = docs
     #words_list = []
@@ -75,7 +75,17 @@ def build_search_index(docs):
     
 
 def search_index_fun(words):
-    print(words)
+    #print(words)
+    words_list = words
+    search_index = {}
+
+    for k in words_list:
+        if k not in search_index:
+            search_index[k] = 1
+        else:
+            search_index[k] += 1
+
+    print(search_index)
 
 # helper function to print the search index
 # use this to verify how the search index looks
