@@ -71,7 +71,7 @@ def build_search_index(docs):
         #print(type(i))
         print(type(word_list(j)))
 
-def search_index(word_list):
+
 
 
 # helper function to print the search index
