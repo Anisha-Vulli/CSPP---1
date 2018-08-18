@@ -39,7 +39,8 @@ def search(search_index, query):
     '''
     query_sent = []
     for i in query:
-    	query_sent = query.split()
+    	for j in i:
+    		query_sent = query.split()
 
     print(query_sent)
 
