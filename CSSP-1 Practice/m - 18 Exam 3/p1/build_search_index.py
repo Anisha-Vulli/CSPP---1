@@ -94,7 +94,7 @@ def build_search_index(docs):
             if j not in search_index_dict:
                 search_index_dict[j] = [(k,1)]
             else:
-                if j in search_index_dict:
+                if j in l:
                     n += 1
                     search_index_dict[j] = [(k,n)]
                 else:
