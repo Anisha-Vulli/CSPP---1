@@ -66,13 +66,14 @@ def build_search_index(docs):
     search_index = {}
 
     doc_list = docs
-    words_list = []
+    #words_list = []
 
     for i,j in enumerate(doc_list):
         #print(type(i))
-        words_list.append(word_list(j))
+        search_index_fun(words_list(j))
+        \
 
-    search_index_fun(words_list)
+    
 
 def search_index_fun(words):
     print(words)
