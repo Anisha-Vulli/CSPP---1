@@ -86,8 +86,17 @@ def build_search_index(docs):
         
         counter.append(i)
 
-    print(words_list)
-    print(counter)
+    # print(words_list)
+    # print(counter)
+
+    for k in words_list:
+        for j in i:
+            if j not in search_index_dict:
+                search_index_dict[j] = 1
+            else:
+                search_index_dict[j] += 1
+
+    print(search_index_dict)
 
     
 
