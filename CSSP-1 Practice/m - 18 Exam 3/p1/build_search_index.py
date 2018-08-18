@@ -96,7 +96,7 @@ def build_search_index(docs):
             else:
                 search_index_dict[j] = [(k,1)]
 
-    print(search_index_dict)
+    return(print_search_index(search_index_dict))
 
     
 
