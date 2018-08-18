@@ -45,12 +45,14 @@ def search(search_index, query):
         #print(list_1)
         query_sent.append(list_1)
 
-    k = 0
+    
 
     for i in query_sent:
         for j in i:
+            k = 0
             if j in search_index:
                 b = search_index[j]
+
                 while k <= len(b):
                     a. append(search_index[j][0][k])
                     print(a)
