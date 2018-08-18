@@ -45,6 +45,8 @@ def search(search_index, query):
         #print(list_1)
         query_sent.append(list_1)
 
+    k = 0
+
     for i in query_sent:
         for j in i:
             if j in search_index:
