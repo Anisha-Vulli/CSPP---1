@@ -44,7 +44,7 @@ def word_list(text):
     list_of_word = []
     strng_obtained = re.sub('[^ a-z]','',text.lower())
     list_of_word = strng_obtained.split()
-    print(list_of_word)
+    return(list_of_word)
 
 
 def build_search_index(docs):
@@ -69,7 +69,10 @@ def build_search_index(docs):
 
     for i,j in enumerate(doc_list):
     	#print(type(i))
-    	word_list(j)
+    	search_index(word_list(j))
+
+def search_index(word_list):
+	print(word_list)
 
 
 # helper function to print the search index
