@@ -55,6 +55,7 @@ def word_list(input1, input2):
 
     list_1 = stng_1.split(" ")
     list_2 = stng_2.split(" ")
+   
     #print(list_1,list_2)
     word_list_1 = list_1[:]
     for i in word_list_1:
