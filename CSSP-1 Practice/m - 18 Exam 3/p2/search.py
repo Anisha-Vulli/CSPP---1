@@ -47,7 +47,7 @@ def search(search_index, query):
     for i in query_sent:
         for j in i:
             if j in search_index:
-                a = search_index[j][0]
+                a = search_index[j][0][0]
     return a
 
 
