@@ -38,11 +38,11 @@ def search(search_index, query):
         make a set of doc_id and return
     '''
     query_sent = []
-    for i in query:
-    	for j in i:
-    		query_sent = query.split()
+    # for i in query:
+    #     for j in i:
+    #         query_sent = query.split()
 
-    print(query_sent)
+    print(query)
 
 def process_queries(search_index, queries):
     '''
@@ -52,7 +52,7 @@ def process_queries(search_index, queries):
     '''
     queries_sent = queries
     for i in queries_sent:
-    	search(search_index,queries_sent)
+        search(search_index,queries_sent)
 
 
 def main():
