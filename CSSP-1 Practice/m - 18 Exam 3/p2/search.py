@@ -49,11 +49,10 @@ def search(search_index, query):
         for j in i:
             if j in search_index:
                 b = search_index[j]
-                print(b)
-
-                # while k < len(search_index[j].values):
-                #     a. append(search_index[j][0][0])
-                #     print(a)
+                while k < len(b):
+                    a. append(search_index[j][0][k])
+                    print(a)
+                    k += 1
     return a
 
 
