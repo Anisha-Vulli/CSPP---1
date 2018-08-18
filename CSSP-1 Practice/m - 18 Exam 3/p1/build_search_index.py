@@ -44,6 +44,15 @@ def word_list(text):
     list_of_word = []
     strng_obtained = re.sub('[^ a-z]','',text.lower())
     list_of_word = strng_obtained.split()
+    stop_words = load_stopwords("stopwords.txt")
+    key_words = list(stop_words.keys())
+
+    tem_list = list_of_word[:]
+
+    for i in tem_list:
+        if i in key_words:
+            list_of_word.remove(i)
+    
     return(list_of_word)
 
 
