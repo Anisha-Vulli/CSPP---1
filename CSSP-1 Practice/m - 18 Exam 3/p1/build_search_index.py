@@ -79,13 +79,11 @@ def build_search_index(docs):
 
     for i,j in enumerate(doc_list):
         #print(type(i))
-        search_index_dict = search_index_fun(word_list(j))
+        word_list(j)
 
-    print(search_index_dict)
+    #print(search_index_dict)
 
-def search_index_fun(words):
-    #print(words)
-    words_list = words
+    words_list = word_list
     search_index = {}
 
     for k in words_list:
@@ -94,7 +92,11 @@ def search_index_fun(words):
         else:
             search_index[k] += 1
 
-    #print(search_index)
+    print(search_index)
+
+def search_index_fun(words):
+    #print(words)
+    
 
     return search_index
 
