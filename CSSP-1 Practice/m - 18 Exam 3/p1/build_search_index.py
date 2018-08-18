@@ -61,7 +61,7 @@ def build_search_index(docs):
 
     doc_list = docs
 
-    for i in enumarate(doc_list):
+    for i in enumerate(doc_list):
     	print(i)
 
 
