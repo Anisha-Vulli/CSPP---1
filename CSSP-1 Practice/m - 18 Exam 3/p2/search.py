@@ -58,7 +58,7 @@ def search(search_index, query):
                     a.append(search_index[j][k][0])
                     k += 1
 
-    return set(a)
+    print(set(a))
 
 
 def process_queries(search_index, queries):
@@ -68,7 +68,7 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     queries_sent = queries
-    print(search(search_index,queries))
+    search(search_index,queries)
 
 def main():
     '''
