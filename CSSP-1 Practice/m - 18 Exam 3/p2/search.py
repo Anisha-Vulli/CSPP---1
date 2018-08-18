@@ -50,7 +50,7 @@ def search(search_index, query):
             b_empty = []
             if j in search_index:
                 b_empty = search_index[j]
-                while k < len(b):
+                while k < len(b_empty):
                     a_empty.append(search_index[j][k][0])
                     k += 1
         print(set(a_empty))
