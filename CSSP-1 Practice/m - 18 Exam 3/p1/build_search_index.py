@@ -20,7 +20,7 @@
         .
     }
 '''
-
+import re
 # helper function to load the stop words from a file
 def load_stopwords(filename):
     '''
@@ -39,7 +39,12 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    print(text)
+    #print(text)
+    strng_obtained = ""
+    list_of_word = []
+    strng_obtained = re.sub('[^ a-z]','',text.lower())
+    print(strng_obtained)
+
 
 def build_search_index(docs):
     '''
