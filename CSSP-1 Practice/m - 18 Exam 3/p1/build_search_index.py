@@ -39,7 +39,7 @@ def word_list(text):
         Clean up the text by remvoing all the non alphabet characters
         return a list of words
     '''
-    pass
+    print(text)
 
 def build_search_index(docs):
     '''
@@ -62,7 +62,8 @@ def build_search_index(docs):
     doc_list = docs
 
     for i in enumerate(doc_list):
-    	print(i)
+    	#print(i)
+    	word_list(doc_list(1))
 
 
 # helper function to print the search index
