@@ -81,7 +81,7 @@ def build_search_index(docs):
         #print(type(i))
         search_index_dict = search_index_fun(word_list(j))
 
-    print(search_index_dict)
+    #print(search_index_dict)
 
 def search_index_fun(words):
     #print(words)
@@ -94,7 +94,7 @@ def search_index_fun(words):
         else:
             search_index[k] += 1
 
-    #print(search_index)
+    print(search_index)
 
     return search_index
 
