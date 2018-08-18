@@ -44,16 +44,16 @@ def search(search_index, query):
         query_sent.append(list_1)
 
     for i in query_sent:
-        a = []
+        a_empty = []
         for j in i:
             k = 0
-            b = []
+            b_empty = []
             if j in search_index:
-                b = search_index[j]
+                b_empty = search_index[j]
                 while k < len(b):
-                    a.append(search_index[j][k][0])
+                    a_empty.append(search_index[j][k][0])
                     k += 1
-        print(set(a))
+        print(set(a_empty))
 
 
 def process_queries(search_index, queries):
