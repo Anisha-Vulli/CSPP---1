@@ -39,7 +39,7 @@ def search(search_index, query):
     '''
     query_sent = []
     a = []
-    b = []
+    
     for i in query:
         list_1 = i.split(" ")
         #print(list_1)
@@ -49,11 +49,10 @@ def search(search_index, query):
 
     for i in query_sent:
         k = 0
+        b = []
         for j in i:
-
             if j in search_index:
                 b = search_index[j]
-
                 while k <= len(b):
                     a. append(search_index[j][0][k])
                     print(a)
