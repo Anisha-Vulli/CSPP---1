@@ -92,8 +92,8 @@ def build_search_index(docs):
             if word in h:
                 n += 1
                 print(n)
-            else:
-                p = 1
+        else:
+            p = 1
 
     #print(n)
 
