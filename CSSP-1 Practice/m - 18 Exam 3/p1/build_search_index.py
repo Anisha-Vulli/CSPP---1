@@ -80,9 +80,9 @@ def build_search_index(docs):
     for i,j in enumerate(doc_list):
         #print(type(i))
         search_index_dict = search_index_fun(word_list(j))
-        words_list.append(search_index_dict.keys())
+        words_list.append(list(search_index_dict.keys()))
 
-    print(list(words_list))
+    print(words_list)
 
     #print(search_index_dict)
 
