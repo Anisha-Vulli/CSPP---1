@@ -47,8 +47,8 @@ def search(search_index, query):
     for i in query_sent:
         for j in i:
             if j in search_index:
-                a = len(search_index[j].values)
-                
+                b = len(search_index[j].values)
+
                 # while k < len(search_index[j].values):
                 #     a. append(search_index[j][0][0])
                 #     print(a)
