@@ -57,7 +57,13 @@ def build_search_index(docs):
         # add or update the words of the doc to the search index
 
     # return search index
-    pass
+    search_index = {}
+
+    doc_list = docs
+
+    for i,j in enumarate(doc_list):
+    	print(i,j)
+
 
 # helper function to print the search index
 # use this to verify how the search index looks
