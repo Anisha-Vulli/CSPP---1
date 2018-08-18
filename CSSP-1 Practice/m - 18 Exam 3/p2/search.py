@@ -43,7 +43,7 @@ def search(search_index, query):
         print(list_1)
         query_sent.append(list_1)
 
-    #print(query_sent)
+    print(query_sent)
 
 def process_queries(search_index, queries):
     '''
