@@ -87,7 +87,7 @@ def build_search_index(docs):
             else:
                 search_index_dict[j].append((k, 1))
 
-    print(search_index_dict)
+
     return search_index_dict
 
 # helper function to print the search index
