@@ -43,7 +43,8 @@ def word_list(text):
     strng_obtained = ""
     list_of_word = []
     strng_obtained = re.sub('[^ a-z]','',text.lower())
-    print(strng_obtained)
+    list_of_word = strng_obtained.split()
+    print(list_of_word)
 
 
 def build_search_index(docs):
