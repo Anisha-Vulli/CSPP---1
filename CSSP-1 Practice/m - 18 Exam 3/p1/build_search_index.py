@@ -61,8 +61,8 @@ def build_search_index(docs):
 
     doc_list = docs
 
-    for i,j in enumarate(doc_list):
-    	print(i,j)
+    for i in enumarate(doc_list):
+    	print(i)
 
 
 # helper function to print the search index
