@@ -40,7 +40,7 @@ def search(search_index, query):
     query_sent = []
     for i in query:
         for j in i:
-            list_1 = j.split()
+            list_1 = j.split(" ")
             print(list_1)
             query_sent.append(list_1)
 
