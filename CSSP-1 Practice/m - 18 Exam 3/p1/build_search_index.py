@@ -52,7 +52,7 @@ def word_list(text):
     for i in tem_list:
         if i in key_words:
             list_of_word.remove(i)
-    return(list_of_word)
+    return list_of_word
 
 
 def build_search_index(docs):
@@ -78,7 +78,7 @@ def build_search_index(docs):
 
     counter = []
 
-    for i,j in enumerate(doc_list):
+    for i, j in enumerate(doc_list):
         #print(type(i))
         words_list.append(word_list(j))
         
