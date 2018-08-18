@@ -48,13 +48,13 @@ def search(search_index, query):
     
 
     for i in query_sent:
-        k = 0
-        b = []
         for j in i:
+            k = 0
+            b = []
             if j in search_index:
                 b = search_index[j]
                 while k <= len(b):
-                    a. append(search_index[j][k][0])
+                    a.append(search_index[j][k][0])
                     print(a)
                     k += 1
     return a
