@@ -88,13 +88,18 @@ def build_search_index(docs):
 
     # print(words_list)
     # print(counter)
-    n = 0
+    n = 1
     for k,l in enumerate(words_list):
         for j in l:
             if j not in search_index_dict:
                 search_index_dict[j] = [(k,1)]
             else:
-                search_index_dict[j].append((k, n+=1))
+                n += 1
+                if n == 1:
+                    search_index_dict[j].append((k,n))
+                else:
+                    search_index_dict[j].append((k,n))
+
 
     return(search_index_dict)
 
