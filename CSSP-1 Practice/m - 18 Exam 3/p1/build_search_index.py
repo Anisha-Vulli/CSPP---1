@@ -88,7 +88,7 @@ def build_search_index(docs):
     n = 1
     for h in words_list:
         for m in h:
-            word = j
+            word = m
             if word in h:
                 n += 1
             else:
