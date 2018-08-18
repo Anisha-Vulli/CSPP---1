@@ -91,10 +91,11 @@ def build_search_index(docs):
             word = m
             if word in h:
                 n += 1
+                print(n)
             else:
                 p = 1
 
-    print(n)
+    #print(n)
 
     # for k,l_1 in enumerate(words_list):
     #     for j in l_1:
