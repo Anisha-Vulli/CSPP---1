@@ -62,7 +62,7 @@ def build_search_index(docs):
     doc_list = docs
 
     for i,j in enumerate(doc_list):
-    	print(type(i,j))
+    	print(type(j))
     	#word_list(doc_list(1))
 
 
