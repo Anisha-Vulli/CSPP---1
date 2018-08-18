@@ -53,7 +53,7 @@ def search(search_index, query):
             b = []
             if j in search_index:
                 b = search_index[j]
-                while k <= len(b):
+                while k < len(b):
                     a.append(search_index[j][k][0])
                     print(a)
                     k += 1
