@@ -72,7 +72,7 @@ def build_search_index(docs):
         #print(type(i))
         words_list.append(word_list(j))
 
-    print(word_list)
+    print(words_list)
 
 # helper function to print the search index
 # use this to verify how the search index looks
