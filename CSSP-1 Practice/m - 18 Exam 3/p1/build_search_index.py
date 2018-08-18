@@ -85,9 +85,9 @@ def build_search_index(docs):
 
 def search_index_fun(words,n):
     #print(words)
-    n = []
+    n_int = []
     for l in n:
-        n.append(l)
+        n_int.append(l)
     print(n)
     words_list = words
     search_index = {}
