@@ -52,9 +52,7 @@ def process_queries(search_index, queries):
         print the results returned by search function
     '''
     queries_sent = queries
-    for i in queries_sent:
-        search(search_index,queries_sent)
-
+    search(search_index,queries)
 
 def main():
     '''
