@@ -48,6 +48,7 @@ def search(search_index, query):
         for j in i:
             if j in search_index:
                 a. append(search_index[j][0][0])
+                print a
     return a
 
 
