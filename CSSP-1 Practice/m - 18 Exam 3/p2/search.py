@@ -40,9 +40,11 @@ def search(search_index, query):
     query_sent = []
     for i in query:
         for j in i:
-            query_sent = j.split()
+            list_1 = j.split()
+            print(list_1)
+            query_sent.append(list_1)
 
-    print(query_sent)
+    #print(query_sent)
 
 def process_queries(search_index, queries):
     '''
