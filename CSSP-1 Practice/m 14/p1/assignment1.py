@@ -1,4 +1,4 @@
-''' 
+'''
 
 Author: Anisha Vulli
 Date: 21 Aug 2018
@@ -32,15 +32,18 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 class Message_encry():
-    def __init__(self,data):
+    # For encrypting data
+    def __init__(self, data):
+        #For message encryption
         self.data = data
         #print(self.data)
 
     def encrypt(self, shift):
+        #Message encryption shifted output
         small_letter = ""
         cap_letter = ""
-        small_letter = "-" + string.ascii_lowercase  + string.ascii_lowercase 
-        cap_letter = "-" + string.ascii_uppercase + string.ascii_uppercase 
+        small_letter = "-" + string.ascii_lowercase  + string.ascii_lowercase
+        cap_letter = "-" + string.ascii_uppercase + string.ascii_uppercase
         final_code = ""
         #length_data = len(self.data)
         for i in range(0, len(self.data)):
@@ -57,7 +60,6 @@ class Message_encry():
 
 
 ### Paste your implementation of the data class here
-        
 
 def main():
     '''
@@ -68,7 +70,7 @@ def main():
     # c = dataage_encry.encrypt(data_input, data_shift)
     Message_encry_obj = Message_encry(data_input)
     print(Message_encry_obj.encrypt(data_shift))
-    
+
 
 if __name__ == "__main__":
     main()
