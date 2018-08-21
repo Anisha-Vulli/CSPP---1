@@ -32,8 +32,7 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 class Message_encry():
-    def __init__(self,mess,data):
-        self.mess = mess
+    def __init__(self,data):
         self.data = data
 
     def encrypt(self, shift):
@@ -42,31 +41,32 @@ class Message_encry():
         small_letter = "-" + string.ascii_lowercase  + string.ascii_lowercase 
         cap_letter = "-" + string.ascii_uppercase + string.ascii_uppercase 
         final_code = ""
-        length_mess = len(self.mess)
-        for i in range[length_mess]:
-            if self.mess[i] in small_letter:
-                final_code = final_code + small_letter[small_letter.index(self.mess[i] + shift)]
+        length_data = len(self.data)
+        for i in range[length_data]:
+            if self.data[i] in small_letter:
+                final_code = final_code + small_letter[small_letter.index(self.data[i] + shift)]
 
-            elif self.mess[i] in cap_letter:
-                final_code = final_code + cap_letter[cap_letter.index(self.mess[i] + shift)]
+            elif self.data[i] in cap_letter:
+                final_code = final_code + cap_letter[cap_letter.index(self.data[i] + shift)]
             else:
-                final_code = final_code + self.mess[i]
+                final_code = final_code + self.data[i]
 
-        print(final_code)
+        return final_code
 
 
 
-### Paste your implementation of the mess class here
+### Paste your implementation of the data class here
         
 
 def main():
     '''
         Function to handle testcases
     '''
-    mess_input = input()
-    mess_shift = int(input())
-    # c = Message_encry.encrypt(mess_input, mess_shift)
-    print(Message_encry.encrypt(mess_input, mess_shift))
+    data_input = input()
+    data_shift = int(input())
+    # c = dataage_encry.encrypt(data_input, data_shift)
+    Message_encry_obj = Message_encry(data_input)
+    Message_encry_obj.encrypt(data_shift)
     
 
 if __name__ == "__main__":
