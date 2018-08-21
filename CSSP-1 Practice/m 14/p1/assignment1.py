@@ -34,7 +34,7 @@ WORDLIST_FILENAME = 'words.txt'
 class Message_encry():
     def __init__(self,data):
         self.data = data
-        print(self.data)
+        #print(self.data)
 
     def encrypt(self, shift):
         small_letter = ""
@@ -43,7 +43,7 @@ class Message_encry():
         cap_letter = "-" + string.ascii_uppercase + string.ascii_uppercase 
         final_code = ""
         #length_data = len(self.data)
-        for i in range[0, len(self.data)]:
+        for i in range(0, len(self.data)):
             if self.data[i] in small_letter:
                 final_code = final_code + small_letter[small_letter.index(self.data[i] + shift)]
 
