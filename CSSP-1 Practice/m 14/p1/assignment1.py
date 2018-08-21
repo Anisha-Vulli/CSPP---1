@@ -59,7 +59,7 @@ def main():
     '''
         Function to handle testcases
     '''
-    data_input = Message(input())
+    data_input = input()
     data_shift = int(input())
     print(Message_encry.encrypt(data_input, data_shift))
     
