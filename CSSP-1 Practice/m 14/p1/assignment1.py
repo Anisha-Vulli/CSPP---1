@@ -38,8 +38,8 @@ class Message_encry():
     def encrypt(self, shift):
         small_letter = ""
         cap_letter = ""
-        small_letter = "-" + small_letter.ascii_lowercase  + small_letter.ascii_lowercase 
-        cap_letter = "-" + cap_letter.ascii_uppercase + cap_letter.ascii_uppercase 
+        small_letter = "-" + string.ascii_lowercase  + string.ascii_lowercase 
+        cap_letter = "-" + string.ascii_uppercase + string.ascii_uppercase 
         final_code = ""
         for i in range[len(self.message)]:
             if self.message[i] in small_letter:
