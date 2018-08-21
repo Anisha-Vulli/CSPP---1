@@ -44,11 +44,11 @@ class Message_encry():
         final_code = ""
         #length_data = len(self.data)
         for i in range(0, len(self.data)):
-            if self.data[i] in small_letter:
-                final_code = final_code + small_letter[small_letter.index(self.data[i] + shift)]
+            if self.data[i] in small_letter
+                final_code = final_code + small_letter[small_letter.index(self.data[i]) + shift]
 
             elif self.data[i] in cap_letter:
-                final_code = final_code + cap_letter[cap_letter.index(self.data[i] + shift)]
+                final_code = final_code + cap_letter[cap_letter.index(self.data[i]) + shift]
             else:
                 final_code = final_code + self.data[i]
 
