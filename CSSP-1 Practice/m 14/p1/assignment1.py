@@ -41,14 +41,14 @@ class Message_encry():
         small_letter = "-" + string.ascii_lowercase  + string.ascii_lowercase 
         cap_letter = "-" + string.ascii_uppercase + string.ascii_uppercase 
         final_code = ""
-        for i in range[0, len(self)]:
-            if self[i] in small_letter:
-                final_code = final_code + small_letter[small_letter.index(self[i] + shift)]
+        for i in range(len(self.message)):
+            if self.message[i] in small_letter:
+                final_code = final_code + small_letter[small_letter.index(self.message[i] + shift)]
 
-            elif self[i] in cap_letter:
-                final_code = final_code + cap_letter[cap_letter.index(self[i] + shift)]
+            elif self.message[i] in cap_letter:
+                final_code = final_code + cap_letter[cap_letter.index(self.message[i] + shift)]
             else:
-                final_code = final_code + self[i]
+                final_code = final_code + self.message[i]
 
         return final_code
 
