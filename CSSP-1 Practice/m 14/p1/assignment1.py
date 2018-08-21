@@ -32,14 +32,14 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 class Message_encry():
-    # For encrypting data
+    '''For encrypting data'''
     def __init__(self, data):
-        #For message encryption
+        '''For message encryption'''
         self.data = data
         #print(self.data)
 
     def encrypt(self, shift):
-        #Message encryption shifted output
+        '''Message encryption shifted output'''
         small_letter = ""
         cap_letter = ""
         small_letter = "-" + string.ascii_lowercase  + string.ascii_lowercase
