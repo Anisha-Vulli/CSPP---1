@@ -1,0 +1,271 @@
+# The 6.00 Word Game
+
+import random
+import string
+
+VOWELS = 'aeiou'
+CONSONANTS = 'bcdfghjklmnpqrstvwxyz'
+HAND_SIZE = 7
+
+SCRABBLE_LETTER_VALUES = {
+    'a': 1, 'b': 3, 'c': 3, 'd': 2, 'e': 1, 'f': 4, 'g': 2, 
+    'h': 4, 'i': 1, 'j': 8, 'k': 5, 'l': 1, 'm': 3, 'n': 1, 
+    'o': 1, 'p': 3, 'q': 10, 'r': 1, 's': 1, 't': 1, 
+    'u': 1, 'v': 4, 'w': 4, 'x': 8, 'y': 4, 'z': 10
+}
+
+# -----------------------------------
+# Helper code
+# (you don't need to understand this helper code)
+
+WORDLIST_FILENAME = "words.txt"
+
+def loadWords():
+    """
+    Returns a list of valid words. Words are strings of lowercase letters.
+    
+    Depending on the size of the word list, this function may
+    take a while to finish.
+    """
+    print("Loading word list from file...")
+    # inFile: file
+    inFile = open(WORDLIST_FILENAME, 'r')
+    # wordList: list of strings
+    wordList = []
+    for line in inFile:
+        wordList.append(line.strip().lower())
+    print("  ", len(wordList), "words loaded.")
+    return wordList
+
+def getFrequencyDict(sequence):
+    """
+    Returns a dictionary where the keys are elements of the sequence
+    and the values are integer counts, for the number of times that
+    an element is repeated in the sequence.
+
+    sequence: string or list
+    return: dictionary
+    """
+    # freqs: dictionary (element_type -> int)
+    freq = {}
+    for x in sequence:
+        freq[x] = freq.get(x,0) + 1
+    return freq
+	
+
+# (end of helper code)
+# -----------------------------------
+
+#
+# Problem #1: Scoring a word
+#
+def getWordScore(word, n):
+    """
+    Returns the score for a word. Assumes the word is a valid word.
+
+    The score for a word is the sum of the points for letters in the
+    word, multiplied by the length of the word, PLUS 50 points if all n
+    letters are used on the first turn.
+
+    Letters are scored as in Scrabble; A is worth 1, B is worth 3, C is
+    worth 3, D is worth 2, E is worth 1, and so on (see SCRABBLE_LETTER_VALUES)
+
+    word: string (lowercase letters)
+    n: integer (HAND_SIZE; i.e., hand size required for additional points)
+    returns: int >= 0
+    """
+    enter_word = word
+    hand_size = n
+    #values_list = list(scrabble_letter_values.values())
+    #print(values_list)
+    score_of_word = 0
+    #sum_of_letters = 0
+    for char in enter_word:
+        score_of_word += SCRABBLE_LETTER_VALUES[char]
+        #score = score + values_list[b]
+
+    score_of_word *= len(enter_word)
+
+    if hand_size == len(enter_word):
+        score_of_word += 50
+
+    return score_of_word
+
+
+#
+# Problem #2: Make sure you understand how this function works and what it does!
+#
+def displayHand(hand):
+    """
+    Displays the letters currently in the hand.
+
+    For example:
+    >>> displayHand({'a':1, 'x':2, 'l':3, 'e':1})
+    Should print out something like:
+       a x x l l l e
+    The order of the letters is unimportant.
+
+    hand: dictionary (string -> int)
+    """
+    dealHand(7)
+    for letter in hand.keys():
+        for j in range(hand[letter]):
+             print(letter,end=" ")       # print all on the same line
+    print()                             # print an empty line
+
+    
+
+#
+# Problem #2: Make sure you understand how this function works and what it does!
+#
+def dealHand(n):
+    """
+    Returns a random hand containing n lowercase letters.
+    At least n/3 the letters in the hand should be VOWELS.
+
+    Hands are represented as dictionaries. The keys are
+    letters and the values are the number of times the
+    particular letter is repeated in that hand.
+
+    n: int >= 0
+    returns: dictionary (string -> int)
+    """
+    hand={}
+    numVowels = n // 3
+    
+    for i in range(numVowels):
+        x = VOWELS[random.randrange(0,len(VOWELS))]
+        hand[x] = hand.get(x, 0) + 1
+        
+    for i in range(numVowels, n):    
+        x = CONSONANTS[random.randrange(0,len(CONSONANTS))]
+        hand[x] = hand.get(x, 0) + 1
+        
+    return hand
+
+#
+# Problem #2: Update a hand by removing letters
+#
+def updateHand(hand, word):
+    """
+    Assumes that 'hand' has all the letters in word.
+    In other words, this assumes that however many times
+    a letter appears in 'word', 'hand' has at least as
+    many of that letter in it. 
+
+    Updates the hand: uses up the letters in the given word
+    and returns the new hand, without those letters in it.
+
+    Has no side effects: does not modify hand.
+
+    word: string
+    hand: dictionary (string -> int)    
+    returns: dictionary (string -> int)
+    """
+    new_hand = dict(hand) #New instance for a hand is created
+
+    for i in word:
+        new_hand[i] = new_hand[i] - 1
+
+    return new_hand
+
+#
+# Problem #3: Test word validity
+#
+def isValidWord(word, hand, wordList):
+    """
+    Returns True if word is in the wordList and is entirely
+    composed of letters in the hand. Otherwise, returns False.
+
+    Does not mutate hand or wordList.
+   
+    word: string
+    hand: dictionary (string -> int)
+    wordList: list of lowercase strings
+    """
+    if word not in wordList:
+        return False
+
+    word_freq = getFrequencyDict(word)
+    
+    for i in word_freq:
+        if i not in hand:
+            return False
+        if word_freq[i] > hand[i]:
+            return False
+        
+    return True
+        
+#
+# Problem #4: Playing a hand
+#
+
+def calculateHandlen(hand):
+    """ 
+    Returns the length (number of letters) in the current hand.
+    
+    hand: dictionary (string-> int)
+    returns: integer
+    """
+    return sum(hand.values())
+
+
+
+def playHand(wordList):
+    """
+    Playing a given hand code
+      
+    """
+    old_hand = dealHand(HAND_SIZE)
+    Total_score = 0
+    while(calculateHandlen(old_hand)>0):
+        displayHand(old_hand)
+        entered_word = input()
+        if '.' in entered_word:
+            break
+        else:
+            if not isValidWord(entered_word,old_hand,wordList):
+                print("Enter a valid word")
+
+            else:
+                word_score = getWordScore(entered_word,HAND_SIZE)
+                print("Points for the word entered is" , word_score)
+                Total_score = Total_score + word_score
+                print("--------------")
+                old_hand = updateHand(old_hand,entered_word)
+
+    print("Thank you for playing!!!")
+    print("Total score", Total_score)
+
+#
+# Problem #5: Playing a game
+# 
+
+# def playGame(wordList):
+#     """
+#     Allow the user to play an arbitrary number of hands.
+#     """
+    
+#     print("Welcome to the game!!")
+    
+#     while True:
+#         print("Select your choice : n -> New Hand r -> Repeat last hand e -> Exit the game")
+#         letter_input = input()
+#         if letter_input == 'n':
+#             old_hand = dealHand(HAND_SIZE)
+#             playHand(old_hand,wordList,HAND_SIZE)
+        
+#         if letter_input == 'r':
+#             playHand(old_hand,wordList,HAND_SIZE)
+            
+#         if letter_input == 'e':
+#             print("End of the game!!")
+#             #break
+#             return
+
+#
+# Build data structures used for entire session and play game
+#
+if __name__ == '__main__':
+    wordList = loadWords()
+    playHand(wordList)
