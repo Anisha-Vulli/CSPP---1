@@ -32,9 +32,9 @@ WORDLIST_FILENAME = 'words.txt'
 
 
 class Message_encry():
-    def __init__(self,mess,mess):
+    def __init__(self,mess,data):
         self.mess = mess
-        self.mess = mess
+        self.data = data
 
     def encrypt(self, shift):
         small_letter = ""
