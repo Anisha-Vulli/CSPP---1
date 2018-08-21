@@ -31,7 +31,7 @@ WORDLIST_FILENAME = 'words.txt'
 # Helper code End
 
 
-class message_encry():
+class Message_encry():
     '''For encrypting data'''
     def __init__(self, data):
         '''For message encryption'''
@@ -68,7 +68,7 @@ def main():
     data_input = input()
     data_shift = int(input())
     # c = dataage_encry.encrypt(data_input, data_shift)
-    message_encry_obj = message_encry(data_input)
+    message_encry_obj = Message_encry(data_input)
     print(message_encry_obj.encrypt(data_shift))
 
 
