@@ -51,7 +51,7 @@ class Message_encry():
             else:
                 final_code = final_code + self.data[i]
 
-        return final_code
+        print(final_code)
 
 
 
@@ -64,7 +64,8 @@ def main():
     '''
     data_input = input()
     data_shift = int(input())
-    print(Message_encry.encrypt(data_input, data_shift))
+    c = Message_encry(data_input, data_shift)
+    #print(Message_encry.encrypt(data_input, data_shift))
     
 
 if __name__ == "__main__":
