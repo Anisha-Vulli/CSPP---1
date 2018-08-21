@@ -41,7 +41,7 @@ class Message_encry():
         small_letter = "-" + string.ascii_lowercase  + string.ascii_lowercase 
         cap_letter = "-" + string.ascii_uppercase + string.ascii_uppercase 
         final_code = ""
-        for i in range[len(self.message)]:
+        for i in range[0, len(self.message)]:
             if self.message[i] in small_letter:
                 final_code = final_code + small_letter[small_letter.index(self.message[i] + shift)]
 
