@@ -36,6 +36,8 @@ class Message_encry():
         self.message = data
 
     def encrypt(self, shift):
+        small_letter = ""
+        cap_letter = ""
         small_letter = "-" + small_letter.ascii_lowercase() + small_letter.ascii_lowercase()
         cap_letter = "-" + cap_letter.ascii_uppercase() + cap_letter.ascii_uppercase()
         final_code = ""
