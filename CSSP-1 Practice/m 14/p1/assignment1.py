@@ -34,6 +34,7 @@ WORDLIST_FILENAME = 'words.txt'
 class Message_encry():
     def __init__(self,data):
         self.data = data
+        print(self.data)
 
     def encrypt(self, shift):
         small_letter = ""
