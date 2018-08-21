@@ -68,8 +68,8 @@ def main():
     data_input = input()
     data_shift = int(input())
     # c = dataage_encry.encrypt(data_input, data_shift)
-    Message_encry_obj = Message_encry(data_input)
-    print(Message_encry_obj.encrypt(data_shift))
+    message_encry_obj = Message_encry(data_input)
+    print(message_encry_obj.encrypt(data_shift))
 
 
 if __name__ == "__main__":
