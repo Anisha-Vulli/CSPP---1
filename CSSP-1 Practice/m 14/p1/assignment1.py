@@ -64,7 +64,7 @@ def main():
     '''
     data_input = input()
     data_shift = int(input())
-    c = Message_encry(data_input, data_shift)
+    c = Message_encry.encrypt(data_input, data_shift)
     #print(Message_encry.encrypt(data_input, data_shift))
     
 
