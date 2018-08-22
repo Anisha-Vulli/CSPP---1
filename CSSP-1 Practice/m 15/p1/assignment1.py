@@ -110,16 +110,16 @@ class Message(object):
         lower_keys = list(string.ascii_lowercase)
         lower_values = list(string.ascii_lowercase)
         shift_lower_values = lower_values[shift:] + lower_values[:shift]
-
+        print(shift_lower_values)
         upper_keys = list(string.ascii_uppercase)
         upper_values = list(string.ascii_uppercase)
         upper_shift_values = upper_values[shift:] + upper_values[:shift]
-
+        print(upper_shift_values)
         full_keys = lower_keys + upper_keys
         full_values = shift_lower_values + upper_shift_values
 
         self.shift_dict = dict(zip(full_keys, full_values))
-        return self.shift_dict
+        print(self.shift_dict)
 
     ### DO NOT MODIFY THIS METHOD ###
     def apply_shift(self, shift):
@@ -217,7 +217,7 @@ class PlaintextMessage(Message):
 # Helper code ends
 
 class CiphertextMessage(Message):
-    ''' CiphertextMessage class '''
+    Best_shift = 1
     def __init__(self, text):
         '''
         Initializes a CiphertextMessage object
@@ -228,9 +228,8 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        self.text = text
-        self.valid_words = load_words("words.txt")
-
+        Message.__init__(self, text)
+        self.valid_words = Message.get_valid_words(self)
     def decrypt_message(self):
         '''
         Decrypt self.message_text by trying every possible shift value
@@ -247,7 +246,35 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        pass
+        self.teststring = self.message_text
+        self.teststring = self.teststring.split() 
+        self.shift = CiphertextMessage.Best_shift
+        self.length = 0
+        self.list = []
+        while self.shift <= 26:
+            shift_dict_cypher = Message.build_shift_dict(self, self.shift)
+            cypher_dict_values = list(shift_dict_cypher.values())
+            cypher_dict_keys = list(shift_dict_cypher.keys())
+            count = 0
+            for element in self.teststring:
+                new_element = ""
+                for char in range(len(element)):
+                    if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
+                        if element[char] in cypher_dict_values:
+                            letter = cypher_dict_keys[cypher_dict_values.index(element[char])].lower()
+                        new_element = new_element + letter
+                if new_element in self.valid_words:
+                    count = count + 1
+            if self.length < count:
+                self.list = []
+                self.length = count
+            if self.length == count:
+                self.list.append(self.shift)
+            if self.length == len(self.teststring):
+                return(self.shift, Message.apply_shift(self, 26-(self.shift)))
+            self.shift += 1
+        return (min(self.list), Message.apply_shift(self, 26-min(self.list)))
+
 
 
 ### DO NOT MODIFY THIS METHOD ###
