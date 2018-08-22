@@ -110,16 +110,16 @@ class Message(object):
         lower_keys = list(string.ascii_lowercase)
         lower_values = list(string.ascii_lowercase)
         shift_lower_values = lower_values[shift:] + lower_values[:shift]
-        print(shift_lower_values)
+        
         upper_keys = list(string.ascii_uppercase)
         upper_values = list(string.ascii_uppercase)
         upper_shift_values = upper_values[shift:] + upper_values[:shift]
-        print(upper_shift_values)
+        
         full_keys = lower_keys + upper_keys
         full_values = shift_lower_values + upper_shift_values
 
         self.shift_dict = dict(zip(full_keys, full_values))
-        print(self.shift_dict)
+        return self.shift_dict
 
     ### DO NOT MODIFY THIS METHOD ###
     def apply_shift(self, shift):
@@ -216,64 +216,64 @@ class PlaintextMessage(Message):
 
 # Helper code ends
 
-# class CiphertextMessage(Message):
-#     Best_shift = 1
-#     def __init__(self, text):
-#         '''
-#         Initializes a CiphertextMessage object
+class CiphertextMessage(Message):
+    Best_shift = 1
+    def __init__(self, text):
+        '''
+        Initializes a CiphertextMessage object
 
-#         text (string): the message's text
+        text (string): the message's text
 
-#         a CiphertextMessage object has two attributes:
-#             self.message_text (string, determined by input text)
-#             self.valid_words (list, determined using helper function load_words)
-#         '''
-#         Message.__init__(self, text)
-#         self.valid_words = Message.get_valid_words(self)
-#     def decrypt_message(self):
-#         '''
-#         Decrypt self.message_text by trying every possible shift value
-#         and find the "best" one. We will define "best" as the shift that
-#         creates the maximum number of real words when we use apply_shift(shift)
-#         on the message text. If s is the original shift value used to encrypt
-#         the message, then we would expect 26 - s to be the best shift value
-#         for decrypting it.
+        a CiphertextMessage object has two attributes:
+            self.message_text (string, determined by input text)
+            self.valid_words (list, determined using helper function load_words)
+        '''
+        Message.__init__(self, text)
+        self.valid_words = Message.get_valid_words(self)
+    def decrypt_message(self):
+        '''
+        Decrypt self.message_text by trying every possible shift value
+        and find the "best" one. We will define "best" as the shift that
+        creates the maximum number of real words when we use apply_shift(shift)
+        on the message text. If s is the original shift value used to encrypt
+        the message, then we would expect 26 - s to be the best shift value
+        for decrypting it.
 
-#         Note: if multiple shifts are  equally good such that they all create
-#         the maximum number of you may choose any of those shifts (and their
-#         corresponding decrypted messages) to return
+        Note: if multiple shifts are  equally good such that they all create
+        the maximum number of you may choose any of those shifts (and their
+        corresponding decrypted messages) to return
 
-#         Returns: a tuple of the best shift value used to decrypt the message
-#         and the decrypted message text using that shift value
-#         '''
-#         self.teststring = self.message_text
-#         self.teststring = self.teststring.split() 
-#         self.shift = CiphertextMessage.Best_shift
-#         self.length = 0
-#         self.list = []
-#         while self.shift <= 26:
-#             shift_dict_cypher = Message.build_shift_dict(self, self.shift)
-#             cypher_dict_values = list(shift_dict_cypher.values())
-#             cypher_dict_keys = list(shift_dict_cypher.keys())
-#             count = 0
-#             for element in self.teststring:
-#                 new_element = ""
-#                 for char in range(len(element)):
-#                     if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
-#                         if element[char] in cypher_dict_values:
-#                             letter = cypher_dict_keys[cypher_dict_values.index(element[char])].lower()
-#                         new_element = new_element + letter
-#                 if new_element in self.valid_words:
-#                     count = count + 1
-#             if self.length < count:
-#                 self.list = []
-#                 self.length = count
-#             if self.length == count:
-#                 self.list.append(self.shift)
-#             if self.length == len(self.teststring):
-#                 return(self.shift, Message.apply_shift(self, 26-(self.shift)))
-#             self.shift += 1
-#         return (min(self.list), Message.apply_shift(self, 26-min(self.list)))
+        Returns: a tuple of the best shift value used to decrypt the message
+        and the decrypted message text using that shift value
+        '''
+        self.teststring = self.message_text
+        self.teststring = self.teststring.split() 
+        self.shift = CiphertextMessage.Best_shift
+        self.length = 0
+        self.list = []
+        while self.shift <= 26:
+            shift_dict_cypher = Message.build_shift_dict(self, self.shift)
+            cypher_dict_values = list(shift_dict_cypher.values())
+            cypher_dict_keys = list(shift_dict_cypher.keys())
+            count = 0
+            for element in self.teststring:
+                new_element = ""
+                for char in range(len(element)):
+                    if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
+                        if element[char] in cypher_dict_values:
+                            letter = cypher_dict_keys[cypher_dict_values.index(element[char])].lower()
+                        new_element = new_element + letter
+                if new_element in self.valid_words:
+                    count = count + 1
+            if self.length < count:
+                self.list = []
+                self.length = count
+            if self.length == count:
+                self.list.append(self.shift)
+            if self.length == len(self.teststring):
+                return(self.shift, Message.apply_shift(self, 26-(self.shift)))
+            self.shift += 1
+        return (min(self.list), Message.apply_shift(self, 26-min(self.list)))
 
 
 
