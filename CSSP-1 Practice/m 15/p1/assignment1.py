@@ -215,7 +215,7 @@ class PlaintextMessage(Message):
 # Helper code ends
 
 class CiphertextMessage(Message):
-    Best_shift = 1
+    ''' CiphertextMessage class '''
     def __init__(self, text):
         '''
         Initializes a CiphertextMessage object
@@ -226,8 +226,10 @@ class CiphertextMessage(Message):
             self.message_text (string, determined by input text)
             self.valid_words (list, determined using helper function load_words)
         '''
-        Message.__init__(self, text)
-        self.valid_words = Message.get_valid_words(self)
+        self.message_text = text
+        self.valid_words = load_words("words.txt")[:]
+        self.max_valid_words = 0
+
     def decrypt_message(self):
         '''
         Decrypt self.message_text by trying every possible shift value
@@ -244,38 +246,19 @@ class CiphertextMessage(Message):
         Returns: a tuple of the best shift value used to decrypt the message
         and the decrypted message text using that shift value
         '''
-        self.teststring = self.message_text
-        self.teststring = self.teststring.split()
-        self.shift = CiphertextMessage.Best_shift
-        self.length = 0
-        self.list = []
-        while self.shift <= 26:
-            shift_dict_cypher = Message.build_shift_dict(self, self.shift)
-            cypher_dict_values = list(shift_dict_cypher.values())
-            cypher_dict_keys = list(shift_dict_cypher.keys())
-            count = 0
-            for element in self.teststring:
-                new_element = ""
-                for char in range(len(element)):
-                    if element[char] in string.ascii_lowercase or element[char] in string.ascii_uppercase:
-                        if element[char] in cypher_dict_values:
-                            letter = cypher_dict_keys[cypher_dict_values.index(element[char])].lower()
-                        new_element = new_element + letter
-                if new_element in self.valid_words:
-                    count = count + 1
-            if self.length < count:
-                self.list = []
-                self.length = count
-            if self.length == count:
-                self.list.append(self.shift)
-            if self.length == len(self.teststring):
-                return(self.shift, Message.apply_shift(self, 26-(self.shift)))
-            self.shift += 1
-        return (min(self.list), Message.apply_shift(self, 26-min(self.list)))
+        for shift in range(27):
+            message = PlaintextMessage(self.message_text, shift)
+            decrypted = message.get_message_text_encrypted()
+            valid_words_count = 0
+            for word in decrypted.split(' '):
+                if is_word(self.valid_words, word):
+                    valid_words_count += 1
+            if self.max_valid_words < valid_words_count:
+                self.max_valid_words = valid_words_count
+                self.decrypted_message = (26-shift, decrypted)
+        return self.decrypted_message
 
-
-
-### DO NOT MODIFY THIS METHOD ###
+# Helper code ends
 def main():
     ''' This method is provided to handle testcases'''
     ciphertext = CiphertextMessage(input())
