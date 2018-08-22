@@ -110,11 +110,9 @@ class Message(object):
         lower_keys = list(string.ascii_lowercase)
         lower_values = list(string.ascii_lowercase)
         shift_lower_values = lower_values[shift:] + lower_values[:shift]
-        
         upper_keys = list(string.ascii_uppercase)
         upper_values = list(string.ascii_uppercase)
         upper_shift_values = upper_values[shift:] + upper_values[:shift]
-        
         full_keys = lower_keys + upper_keys
         full_values = shift_lower_values + upper_shift_values
 
@@ -247,7 +245,7 @@ class CiphertextMessage(Message):
         and the decrypted message text using that shift value
         '''
         self.teststring = self.message_text
-        self.teststring = self.teststring.split() 
+        self.teststring = self.teststring.split()
         self.shift = CiphertextMessage.Best_shift
         self.length = 0
         self.list = []
