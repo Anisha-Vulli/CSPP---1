@@ -248,15 +248,15 @@ class CiphertextMessage(Message):
         '''
         for shift in range(27):
             message = PlaintextMessage(self.message_text, shift)
-            decrypted = message.get_message_text_encrypted()
+            decryp = message.get_message_text_encrypted()
             valid_words_count = 0
-            for word in decrypted.split(' '):
+            for word in decryp.split(' '):
                 if is_word(self.valid_words, word):
                     valid_words_count += 1
             if self.max_valid_words < valid_words_count:
                 self.max_valid_words = valid_words_count
-                self.decrypted_message = (26-shift, decrypted)
-        return self.decrypted_message
+                self.decryp_message = (26-shift, decryp)
+        return self.decryp_message
 
 # Helper code ends
 def main():
