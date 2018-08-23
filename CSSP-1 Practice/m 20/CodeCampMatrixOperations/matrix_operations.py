@@ -81,7 +81,7 @@ def read_matrix():
     flag = True
     for i in matrix_1:
         count = 0
-        for j in i:
+        for _ in i:
             count += 1
         if count != m_c:
             flag = False
@@ -92,7 +92,7 @@ def read_matrix():
     flag = True
     for i in matrix_2:
         count = 0
-        for j in i:
+        for _ in i:
             count += 1
         if count != l_c:
             flag = False
