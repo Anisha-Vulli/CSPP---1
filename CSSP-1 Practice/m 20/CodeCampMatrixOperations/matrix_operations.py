@@ -75,7 +75,7 @@ def read_matrix():
     for i in matrix_1:
         count = 0
         for j in i:
-            count+=1
+            count += 1
         if count != m_c:
             flag = False
             
