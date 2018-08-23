@@ -7,7 +7,7 @@ def mult_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
 
-    if m == k:
+    if m_1 == k_2:
         res_mat = []
         for i in range(0, n_1):
             in_mat = []
