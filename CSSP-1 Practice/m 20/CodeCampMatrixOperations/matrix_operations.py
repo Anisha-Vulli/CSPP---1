@@ -34,7 +34,7 @@ def mult_matrix(mat_1, mat_2, n_1, m_1, k_2):
 
 
 
-def add_matrix(mat_1, mat_2, n_1, m_1):
+def add_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -101,8 +101,8 @@ def read_matrix():
         print("Error: Invalid input for the matrix")
 
     if flag is True:
-        print(add_matrix(matrix_1, matrix_2, n_r, m_c))
-        print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r))
+        print(add_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
+        print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
 
 
 def main():
