@@ -85,7 +85,7 @@ def read_matrix():
 
     if flag == True:
         print(add_matrix(matrix_1, matrix_2,n))
-        return(mult_matrix(matrix_1, matrix_2,n))
+        print(mult_matrix(matrix_1, matrix_2,n))
 
 
 def main():
@@ -96,7 +96,7 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    print(read_matrix())
+    read_matrix()
 
 if __name__ == '__main__':
     main()
