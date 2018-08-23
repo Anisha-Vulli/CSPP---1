@@ -60,19 +60,19 @@ def read_matrix():
 
     
     for i in matrix_1:
-        count = 1
+        count = 0
         for j in i:
             count+=1
-    if count != m:
-        print("Error: Invalid input for the matrix")
+        if count != m:
+            print("Error: Invalid input for the matrix")
 
     
     for i in matrix_2:
-        count = 1
+        count = 0
         for j in i:
             count += 1
-    if count != l:
-        print("Error: Invalid input for the matrix")
+        if count != l:
+            print("Error: Invalid input for the matrix")
 
     print(add_matrix(matrix_1,matrix_2,n))
     return(mult_matrix(matrix_1,matrix_2,n))
