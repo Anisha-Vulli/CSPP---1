@@ -29,8 +29,7 @@ def mult_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
 
         return res_mat
 
-    else:
-        print("Error: Matrix shapes invalid for mult")
+    print("Error: Matrix shapes invalid for mult")
 
 
 
@@ -52,8 +51,7 @@ def add_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
             res.append(in_mat)
         return res
 
-    else:
-        print("Error: Matrix shapes invalid for addition")
+    print("Error: Matrix shapes invalid for addition")
 
 
 def read_matrix():
