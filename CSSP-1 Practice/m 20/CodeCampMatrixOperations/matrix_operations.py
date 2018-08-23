@@ -98,8 +98,8 @@ def read_matrix():
             
 
     if flag == True:
-        print(add_matrix(matrix_1, matrix_2,n,m,k,l))
-        print(mult_matrix(matrix_1, matrix_2,n,m,k,l))
+        print(add_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
+        print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
 
 
 def main():
