@@ -101,8 +101,8 @@ def read_matrix():
         print("Error: Invalid input for the matrix")
 
     if flag is True:
-        print(add_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
-        print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
+        print(add_matrix(matrix_1, matrix_2, n_r, m_c))
+        print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r))
 
 
 def main():
