@@ -58,7 +58,7 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    n_r, m_c =input().split(',')
+    n_r, m_c = input().split(',')
     n_r = int(n_r)
     m_c = int(m_c)
     matrix_1 = []
