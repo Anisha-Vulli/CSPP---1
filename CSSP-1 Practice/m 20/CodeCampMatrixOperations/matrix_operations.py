@@ -78,7 +78,7 @@ def read_matrix():
             flag = True
             print("Error: Invalid input for the matrix")
 
-    if flag == False:
+    if flag == True:
         print(add_matrix(matrix_1,matrix_2,n))
         return(mult_matrix(matrix_1,matrix_2,n))
 
