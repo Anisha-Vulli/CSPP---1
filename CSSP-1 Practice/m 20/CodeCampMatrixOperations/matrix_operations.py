@@ -60,11 +60,13 @@ def read_matrix():
         matrix_2.append(list(map(int,input().split())))
 
     #print(l)
+    flag = True
     for i in matrix_1:
         count = 0
         for j in i:
             count+=1
         if count != m:
+            flag = False
             print("Error: Invalid input for the matrix")
 
     
@@ -73,11 +75,13 @@ def read_matrix():
         for j in i:
             count += 1
         if count != l:
+            flag = True
             print("Error: Invalid input for the matrix")
 
-    print(add_matrix(matrix_1,matrix_2,n))
-    return(mult_matrix(matrix_1,matrix_2,n))
- 
+    if flag == False:
+        print(add_matrix(matrix_1,matrix_2,n))
+        return(mult_matrix(matrix_1,matrix_2,n))
+
 
 def main():
     # read matrix 1
