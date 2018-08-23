@@ -59,7 +59,7 @@ def read_matrix():
     for j in range(0,k):
         matrix_2.append(list(map(int,input().split())))
 
-    print(l)
+    #print(l)
     for i in matrix_1:
         count = 0
         for j in i:
