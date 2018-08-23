@@ -46,19 +46,20 @@ def read_matrix():
     '''
     n,m =input().split(',')
     n = int(n)
-    
+    m = int(m)
     matrix_1 = []
     for i in range(0,n):
         matrix_1.append(list(map(int,input().split())))
 
     k,l = input().split(',')
     k = int(k)
+    l = int(l)
 
     matrix_2 = []
     for j in range(0,k):
         matrix_2.append(list(map(int,input().split())))
 
-    
+    print(l)
     for i in matrix_1:
         count = 0
         for j in i:
