@@ -38,7 +38,7 @@ def add_matrix(m_1, m_2, n,m,k,l):
         res = []
         for i in range(0, n):
             in_mat = []
-            for j in range(0, n):
+            for j in range(0, k):
                 in_mat.append(m_1[i][j] + m_2[i][j])
             res.append(in_mat)
         return (res)
