@@ -106,6 +106,7 @@ def read_matrix():
 
 
 def main():
+    '''Main function '''
     # read matrix 1
 
     # read matrix 2
