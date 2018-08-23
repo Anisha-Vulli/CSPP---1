@@ -7,9 +7,9 @@ def mult_matrix(m_1, m_2,n):
         error message should be "Error: Matrix shapes invalid for mult"
     '''
     res_mat = []
-    for i in range(0,n):
+    for i in range(0, n):
         in_mat = []
-        for j in range(0,n):
+        for j in range(0, n):
             sum_val = 0
             for k in range(0,n):
                 sum_val = sum_val + (m_1[i][k] * m_2[k][j])
@@ -19,7 +19,7 @@ def mult_matrix(m_1, m_2,n):
 
     return(res_mat)
 
-def add_matrix(m_1, m_2,n):
+def add_matrix(m_1, m_2, n):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -28,9 +28,9 @@ def add_matrix(m_1, m_2,n):
         error message should be "Error: Matrix shapes invalid for addition"
     '''
     res = []
-    for i in range(0,n):
+    for i in range(0, n):
         in_mat = []
-        for j in range(0,n):
+        for j in range(0, n):
             in_mat.append(m_1[i][j] + m_2[i][j])
         res.append(in_mat)
 
@@ -48,16 +48,16 @@ def read_matrix():
     n = int(n)
     m = int(m)
     matrix_1 = []
-    for i in range(0,n):
-        matrix_1.append(list(map(int,input().split())))
+    for i in range(0, n):
+        matrix_1.append(list(map(int, input().split())))
 
     k,l = input().split(',')
     k = int(k)
     l = int(l)
 
     matrix_2 = []
-    for j in range(0,k):
-        matrix_2.append(list(map(int,input().split())))
+    for j in range(0, k):
+        matrix_2.append(list(map(int, input().split())))
 
     #print(l)
     flag = True
@@ -69,7 +69,6 @@ def read_matrix():
             flag = False
             print("Error: Invalid input for the matrix")
 
-    
     for i in matrix_2:
         count = 0
         for j in i:
@@ -80,8 +79,8 @@ def read_matrix():
         break
 
     if flag == True:
-        print(add_matrix(matrix_1,matrix_2,n))
-        return(mult_matrix(matrix_1,matrix_2,n))
+        print(add_matrix(matrix_1, matrix_2,n))
+        return(mult_matrix(matrix_1, matrix_2,n))
 
 
 def main():
@@ -92,14 +91,7 @@ def main():
     # add matrix 1 and matrix 2
 
     # multiply matrix 1 and matrix 2
-    
-    
-    
     print(read_matrix())
-   
-
-
-
 
 if __name__ == '__main__':
     main()
