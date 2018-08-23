@@ -1,4 +1,4 @@
-def mult_matrix(m_1, m_2,n):
+def mult_matrix(m_1, m_2,n,m,k,l):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -6,20 +6,24 @@ def mult_matrix(m_1, m_2,n):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
-    res_mat = []
-    for i in range(0, n):
-        in_mat = []
-        for j in range(0, n):
-            sum_val = 0
-            for k in range(0,n):
-                sum_val = sum_val + (m_1[i][k] * m_2[k][j])
-            in_mat.append(sum_val)
+    if m == k:
+        res_mat = []
+        for i in range(0, n):
+            in_mat = []
+            for j in range(0, n):
+               sum_val = 0
+               for k in range(0,n):
+                   sum_val = sum_val + (m_1[i][k] * m_2[k][j])
+                in_mat.append(sum_val)
 
-        res_mat.append(in_mat)
+           res_mat.append(in_mat)
 
-    return(res_mat)
+        return(res_mat)
 
-def add_matrix(m_1, m_2, n):
+    else:
+        print("Error: Matrix shapes invalid for mult")
+
+def add_matrix(m_1, m_2, n,m,k,l):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -27,14 +31,21 @@ def add_matrix(m_1, m_2, n):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    res = []
-    for i in range(0, n):
-        in_mat = []
-        for j in range(0, n):
-            in_mat.append(m_1[i][j] + m_2[i][j])
+    if n == k and k == l:
+        res = []
+        for i in range(0, n):
+            in_mat = []
+            for j in range(0, n):
+                in_mat.append(m_1[i][j] + m_2[i][j])
         res.append(in_mat)
+        return (res)
 
-    return (res)
+    else:
+        print("Error: Matrix shapes invalid for addition")
+
+
+
+    
 
 def read_matrix():
     '''
@@ -84,8 +95,8 @@ def read_matrix():
             
 
     if flag == True:
-        print(add_matrix(matrix_1, matrix_2,n))
-        print(mult_matrix(matrix_1, matrix_2,n))
+        print(add_matrix(matrix_1, matrix_2,n,m,k,l))
+        print(mult_matrix(matrix_1, matrix_2,n,m,k,l))
 
 
 def main():
