@@ -58,28 +58,28 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    n,m =input().split(',')
-    n = int(n)
-    m = int(m)
+    n_r, m_c =input().split(',')
+    n_r = int(n_r)
+    m_m = int(m_c)
     matrix_1 = []
-    for i in range(0, n):
+    for i in range(0, n_r):
         matrix_1.append(list(map(int, input().split())))
 
-    k,l = input().split(',')
-    k = int(k)
-    l = int(l)
+    k_r, l_c = input().split(',')
+    k_r = int(k)
+    l_c = int(l)
 
     matrix_2 = []
-    for j in range(0, k):
+    for j in range(0, k_r):
         matrix_2.append(list(map(int, input().split())))
 
     #print(l)
     flag = True
     for i in matrix_1:
-        count = 0
+        count_val = 0
         for j in i:
-            count+=1
-        if count != m:
+            count_val += 1
+        if count_val != m:
             flag = False
             
     if flag == False:
@@ -87,10 +87,10 @@ def read_matrix():
     
     flag = True
     for i in matrix_2:
-        count = 0
+        count_val = 0
         for j in i:
-            count += 1
-        if count != l:
+            count_val += 1
+        if count_val != l:
             flag = False
             
     if flag == False:
@@ -98,8 +98,8 @@ def read_matrix():
             
 
     if flag == True:
-        print(add_matrix(matrix_1, matrix_2,n,m,k,l))
-        print(mult_matrix(matrix_1, matrix_2,n,m,k,l))
+        print(add_matrix(matrix_1, matrix_2,n_r,m_c,k_r,l_c))
+        print(mult_matrix(matrix_1, matrix_2,n_r,m_c,k_r,l_c))
 
 
 def main():
