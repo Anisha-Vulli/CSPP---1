@@ -6,22 +6,25 @@ def mult_matrix(m_1, m_2,n,m,k,l):
         and return None
         error message should be "Error: Matrix shapes invalid for mult"
     '''
+
     if m == k:
         res_mat = []
         for i in range(0, n):
             in_mat = []
             for j in range(0, n):
-               sum_val = 0
-               for k in range(0,n):
-                   sum_val = sum_val + (m_1[i][k] * m_2[k][j])
-               in_mat.append(sum_val)
-
-           res_mat.append(in_mat)
+                sum_val = 0
+                for k in range(0,n):
+                    sum_val = sum_val + (m_1[i][k] * m_2[k][j])
+                in_mat.append(sum_val)
+            res_mat.append(in_mat)
 
         return(res_mat)
 
     else:
-        print("Error: Matrix shapes invalid for mult")
+        print("Error: Matrix shapes invalid for addition")
+
+
+
 
 def add_matrix(m_1, m_2, n,m,k,l):
     '''
