@@ -77,7 +77,7 @@ def read_matrix():
         if count != l:
             flag = True
             print("Error: Invalid input for the matrix")
-            break
+        break
 
     if flag == True:
         print(add_matrix(matrix_1,matrix_2,n))
