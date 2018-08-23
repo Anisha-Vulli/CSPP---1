@@ -79,7 +79,7 @@ def read_matrix():
         count_val = 0
         for j in i:
             count_val += 1
-        if count_val != m:
+        if count_val != m_c:
             flag = False
             
     if flag == False:
@@ -90,7 +90,7 @@ def read_matrix():
         count_val = 0
         for j in i:
             count_val += 1
-        if count_val != l:
+        if count_val != l_c:
             flag = False
             
     if flag == False:
