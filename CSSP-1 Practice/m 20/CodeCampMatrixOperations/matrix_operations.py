@@ -1,4 +1,4 @@
-def mult_matrix(m_1, m_2, n, m, k, l):
+def mult_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -9,12 +9,12 @@ def mult_matrix(m_1, m_2, n, m, k, l):
 
     if m == k:
         res_mat = []
-        for i in range(0, n):
+        for i in range(0, n_1):
             in_mat = []
-            for j in range(0, n):
+            for j in range(0, n_1):
                 sum_val = 0
-                for k in range(0, m):
-                    sum_val = sum_val + (m_1[i][k] * m_2[k][j])
+                for k in range(0, m_1):
+                    sum_val = sum_val + (mat_1[i][k] * mat_2[k][j])
                 in_mat.append(sum_val)
             res_mat.append(in_mat)
 
