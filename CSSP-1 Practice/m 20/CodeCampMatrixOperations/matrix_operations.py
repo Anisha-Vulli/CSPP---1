@@ -8,14 +8,14 @@ def mult_matrix(m_1, m_2,n):
     '''
     res_mat = []
     for i in range(0,n):
-    	in_mat = []
-    	for j in range(0,n):
-    		sum_val = 0
-    		for k in range(0,n):
-    			sum_val = sum_val + (m_1[i][k] * m_2[k][j])
-    		in_mat.append(sum_val)
+        in_mat = []
+        for j in range(0,n):
+            sum_val = 0
+            for k in range(0,n):
+                sum_val = sum_val + (m_1[i][k] * m_2[k][j])
+            in_mat.append(sum_val)
 
-    	res_mat.append(in_mat)
+        res_mat.append(in_mat)
 
     return(res_mat)
 
@@ -29,10 +29,10 @@ def add_matrix(m_1, m_2,n):
     '''
     res = []
     for i in range(0,n):
-    	in_mat = []
-    	for j in range(0,n):
-    		in_mat.append(m_1[i][j] + m_2[i][j])
-    	res.append(in_mat)
+        in_mat = []
+        for j in range(0,n):
+            in_mat.append(m_1[i][j] + m_2[i][j])
+        res.append(in_mat)
 
     return (res)
 
@@ -49,14 +49,28 @@ def read_matrix():
     
     matrix_1 = []
     for i in range(0,n):
-    	matrix_1.append(list(map(int,input().split())))
+        matrix_1.append(list(map(int,input().split())))
 
     k,l = input().split(',')
     k = int(k)
 
     matrix_2 = []
     for j in range(0,k):
-    	matrix_2.append(list(map(int,input().split())))
+        matrix_2.append(list(map(int,input().split())))
+
+    count = 0
+    for i in matrix_1:
+        for j in i:
+            count+=1
+        if count != l:
+            print("Error: Invalid input for the matrix")
+
+    count = 0
+    for i in matrix_2:
+        for j in i:
+            count+=1
+        if count != l:
+            print("Error: Invalid input for the matrix")
 
     print(add_matrix(matrix_1,matrix_2,n))
     return(mult_matrix(matrix_1,matrix_2,n))
