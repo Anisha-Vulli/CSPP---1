@@ -67,16 +67,21 @@ def read_matrix():
             count+=1
         if count != m:
             flag = False
-            print("Error: Invalid input for the matrix")
-
+            
+    if flag == False:
+        print("Error: Invalid input for the matrix")
+    
+    flag = True
     for i in matrix_2:
         count = 0
         for j in i:
             count += 1
         if count != l:
-            flag = True
-            print("Error: Invalid input for the matrix")
-        break
+            flag = False
+            
+    if flag == False:
+        print("Error: Invalid input for the matrix")
+            
 
     if flag == True:
         print(add_matrix(matrix_1, matrix_2,n))
