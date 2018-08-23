@@ -66,8 +66,8 @@ def read_matrix():
         matrix_1.append(list(map(int, input().split())))
 
     k_r, l_c = input().split(',')
-    k_r = int(k)
-    l_c = int(l)
+    k_r = int(k_r)
+    l_c = int(l_c)
 
     matrix_2 = []
     for j in range(0, k_r):
