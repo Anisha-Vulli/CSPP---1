@@ -102,7 +102,7 @@ def read_matrix():
 
     if flag is True:
         print(add_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
-        print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
+        print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r))
 
 
 def main():
