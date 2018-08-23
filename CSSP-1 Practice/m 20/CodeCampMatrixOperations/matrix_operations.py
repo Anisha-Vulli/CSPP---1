@@ -47,9 +47,6 @@ def add_matrix(m_1, m_2, n, m, k, l):
         print("Error: Matrix shapes invalid for addition")
 
 
-
-    
-
 def read_matrix():
     '''
         read the matrix dimensions from input
@@ -95,7 +92,6 @@ def read_matrix():
             
     if flag is False:
         print("Error: Invalid input for the matrix")
-            
 
     if flag is True:
         print(add_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
