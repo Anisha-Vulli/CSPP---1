@@ -82,7 +82,7 @@ def read_matrix():
         if count != m_c:
             flag = False
             
-    if flag == False:
+    if flag is False:
         print("Error: Invalid input for the matrix")
     
     flag = True
@@ -93,11 +93,11 @@ def read_matrix():
         if count != l_c:
             flag = False
             
-    if flag == False:
+    if flag is False:
         print("Error: Invalid input for the matrix")
             
 
-    if flag == True:
+    if flag is True:
         print(add_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
         print(mult_matrix(matrix_1, matrix_2, n_r, m_c, k_r, l_c))
 
