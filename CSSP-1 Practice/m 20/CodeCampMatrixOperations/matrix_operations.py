@@ -74,7 +74,7 @@ def read_matrix():
     l_c = int(l_c)
 
     matrix_2 = []
-    for j in range(0, k_r):
+    for _ in range(0, k_r):
         matrix_2.append(list(map(int, input().split())))
 
     #print(l)
