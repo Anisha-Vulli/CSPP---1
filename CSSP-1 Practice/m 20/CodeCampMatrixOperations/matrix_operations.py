@@ -58,15 +58,17 @@ def read_matrix():
     for j in range(0,k):
         matrix_2.append(list(map(int,input().split())))
 
-    count = 1
+    
     for i in matrix_1:
+        count = 1
         for j in i:
             count+=1
         if count != m:
             print("Error: Invalid input for the matrix")
 
-    count = 1
+    
     for i in matrix_2:
+        count = 1
         for j in i:
             count+=1
         if count != l:
