@@ -26,7 +26,7 @@ def mult_matrix(m_1, m_2, n, m, k, l):
 
 
 
-def add_matrix(m_1, m_2, n, m, k, l):
+def add_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -34,12 +34,12 @@ def add_matrix(m_1, m_2, n, m, k, l):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if n == k and m == l:
+    if n_1 == k_2 and m_1 == l_2:
         res = []
-        for i in range(0, n):
+        for i in range(0, n_1):
             in_mat = []
-            for j in range(0, m):
-                in_mat.append(m_1[i][j] + m_2[i][j])
+            for j in range(0, m_1):
+                in_mat.append(mat_1[i][j] + mat_2[i][j])
             res.append(in_mat)
         return res
 
