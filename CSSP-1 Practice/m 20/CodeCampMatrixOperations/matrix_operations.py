@@ -58,19 +58,19 @@ def read_matrix():
         print an error message and return None
         error message should be "Error: Invalid input for the matrix"
     '''
-    n,m =input().split(',')
-    n = int(n)
-    m = int(m)
+    n_r,m_c =input().split(',')
+    n_r = int(n_r)
+    m_c = int(m_c)
     matrix_1 = []
-    for i in range(0, n):
+    for i in range(0, n_r):
         matrix_1.append(list(map(int, input().split())))
 
-    k,l = input().split(',')
-    k = int(k)
-    l = int(l)
+    k_r,l_c = input().split(',')
+    k_r = int(k_r)
+    l_c = int(l_c)
 
     matrix_2 = []
-    for j in range(0, k):
+    for j in range(0, k_r):
         matrix_2.append(list(map(int, input().split())))
 
     #print(l)
