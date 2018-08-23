@@ -78,10 +78,10 @@ def read_matrix():
             count += 1
         if count != m_c:
             flag = False
-            
+
     if flag is False:
         print("Error: Invalid input for the matrix")
-    
+
     flag = True
     for i in matrix_2:
         count = 0
@@ -89,7 +89,7 @@ def read_matrix():
             count += 1
         if count != l_c:
             flag = False
-            
+
     if flag is False:
         print("Error: Invalid input for the matrix")
 
