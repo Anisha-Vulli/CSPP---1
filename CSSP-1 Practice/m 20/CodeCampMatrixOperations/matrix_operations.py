@@ -21,7 +21,7 @@ def mult_matrix(m_1, m_2,n,m,k,l):
         return(res_mat)
 
     else:
-        print("Error: Matrix shapes invalid for addition")
+        print("Error: Matrix shapes invalid for mult")
 
 
 
