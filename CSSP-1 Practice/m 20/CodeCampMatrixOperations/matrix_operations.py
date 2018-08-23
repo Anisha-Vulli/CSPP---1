@@ -42,9 +42,11 @@ def add_matrix(mat_1, mat_2):
     '''
     if len(mat_1) == len(mat_2) and len(mat_1[0]) == len(mat_2[0]):
         res = []
-        for i in range(0, len(mat_1)):
+        len_rows = len(mat_1)
+        len_colu = len(mat_1[0])
+        for i in range(len_rows):
             in_mat = []
-            for j in range(0, len(mat_1[0])):
+            for j in range(len_colu):
                 in_mat.append(mat_1[i][j] + mat_2[i][j])
             res.append(in_mat)
         return res
