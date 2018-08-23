@@ -34,7 +34,7 @@ def add_matrix(m_1, m_2, n,m,k,l):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    if n == k and k == l:
+    if n == k and m == l:
         res = []
         for i in range(0, n):
             in_mat = []
