@@ -7,7 +7,7 @@ Date : 23 Aug 2018
 '''
 
 
-def mult_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
+def mult_matrix(mat_1, mat_2, n_1, m_1, k_2):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -34,7 +34,7 @@ def mult_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
 
 
 
-def add_matrix(mat_1, mat_2, n_1, m_1, k_2, l_2):
+def add_matrix(mat_1, mat_2, n_1, m_1):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
