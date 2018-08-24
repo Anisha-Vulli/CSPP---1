@@ -87,9 +87,9 @@ def build_search_index(docs):
     for doc_id in range(len(doc_list)) :
         for word in doc_list[doc_id]:
             if word not in search_index_dict:
-                search_index_dict[j].append(doc_id,doc_list[doc_id][word])
+                search_index_dict[word].append(doc_id,doc_list[doc_id][word])
             else:
-                search_index_dict[j] = [(doc_id,doc_list[doc_id][word])]
+                search_index_dict[word] = [(doc_id,doc_list[doc_id][word])]
 
 
     return search_index_dict
