@@ -66,19 +66,25 @@ def main():
     o_count = 0
     char_count = 0
     other_count = 0
+    basic_count = 0
 
     for i in range(3):
         for j in range(3):
             if board[i][j] == 'x':
                 x_count += 1
+                basic_count += 1
             elif board[i][j] == 'o':
                 o_count += 1
+                basic_count += 1
             elif board[i][j] == '.':
                 char_count += 1
+                basic_count += 1
             else:
                 other_count += 1
+                basic_count += 1
 
     #print(x_count, o_count, char_count, other_count)
+    print(basic_count)
 
     if other_count != 0:
         print("invalid input")
@@ -86,8 +92,6 @@ def main():
 
     elif x_count > o_count + 1 or o_count > x_count + 1:
         print("invalid game")
-        if x_count > o_count:
-            print("draw")
 
     else:
         turn_x = 'x'
