@@ -79,7 +79,7 @@ def main():
             else:
                 other_count += 1
 
-    if other_char != 0:
+    if other_count != 0:
         print("invalid input")
         count_val += 1
 
