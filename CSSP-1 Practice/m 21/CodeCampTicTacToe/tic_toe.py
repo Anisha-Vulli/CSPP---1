@@ -79,11 +79,13 @@ def main():
             else:
                 other_count += 1
 
+    print(x_count, o_count, char_count, other_count)
+
     if other_count != 0:
         print("invalid input")
         count_val += 1
 
-    elif (x_count > o_count) or (o_count > x_count):
+    elif (x_count > o_count) and (o_count > x_count):
         print("invalid game")
 
     turn_x = 'x'
