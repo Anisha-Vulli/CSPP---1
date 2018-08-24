@@ -1,4 +1,5 @@
 def is_diagonal_forward(board, turn):
+    '''Checking diagonal forward '''
     count_val = 0
     for lop_1 in range(3):
         if board[lop_1][lop_1] is turn:
@@ -9,19 +10,21 @@ def is_diagonal_forward(board, turn):
     return False
 
 def is_diagonal_backward(board, turn):
+    '''Checking diagonal backward '''
     count_val = 0
     in_loop = 2
     for lop_1 in range(3):
         if board[lop_1][in_loop] is turn:
             count_val += 1
         in_loop -= 1
-            
+
     if count_val == 3:
         #print("DB true")
         return True
     return False
 
 def is_horizontal(board, turn):
+    '''Check horizontal '''
     count_val = 0
     for lop_1 in range(3):
         for in_loop in range(3):
@@ -34,6 +37,7 @@ def is_horizontal(board, turn):
     return False
 
 def is_vertical(board, turn):
+    '''Check vertical '''
     count_val = 0
     for lop_1 in range(3):
         for in_loop in range(3):
@@ -46,6 +50,7 @@ def is_vertical(board, turn):
     return False
 
 def read_input():
+    '''Reading the input '''
     board = []
     for i in range(0, 3):
         board.append(list(map(str, input().split())))
@@ -103,7 +108,7 @@ def main():
         #print(boolean_x)
         turn_o = 'o'
         boolean_o = (is_vertical(board, turn_o) or is_horizontal(board, turn_o)
-                     or is_diagonal_forward(board, turn_o) 
+                     or is_diagonal_forward(board, turn_o)
                      or is_diagonal_backward(board, turn_o))
         #print(boolean_o)
 
