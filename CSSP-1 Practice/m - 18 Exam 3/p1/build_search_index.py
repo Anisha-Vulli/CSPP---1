@@ -89,7 +89,7 @@ def build_search_index(docs):
                 search_index_dict[word].append((doc_id, doc_list[doc_id][word]))
             else:
                 search_index_dict[word] = [(doc_id, doc_list[doc_id][word])]
-      
+
     return search_index_dict
 
 # helper function to print the search index
