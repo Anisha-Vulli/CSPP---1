@@ -66,11 +66,11 @@ def main():
 
     for i in range(3):
         for j in range(3):
-            if board[lo_op][in_loop] == 'x':
+            if board[i][j] == 'x':
                 x_count += 1
-            elif board[lo_op][in_loop] == 'o':
+            elif board[i][j] == 'o':
                 o_count += 1
-            elif board[lo_op][in_loop] == '.':
+            elif board[i][j] == '.':
                 char_count += 1
             else:
                 other_char += 1
