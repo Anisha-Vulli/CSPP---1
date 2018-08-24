@@ -83,7 +83,7 @@ def main():
         print("invalid input")
         count_val += 1
 
-    elif x_count > o_count + 1 and o_count > x_count + 1:
+    elif (x_count > o_count) and (o_count > x_count):
         print("invalid game")
 
     turn_x = 'x'
