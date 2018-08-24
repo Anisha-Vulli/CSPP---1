@@ -9,7 +9,7 @@ def print_board(board):
 def read_input():
     board = []
     for i in range(0, 3):
-        board.append(list(map(input().split())))
+        board.append(input().split())
 
     print(print_board)
 
