@@ -1,3 +1,9 @@
+'''
+
+Author: Anisha Vulli
+Date : 24th Aug 2018
+
+'''
 def is_diagonal_forward(board, turn):
     '''Checking diagonal forward '''
     count_val = 0
@@ -52,7 +58,7 @@ def is_vertical(board, turn):
 def read_input():
     '''Reading the input '''
     board = []
-    for i in range(0, 3):
+    for _ in range(0, 3):
         board.append(list(map(str, input().split())))
 
     #print(board)
