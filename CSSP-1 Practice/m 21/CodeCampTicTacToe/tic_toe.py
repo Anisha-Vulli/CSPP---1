@@ -48,6 +48,8 @@ def read_input():
     for i in range(0, 3):
         board.append(list(map(str, input().split())))
 
+    return board
+
 
 def main():
     '''Main function '''
