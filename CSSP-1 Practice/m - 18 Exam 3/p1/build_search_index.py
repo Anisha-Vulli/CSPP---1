@@ -75,21 +75,22 @@ def build_search_index(docs):
     search_index_dict = {}
     doc_list = docs
     words_list = []
+    len_doc_list = len(doc_list)
 
 
-    for i in range(len(doc_list)):
+    for i in range(len_doc_list):
         doc_list[i] = word_list(doc_list[i])
         doc_list[i] = collections.Counter(doc_list[i])
 
     #print(doc_list)
 
 
-    for doc_id in range(len(doc_list)) :
+    for doc_id in range(len_doc_list):
         for word in doc_list[doc_id]:
             if word in search_index_dict:
-                search_index_dict[word].append((doc_id,doc_list[doc_id][word]))
+                search_index_dict[word].append((doc_id, doc_list[doc_id][word]))
             else:
-                search_index_dict[word] = [(doc_id,doc_list[doc_id][word])]
+                search_index_dict[word] = [(doc_id, doc_list[doc_id][word])]
 
 
     return search_index_dict
