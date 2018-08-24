@@ -81,15 +81,15 @@ def build_search_index(docs):
         doc_list[i] = word_list(doc_list[i])
         doc_list[i] = collections.Counter(doc_list[i])
 
-    print(doc_list)
+    #print(doc_list)
 
 
-    for k, l_1 in enumerate(words_list):
-        for j in l_1:
+    for doc_id in range(len(doc_list)) :
+        for word in doc_id:
             if j not in search_index_dict:
-                search_index_dict[j] = [(k, 1)]
+                search_index_dict[j].append(doc_id,doc_list[doc_id][word])
             else:
-                search_index_dict[j].append((k, 1))
+                search_index_dict[j] = [(doc_id,doc_list[doc_id][word])]
 
 
     return search_index_dict
