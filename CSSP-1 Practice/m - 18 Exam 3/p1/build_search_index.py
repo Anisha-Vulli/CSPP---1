@@ -77,10 +77,10 @@ def build_search_index(docs):
     words_list = []
 
 
-    for i, j in enumerate(doc_list):
+    for i in range(len(doc_list)):
         #print(type(i))
         words_list.append(word_list(j))
-        doc_list[j] = collections.Counter(doc_list[j])
+        doc_list[i] = collections.Counter(doc_list[i])
 
     print(doc_list)
 
