@@ -2,7 +2,7 @@ def is_diagonal_forward(board, turn):
     count_val = 0
     for lop_1 in range(3):
         if board[lop_1][lop_1] is turn:
-                count_val += 1
+            count_val += 1
     if count_val == 3:
         #print("DF true")
         return True
