@@ -63,6 +63,10 @@ def main():
     board = read_input()
     #print(board)
     count_val = 0
+    x_count = 0
+    o_count = 0
+    char_count = 0
+    other_count = 0
 
     for i in range(3):
         for j in range(3):
@@ -73,7 +77,7 @@ def main():
             elif board[i][j] == '.':
                 char_count += 1
             else:
-                other_char += 1
+                other_count += 1
 
     if other_char != 0:
         print("invalid input")
