@@ -74,7 +74,6 @@ def build_search_index(docs):
     # return search index
     search_index_dict = {}
     doc_list = docs
-    words_list = []
     len_doc_list = len(doc_list)
 
 
