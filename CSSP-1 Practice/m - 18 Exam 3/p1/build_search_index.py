@@ -86,9 +86,9 @@ def build_search_index(docs):
     for doc_id, doc in enumerate(doc_list):
         for word in doc:
             if word in search_index_dict:
-                search_index_dict[word].append((doc_id, doc_list[doc_id][word]))
+                search_index_dict[word].append((doc_id, doc_list[word][doc_id]))
             else:
-                search_index_dict[word] = [(doc_id, doc_list[doc_id][word])]
+                search_index_dict[word] = [(doc_id, doc_list[word][doc_id])]
 
     # for doc_id in range(len_doc_list):
     #     for word in doc_list[doc_id]:
