@@ -79,7 +79,7 @@ def main():
             else:
                 other_count += 1
 
-    print(x_count, o_count, char_count, other_count)
+    #print(x_count, o_count, char_count, other_count)
 
     if other_count != 0:
         print("invalid input")
@@ -88,27 +88,27 @@ def main():
     elif (x_count > o_count) and (o_count > x_count):
         print("invalid game")
 
-    turn_x = 'x'
-    boolean_x = (is_vertical(board, turn_x) or is_horizontal(board, turn_x) 
-                 or is_diagonal_forward(board, turn_x) 
-                 or is_diagonal_backward(board, turn_x))
-    #print(boolean_x)
-    turn_o = 'o'
-    boolean_o = (is_vertical(board, turn_o) or is_horizontal(board, turn_o) 
-                 or is_diagonal_forward(board, turn_o) 
-                 or is_diagonal_backward(board, turn_o))
+    else:
+        turn_x = 'x'
+        boolean_x = (is_vertical(board, turn_x) or is_horizontal(board, turn_x) 
+                     or is_diagonal_forward(board, turn_x) 
+                     or is_diagonal_backward(board, turn_x))
+        turn_o = 'o'
+        boolean_o = (is_vertical(board, turn_o) or is_horizontal(board, turn_o) 
+                     or is_diagonal_forward(board, turn_o) 
+                     or is_diagonal_backward(board, turn_o))
 
-    if boolean_x and boolean_o and count_val == 0:
-        print("invalid game")
-        count_val += 1
+        if boolean_x and boolean_o and count_val == 0:
+            print("invalid game")
+            count_val += 1
 
-    if boolean_x and count_val == 0:
-        print(turn_x)
-        count_val += 1
+        if boolean_x and count_val == 0:
+            print(turn_x)
+            count_val += 1
 
-    if boolean_o and count_val == 0:
-        print(turn_o)
-        count_val += 1
+        if boolean_o and count_val == 0:
+            print(turn_o)
+            count_val += 1
 
 if __name__ == '__main__':
     main()
