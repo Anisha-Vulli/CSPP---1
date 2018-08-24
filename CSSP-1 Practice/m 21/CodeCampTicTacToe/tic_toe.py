@@ -87,6 +87,9 @@ def main():
     elif x_count > o_count + 1 or o_count > x_count + 1:
         print("invalid game")
 
+    elif x_count > o_count:
+        print("draw")
+
     else:
         turn_x = 'x'
         boolean_x = (is_vertical(board, turn_x) or is_horizontal(board, turn_x)
