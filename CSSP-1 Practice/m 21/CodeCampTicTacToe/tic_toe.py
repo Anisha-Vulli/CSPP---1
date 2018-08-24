@@ -1,14 +1,14 @@
 def print_board(board):
-	board_list = board
-	for i in range(len(board_list)):
-		return join(board_list[i])
+    board_list = board
+    for i in range(len(board_list)):
+        return join(board_list[i])
 
 
 
 
 def read_input():
-	board = []
-	for i in range(0, 3):
+    board = []
+    for i in range(0, 3):
         board.append(list(map(int, input().split())))
 
     print(print_board)
