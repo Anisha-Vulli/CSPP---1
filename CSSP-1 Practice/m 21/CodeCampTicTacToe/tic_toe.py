@@ -25,7 +25,7 @@ def is_horizontal(board, turn):
     count_val = 0
     for lop_1 in range(3):
         for in_loop in range(3):
-            if not board[lop_1][in_loop] is turn:
+            if board[lop_1][in_loop] is not turn:
                 count_val += 1
         if count_val == 0:
             return True
@@ -48,6 +48,8 @@ def read_input():
     for i in range(0, 3):
         board.append(list(map(str, input().split())))
 
+    print(board)
+
     return board
 
 
@@ -60,6 +62,7 @@ def main():
     boolean_x = (is_vertical(board, turn_x) or is_horizontal(board, turn_x) 
                  or is_diagonal_forward(board, turn_x) 
                  or is_diagonal_backward(board, turn_x))
+    #print(boolean_x)
     turn_o = 'o'
     boolean_o = (is_vertical(board, turn_o) or is_horizontal(board, turn_o) 
                  or is_diagonal_forward(board, turn_o) 
