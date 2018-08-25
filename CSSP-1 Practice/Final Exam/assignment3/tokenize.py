@@ -18,13 +18,14 @@ def tokenize(string):
     # print(string_obt)
     temp_list = []
     final_dict = {}
-    for i in range(len(string_obt)):
-        temp_list[i] = collections.Counter(string_obt)
+    for i in string_obt:
+        temp_list = collections.Counter(string_obt)
         #temp_list = Counter(temp_list)
 
     #print(temp_list)
 
     for doc_id, doc in enumerate(temp_list):
+        print(doc)
         for word in doc:
             if word in final_dict:
                 final_dict[word].append((doc_id, temp_list[doc_id][word]))
