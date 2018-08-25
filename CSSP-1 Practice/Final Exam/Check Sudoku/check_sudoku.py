@@ -9,6 +9,7 @@
 '''
 
 def check_inside(list_sudoku):
+    '''Checking inside '''
     #print("Hello")
     temp = list_sudoku
     #print(temp)
@@ -17,7 +18,7 @@ def check_inside(list_sudoku):
     empty_list = []
     count_vert = 0
     count_hori = 0
-    
+
     for val in temp:
         empty_list = sorted(val)
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
@@ -74,7 +75,6 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
     # initialize empty list
     sudoku = []
 
