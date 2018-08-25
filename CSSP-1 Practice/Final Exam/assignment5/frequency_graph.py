@@ -8,9 +8,9 @@ def frequency_graph(dictionary):
     temp_dict = {}
     for key in keys:
     	if key in temp_dict:
-    		temp_dict.append('#' * dictionary[key])
+    		temp_dict[key].append('#' * dictionary[key])
     	else:
-    		temp_dict = '#' * dictionary[key]
+    		temp_dict[key] = '#' * dictionary[key]
 
 
     print(temp_dict)
