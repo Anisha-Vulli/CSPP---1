@@ -26,10 +26,10 @@ def tokenize(string):
 
     for doc_id, doc in enumerate(temp_list):
         #print(doc)
-        if word in final_dict:
-            final_dict[word].append((doc_id, temp_list[doc_id][word]))
+        if doc in final_dict:
+            final_dict[doc].append(temp_list[doc_id][doc])
         else:
-            final_dict[word] = [(doc_id, temp_list[doc_id][word])]
+            final_dict[doc] = temp_list[doc_id][doc]
 
     return final_dict
 def main():
