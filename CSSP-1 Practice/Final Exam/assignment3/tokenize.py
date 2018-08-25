@@ -13,15 +13,15 @@ def clean_input(string):
 def tokenize(string):
     clean_stng = clean_input(string)
     string_obt = clean_stng.split()
-    print(string_obt)
+    #print(string_obt)
     # len_list = len(string_obt)
     # print(string_obt)
-    # final = {}
-    # for i in range(len_list):
-    #     if i in final:
-    #         final[i] = collections.Counter(string_obt[i])
+    final = {}
+    for i in string_obt:
+        if i in final:
+            final[i] = collections.Counter(string_obt)
 
-    # return final
+    return final
 def main():
     range_num = int(input())
     string = ""
