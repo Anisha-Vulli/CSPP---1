@@ -5,6 +5,7 @@ each word
 import collections
 def tokenize(string):
     string_obt = string.split()
+    print(string_obt)
     final = {}
     for i in string_obt:
         final = collections.Counter(i)
