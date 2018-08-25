@@ -11,13 +11,13 @@
 def check_inside(list_sudoku):
     temp = list_sudoku
     temp_list = []
-    for i in range(len(temp)):
+    for i in temp:
         for j in i:
-            temp_list.append(temp[j][i])
+            temp_list.append(temp[index(j)][index(i)])
 
     print(temp_list)
 
-    return 
+    return
 
 
 
