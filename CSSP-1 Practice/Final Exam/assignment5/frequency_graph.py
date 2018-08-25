@@ -7,7 +7,11 @@ def frequency_graph(dictionary):
     keys = sorted(dictionary.keys())
     temp_dict = {}
     for key in keys:
-    	temp_dict = '#' * dictionary[key]
+    	if key in temp_dict:
+    		temp_dict.append('#' * dictionary[key])
+    	else:
+    		temp_dict = '#' * dictionary[key]
+
 
     print(temp_dict)
 
