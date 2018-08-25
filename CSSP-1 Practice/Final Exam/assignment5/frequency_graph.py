@@ -14,10 +14,10 @@ def frequency_graph(dictionary):
 
 
     print(temp_dict)
-    keys = sorted(temp_dict.keys())
+    #keys = sorted(temp_dict.keys())
 
     for key in keys:
-        print(key, "-", dictionary[key])
+        print(key, "-", temp_dict[key])
 
 def main():
     dictionary = eval(input())
