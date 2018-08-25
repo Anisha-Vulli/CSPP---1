@@ -10,7 +10,7 @@
 
 def check_inside(list_sudoku):
     temp = list_sudoku
-    print(temp)
+    #print(temp)
     temp_list = []
     basic_list = []
     for i in range(9):
