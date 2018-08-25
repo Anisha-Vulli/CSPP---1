@@ -22,7 +22,7 @@ def tokenize(string):
         temp_list = collections.Counter(string_obt)
         #temp_list = Counter(temp_list)
 
-    print(temp_list)
+    print(type(temp_list))
 
     for i in range(len(temp_list)):
         final = final[i]
