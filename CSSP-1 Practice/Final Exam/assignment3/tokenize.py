@@ -18,10 +18,10 @@ def tokenize(string):
     string_obt = clean_stng.split()
     temp_list = []
     final_dict = {}
-    for i in string_obt:
+    for _ in string_obt:
         temp_list = collections.Counter(string_obt)
 
-    for doc_id, doc in enumerate(temp_list):
+    for _, doc in enumerate(temp_list):
         if doc in final_dict:
             final_dict[doc].append(temp_list[doc])
         else:
