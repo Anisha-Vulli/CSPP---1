@@ -19,16 +19,18 @@ def tokenize(string):
     temp_list = []
     final = {}
     for i in string_obt:
-        temp_list = collections(string_obt)
+        collections.Counter(string_obt)
 
-    for id_num, id in enumarate(temp_list):
-        if id in final:
-            final = final.append(id_num)
+    print(collections)
 
-        else:
-            final = temp_list[id_num]
+    # for id_num, id in enumarate(temp_list):
+    #     if id in final:
+    #         final = final.append(id_num)
 
-    return final
+    #     else:
+    #         final = temp_list[id_num]
+
+    # return final
 def main():
     range_num = int(input())
     string = ""
