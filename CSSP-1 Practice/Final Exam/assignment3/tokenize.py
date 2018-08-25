@@ -17,17 +17,21 @@ def tokenize(string):
     # len_list = len(string_obt)
     # print(string_obt)
     temp_list = []
-    final = {}
+    final_dict = {}
     for i in string_obt:
         temp_list = collections.Counter(string_obt)
         #temp_list = Counter(temp_list)
 
-    print(type(temp_list))
+    #print(temp_list)
 
-    for i in range(len(temp_list)):
-        final = final[i]
+    for doc_id, doc in enumerate(temp_list):
+        for word in doc:
+            if word in final_dict:
+                final_dict[word].append((doc_id, temp_list[doc_id][word]))
+            else:
+                final_dict[word] = [(doc_id, temp_list[doc_id][word])]
 
-    return final
+    return final_dict
 def main():
     range_num = int(input())
     string = ""
