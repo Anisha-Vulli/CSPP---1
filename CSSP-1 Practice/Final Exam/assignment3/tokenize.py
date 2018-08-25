@@ -18,8 +18,7 @@ def tokenize(string):
     # print(string_obt)
     final = {}
     for i in string_obt:
-        if i in final:
-            final[i] = collections.Counter(string_obt)
+        final = collections.Counter(string_obt)
 
     return final
 def main():
