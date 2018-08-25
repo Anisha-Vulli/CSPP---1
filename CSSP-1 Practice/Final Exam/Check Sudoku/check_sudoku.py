@@ -43,7 +43,7 @@ def check_inside(list_sudoku):
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count_vert += 1
 
-    #print(count_vert)
+    print(count_vert)
 
     if (count_vert == 8 and count_hori == 8):
         return True
