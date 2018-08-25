@@ -45,7 +45,7 @@ def check_inside(list_sudoku):
 
     #print(count_vert)
 
-    if (count_hori == 8 and count_vert == 9):
+    if (count_hori == 9 and count_vert == 9):
         return True
 
 def check_sudoku(sudoku):
