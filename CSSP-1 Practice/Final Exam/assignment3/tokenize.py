@@ -28,7 +28,7 @@ def main():
     for _ in range(range_num):
         string = string + input()
 
-    tokenize(string)
+    print(tokenize(string))
 
 if __name__ == '__main__':
     main()
