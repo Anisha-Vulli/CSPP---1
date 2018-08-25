@@ -4,10 +4,10 @@ each word
 '''
 import collections
 def tokenize(string):
-    string_obt = string
+    string_obt = string.split()
     final = {}
-    for i in string:
-        final = collections.Counter(string)
+    for i in string_obt:
+        final = collections.Counter(i)
 
     return final
 def main():
