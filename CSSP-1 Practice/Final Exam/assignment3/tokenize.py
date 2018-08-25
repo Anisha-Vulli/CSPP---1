@@ -9,9 +9,10 @@ def clean_input(string):
     return final_stng
 
 def tokenize(string):
-    string_obt = string.split()
-    clean_stng = clean_input(string_obt)
-    print(clean_stng)
+    clean_stng = clean_input(string)
+    string_obt = clean_stng.split()
+    
+    print(string_obt)
     # len_list = len(string_obt)
     # print(string_obt)
     # final = []
