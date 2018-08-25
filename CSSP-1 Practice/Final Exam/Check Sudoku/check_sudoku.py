@@ -36,7 +36,7 @@ def check_inside(list_sudoku):
         temp_list.append(basic_list)
         j += 1
 
-    print(temp_list)
+    #print(temp_list)
 
     for i in temp_list:
         empty_list = sorted(i)
