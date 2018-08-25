@@ -6,10 +6,10 @@ import collections
 def tokenize(string):
     string_obt = list(string)
     len_list = len(string_obt)
-    #print(string_obt)
+    print(string_obt)
     final = []
     for i in range(len_list):
-        final[i]= collections.Counter(string_obt[i])
+        final[i] = collections.Counter(string_obt[i])
 
     return final
 def main():
