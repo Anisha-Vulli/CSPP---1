@@ -24,7 +24,7 @@ def tokenize(string):
 
     print(temp_list)
 
-    for i in temp_list:
+    for i in range(len(temp_list)):
         final = final[i]
 
     return final
