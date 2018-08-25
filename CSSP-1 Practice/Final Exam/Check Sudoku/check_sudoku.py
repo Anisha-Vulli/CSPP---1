@@ -48,8 +48,6 @@ def check_inside(list_sudoku):
     if (count_hori == 8 and count_vert == 9):
         return True
 
-    return False
-
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
