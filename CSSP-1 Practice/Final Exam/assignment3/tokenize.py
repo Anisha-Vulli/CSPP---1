@@ -19,7 +19,7 @@ def tokenize(string):
     temp_list = []
     final = {}
     for i in string_obt:
-        temp_list = list(collections.Counter(string_obt))
+        temp_list = collections.Counter(string_obt)
 
     print(temp_list)
 
