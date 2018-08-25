@@ -21,7 +21,7 @@ def tokenize(string):
     for i in string_obt:
         temp_list = list(collections.Counter(string_obt))
 
-    print(collections)
+    print(temp_list)
 
     # for id_num, id in enumarate(temp_list):
     #     if id in final:
