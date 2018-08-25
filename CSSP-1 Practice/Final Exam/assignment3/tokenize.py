@@ -4,6 +4,7 @@ each word
 '''
 import collections
 import re
+cnt = Counter()
 def clean_input(string):
     final_stng = ""
     final_stng = re.sub('[^ a-zA-z0-9]','',string)
@@ -20,7 +21,7 @@ def tokenize(string):
     final = {}
     for i in string_obt:
         temp_list = collections.Counter(string_obt)
-        temp_list = Counter(temp_list)
+        temp_list = cnt(temp_list)
 
     print(temp_list)
 
