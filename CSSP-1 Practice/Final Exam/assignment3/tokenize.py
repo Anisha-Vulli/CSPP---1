@@ -3,9 +3,11 @@ Write a function to tokenize a given string and return a dictionary with the fre
 each word
 '''
 import collections
+import re
 def clean_input(string):
     final_stng = ""
-    final_stng = (''.join(e for e in string if e.isalnum()))
+    final_stng = re.sub('[^ a-zA-z0-9]','',string)
+    # final_stng = (''.join(e for e in string if e.isalnum()))
     return final_stng
 
 def tokenize(string):
