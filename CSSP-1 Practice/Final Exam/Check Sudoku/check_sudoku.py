@@ -9,7 +9,7 @@
 '''
 
 def check_inside(list_sudoku):
-    print("Hello")
+    #print("Hello")
     temp = list_sudoku
     #print(temp)
     temp_list = []
@@ -23,7 +23,7 @@ def check_inside(list_sudoku):
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count_hori += 1
 
-    print(count_hori)
+    #print(count_hori)
 
     empty_list = []
     temp_list = []
