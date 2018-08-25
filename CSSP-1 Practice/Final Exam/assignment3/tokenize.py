@@ -26,7 +26,7 @@ def tokenize(string):
 def main():
     range_num = int(input())
     for _ in range(range_num):
-        string = input()
+        string = string + input()
 
     tokenize(string)
 
