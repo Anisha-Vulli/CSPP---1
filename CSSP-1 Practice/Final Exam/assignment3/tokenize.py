@@ -8,6 +8,7 @@ def clean_input(string):
     final_stng = ""
     final_stng = re.sub('[^ a-zA-z0-9]','',string)
     #final_stng = (''.join(e for e in string if e.isalpha()))
+    print(final_stng)
     return final_stng
 
 def tokenize(string):
