@@ -15,7 +15,7 @@ def check_inside(list_sudoku):
     basic_list = []
     for i in range(9):
         for j in range(9):
-            basic_list.append(temp[j][i])
+            list(basic_list.append(temp[j][i]))
             #print(basic_list)
 
         temp_list.append(basic_list)
