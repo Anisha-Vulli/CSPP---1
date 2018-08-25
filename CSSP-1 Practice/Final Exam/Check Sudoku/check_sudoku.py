@@ -19,7 +19,7 @@ def check_inside(list_sudoku):
 
         temp_list.append(basic_list)
 
-    #print(temp_list)
+    print(temp_list)
 
     return
 
