@@ -18,7 +18,7 @@ def check_sudoku(sudoku):
     count = 0
     
     for i in list_sudoku:
-        basic_list = sorted(list_sudoku[i])
+        basic_list = sorted(i)
         if basic_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count += 1
 
