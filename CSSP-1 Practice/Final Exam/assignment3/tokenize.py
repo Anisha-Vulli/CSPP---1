@@ -6,8 +6,8 @@ import collections
 import re
 def clean_input(string):
     final_stng = ""
-    #final_stng = re.sub('[^ a-zA-z0-9]','',string)
-    final_stng = (''.join(e for e in string if e.isalpha()))
+    final_stng = re.sub('[^ a-zA-z0-9]','',string)
+    #final_stng = (''.join(e for e in string if e.isalpha()))
     return final_stng
 
 def tokenize(string):
@@ -18,7 +18,7 @@ def tokenize(string):
     # print(string_obt)
     final = {}
     for i in string_obt:
-        final = collections.Counter(string_obt)
+        final = counter(collections.Counter(string_obt))
 
     return final
 def main():
