@@ -13,8 +13,8 @@ def check_inside(list_sudoku):
     #print(temp)
     temp_list = []
     basic_list = []
-    for i in range(9):
-        for j in range(9):
+    for i in range(0, 9):
+        for j in range(0, 9):
             basic_list = basic_list.append(temp[j][i])
 
         temp_list.append(basic_list)
