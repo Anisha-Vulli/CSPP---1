@@ -16,9 +16,12 @@ def tokenize(string):
     print(string_obt)
     # len_list = len(string_obt)
     # print(string_obt)
+    temp_list = []
     final = {}
     for i in string_obt:
-        final = counter(collections.Counter(string_obt))
+        temp_list = collections.Counter(string_obt)
+
+    print(temp_list)
 
     return final
 def main():
