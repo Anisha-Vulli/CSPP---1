@@ -13,8 +13,8 @@ def frequency_graph(dictionary):
     		temp_dict[key] = '#' * dictionary[key]
 
 
-    print(temp_dict)
-    #keys = sorted(temp_dict.keys())
+    #print(temp_dict)
+    keys = sorted(temp_dict.keys())
 
     for key in keys:
         print(key, "-", temp_dict[key])
