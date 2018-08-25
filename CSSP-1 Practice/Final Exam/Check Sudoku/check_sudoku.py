@@ -30,16 +30,18 @@ def check_inside(list_sudoku):
     basic_list = []
 
     for i in range(9):
-        basic_list.append(temp[i][j])
+        basic_list.append(temp[j][i])
         j += 1
         temp_list.append(basic_list)
+
+    print(temp_list)
 
     for i in temp_list:
         empty_list = sorted(i)
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count_vert += 1
 
-    print(count_vert)
+    #print(count_vert)
 
     if (count_vert == 8 and count_hori == 8):
         return True
