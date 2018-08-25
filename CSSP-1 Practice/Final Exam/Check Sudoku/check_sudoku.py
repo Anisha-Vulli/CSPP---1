@@ -9,6 +9,7 @@
 '''
 
 def check_inside(list_sudoku):
+    print("Hello")
     temp = list_sudoku
     #print(temp)
     temp_list = []
