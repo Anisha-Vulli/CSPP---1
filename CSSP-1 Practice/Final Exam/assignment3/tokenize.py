@@ -14,14 +14,14 @@ def tokenize(string):
     clean_stng = clean_input(string)
     string_obt = clean_stng.split()
     
+    #print(string_obt)
+    len_list = len(string_obt)
     print(string_obt)
-    # len_list = len(string_obt)
-    # print(string_obt)
-    # final = []
-    # for i in range(len_list):
-    #     final[i] = collections.Counter(string_obt[i])
+    final = {}
+    for i in range(len_list):
+        final[i] = collections.Counter(string_obt[i])
 
-    #return final
+    return final
 def main():
     range_num = int(input())
     for _ in range(range_num):
