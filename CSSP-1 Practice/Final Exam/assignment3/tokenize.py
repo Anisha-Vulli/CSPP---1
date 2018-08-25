@@ -18,7 +18,7 @@ def tokenize(string):
     # print(string_obt)
     temp_list = []
     final_dict = {}
-    for i in string_obt:
+    for i in range(len(string_obt)):
         temp_list[i] = collections.Counter(string_obt)
         #temp_list = Counter(temp_list)
 
