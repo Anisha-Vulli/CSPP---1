@@ -81,7 +81,7 @@ def build_search_index(docs):
         doc_list[i] = word_list(doc_list[i])
         doc_list[i] = collections.Counter(doc_list[i])
 
-    #print(doc_list)
+    print(doc_list)
 
     for doc_id, doc in enumerate(doc_list):
         for word in doc:
