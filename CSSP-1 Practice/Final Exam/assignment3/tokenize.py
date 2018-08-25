@@ -18,7 +18,7 @@ def tokenize(string):
     # for i in range(len_list):
     #     final[i] = collections.Counter(string_obt[i])
 
-    return final
+    #return final
 def main():
     range_num = int(input())
     for _ in range(range_num):
