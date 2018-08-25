@@ -9,7 +9,7 @@ def tokenize(string):
     #print(string_obt)
     final = {}
     for i in range(len_list):
-        final = collections.Counter(string_obt[i])
+        final = final(collections.Counter(string_obt[i]))
 
     return final
 def main():
