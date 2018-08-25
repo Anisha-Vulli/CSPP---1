@@ -24,14 +24,10 @@ def tokenize(string):
 
     print(temp_list)
 
-    # for id_num, id in enumarate(temp_list):
-    #     if id in final:
-    #         final = final.append(id_num)
+    for i in temp_list:
+        final = final[i]
 
-    #     else:
-    #         final = temp_list[id_num]
-
-    # return final
+    return final
 def main():
     range_num = int(input())
     string = ""
