@@ -49,6 +49,8 @@ def check_inside(list_sudoku):
     if (count_hori == 9 and count_vert == 9):
         return True
 
+    return None
+
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
@@ -79,7 +81,7 @@ def main():
     sudoku = []
 
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for _ in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
