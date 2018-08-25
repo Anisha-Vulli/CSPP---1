@@ -11,21 +11,24 @@ def clean_input(string):
     return final_stng
 
 def tokenize(string):
+    print(string)
     clean_stng = clean_input(string)
     string_obt = clean_stng.split()
-    
     #print(string_obt)
-    len_list = len(string_obt)
-    print(string_obt)
-    final = {}
-    for i in range(len_list):
-        final[i] = collections.Counter(string_obt[i])
+    # len_list = len(string_obt)
+    # print(string_obt)
+    # final = {}
+    # for i in range(len_list):
+    #     if i in final:
+    #         final[i] = collections.Counter(string_obt[i])
 
-    return final
+    # return final
 def main():
     range_num = int(input())
     for _ in range(range_num):
-        print(tokenize(input()))
+        string = input()
+
+    tokenize(string)
 
 if __name__ == '__main__':
     main()
