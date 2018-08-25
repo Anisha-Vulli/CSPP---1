@@ -22,7 +22,7 @@ def check_inside(list_sudoku):
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count_hori += 1
 
-    #print(count_hori)
+    print(count_hori)
 
     empty_list = []
     temp_list = []
@@ -38,9 +38,10 @@ def check_inside(list_sudoku):
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count_vert += 1
 
-    return count_vert == 9 and count_hori == 9
+    if count_vert == 9 and count_hori == 9:
+        return True
 
-
+    return False
 
 def check_sudoku(sudoku):
     '''
