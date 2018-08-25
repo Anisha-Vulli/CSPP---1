@@ -17,7 +17,7 @@ def check_inside(list_sudoku):
     empty_list = []
     count_vert = 0
     count_hori = 0
-    j = 0
+    
     for val in temp:
         empty_list = sorted(val)
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
@@ -29,7 +29,9 @@ def check_inside(list_sudoku):
     temp_list = []
     basic_list = []
 
+
     for i in range(9):
+        j = 0
         basic_list.append(temp[j][i])
         temp_list.append(basic_list)
         j += 1
