@@ -4,7 +4,7 @@ each word
 '''
 import collections
 def tokenize(string):
-    string_obt = list(string)
+    string_obt = string.split()
     len_list = len(string_obt)
     print(string_obt)
     final = []
