@@ -17,10 +17,12 @@ def check_inside(list_sudoku):
     count_vert = 0
     count_hori = 0
     j = 0
-    for val in temp_list:
+    for val in temp:
         empty_list = sorted(val)
         if empty_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count_hori += 1
+
+    print(count_hori)
 
     empty_list = []
     temp_list = []
