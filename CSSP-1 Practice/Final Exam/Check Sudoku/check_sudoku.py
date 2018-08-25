@@ -8,6 +8,19 @@
     satisfies all the sudoku rules given in the statement above.
 '''
 
+def check_inside(list_sudoku):
+    temp = list_sudoku
+    temp_list = []
+    for i in temp:
+        for j in i:
+            temp_list.append(temp[j][i])
+
+    print(temp_list)
+
+    return 
+
+
+
 def check_sudoku(sudoku):
     '''
         Your solution goes here. You may add other helper functions as needed.
@@ -22,7 +35,7 @@ def check_sudoku(sudoku):
         if basic_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count += 1
 
-    if count == 9:
+    if count == 9 and check_inside(list_sudoku):
         return True
     return False
 
