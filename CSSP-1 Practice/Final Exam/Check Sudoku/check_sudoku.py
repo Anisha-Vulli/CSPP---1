@@ -14,11 +14,16 @@ def check_sudoku(sudoku):
         The function has to return True for a valid sudoku grid and false otherwise
     '''
     list_sudoku = sudoku
+    basic_list = []
+    count = 0
+    
     for i in list_sudoku:
-        for j in i:
-            if j in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
-                return True
+        basic_list = sorted(list_sudoku[i])
+        if basic_list == ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+            count += 1
 
+    if count == 9:
+        return True
     return False
 
 def main():
