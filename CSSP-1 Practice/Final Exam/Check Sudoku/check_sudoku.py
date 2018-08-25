@@ -52,13 +52,13 @@ def check_sudoku(sudoku):
     list_sudoku = sudoku
     basic_list = []
     count = 0
-    
+
     for i in list_sudoku:
         basic_list = sorted(i)
         if basic_list in ['1', '2', '3', '4', '5', '6', '7', '8', '9']:
             count += 1
 
-    if (count == 9 and check_inside(list_sudoku)):
+    if (count == 9 or check_inside(list_sudoku)):
         return True
     return False
 
